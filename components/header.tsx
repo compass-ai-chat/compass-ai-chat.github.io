@@ -14,6 +14,14 @@ export default function Header() {
     setIsMenuOpen(!isMenuOpen)
   }
 
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+    setIsMenuOpen(false);
+  };
+
   return (
     <header className="fixed w-full bg-white/80 backdrop-blur-md z-50 shadow-sm">
       <div className="container mx-auto px-4">
@@ -31,32 +39,54 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <motion.div
+          <motion.div
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
             >
-              <Link href="#features" className="text-gray-600 hover:text-emerald-500 transition-colors">
-                Features
-              </Link>
+              <a 
+                href="#demo" 
+                className="text-gray-600 hover:text-emerald-500 transition-colors cursor-pointer"
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection('demo');
+                }}
+              >
+                Demo
+              </a>
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              <Link href="#demo" className="text-gray-600 hover:text-emerald-500 transition-colors">
-                Demo
-              </Link>
+              <a 
+                href="#features" 
+                className="text-gray-600 hover:text-emerald-500 transition-colors cursor-pointer"
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection('features');
+                }}
+              >
+                Features
+              </a>
             </motion.div>
+            
             <motion.div
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
             >
-              <Link href="#contact" className="text-gray-600 hover:text-emerald-500 transition-colors">
+              <a 
+                href="#contact" 
+                className="text-gray-600 hover:text-emerald-500 transition-colors cursor-pointer"
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection('contact');
+                }}
+              >
                 Contact
-              </Link>
+              </a>
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: -10 }}
@@ -93,27 +123,36 @@ export default function Header() {
           className="md:hidden bg-white"
         >
           <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
-            <Link
+            <a
               href="#features"
-              className="text-gray-600 hover:text-emerald-500 transition-colors py-2"
-              onClick={() => setIsMenuOpen(false)}
+              className="text-gray-600 hover:text-emerald-500 transition-colors py-2 cursor-pointer"
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToSection('features');
+              }}
             >
               Features
-            </Link>
-            <Link
+            </a>
+            <a
               href="#demo"
-              className="text-gray-600 hover:text-emerald-500 transition-colors py-2"
-              onClick={() => setIsMenuOpen(false)}
+              className="text-gray-600 hover:text-emerald-500 transition-colors py-2 cursor-pointer"
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToSection('demo');
+              }}
             >
               Demo
-            </Link>
-            <Link
+            </a>
+            <a
               href="#contact"
-              className="text-gray-600 hover:text-emerald-500 transition-colors py-2"
-              onClick={() => setIsMenuOpen(false)}
+              className="text-gray-600 hover:text-emerald-500 transition-colors py-2 cursor-pointer"
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToSection('contact');
+              }}
             >
               Contact
-            </Link>
+            </a>
             <div className="flex justify-center py-2">
               <ThemeToggle />
             </div>
