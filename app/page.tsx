@@ -161,7 +161,7 @@ export default function Home() {
                 </div>
                 <div>
                   <h3 className="font-medium text-gray-900 dark:text-white">{t("contact.email")}</h3>
-                  <p className="text-gray-700 dark:text-gray-300">compass-ai@nordwestt.com</p>
+                  <p className="text-gray-700 dark:text-gray-300">thomas@nordentoft.dk</p>
                 </div>
               </div>
 
@@ -175,13 +175,13 @@ export default function Home() {
                 </div>
               </div>
 
-              <div onClick={() => window.open('https://www.linkedin.com/company/nordwestt', '_blank')} className="flex items-center gap-4 cursor-pointer hover:bg-emerald-100 dark:hover:bg-emerald-900 rounded-full transition-all duration-300">
+              <div onClick={() => window.open('https://www.linkedin.com/in/thomas-nordentoft', '_blank')} className="flex items-center gap-4 cursor-pointer hover:bg-emerald-100 dark:hover:bg-emerald-900 rounded-full transition-all duration-300">
                 <div className="bg-emerald-100 dark:bg-emerald-900 p-3 rounded-full">
                   <Linkedin className="h-6 w-6 text-emerald-600 dark:text-emerald-400" />
                 </div>
                 <div>
                   <h3 className="font-medium text-gray-900 dark:text-white">{t("contact.linkedin")}</h3>
-                  <p className="text-gray-700 dark:text-gray-300">linkedin.com/company/compass-ai</p>
+                  <p className="text-gray-700 dark:text-gray-300">https://www.linkedin.com/in/thomas-nordentoft</p>
                 </div>
               </div>
             </div>
