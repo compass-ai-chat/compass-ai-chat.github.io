@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import ThemeToggle from "@/components/theme-toggle"
 import { changeLanguage } from '../i18n';
+import LanguageSwitcher from "./language-switcher"
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -109,8 +110,7 @@ export default function Header() {
             </motion.div>
           </nav>
 
-          <button onClick={() => handleLanguageChange('en')}>English</button>
-          <button onClick={() => handleLanguageChange('it')}>Italian</button>
+          <LanguageSwitcher />
 
           {/* Mobile Menu Button */}
           <div className="md:hidden">
