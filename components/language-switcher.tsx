@@ -16,12 +16,14 @@ import { changeLanguage } from '../i18n'
 const languageFlags: Record<string, string> = {
   en: "🇬🇧",
   it: "🇮🇹",
+  da: "🇩🇰"
 }
 
 // Language names for display
 const languageNames: Record<string, string> = {
   en: "English",
   it: "Italiano",
+  da: "Dansk"
 }
 
 export default function LanguageSwitcher() {

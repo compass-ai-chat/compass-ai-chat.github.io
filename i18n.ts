@@ -5,6 +5,7 @@ import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 import enTranslation from './public/locales/en.json';
 import itTranslation from './public/locales/it.json';
+import daTranslation from './public/locales/da.json';
 
 
 i18n
@@ -45,6 +46,11 @@ i18n
       it: {
 
         translation: itTranslation
+
+      },
+      da: {
+
+        translation: daTranslation
 
       }
 
