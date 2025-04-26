@@ -6,6 +6,7 @@ import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import ThemeToggle from "@/components/theme-toggle"
+import { changeLanguage } from '../i18n';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -13,6 +14,10 @@ export default function Header() {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen)
   }
+
+  const handleLanguageChange = (lang: string) => {
+    changeLanguage(lang);
+  };
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -103,6 +108,9 @@ export default function Header() {
               <Button className="bg-emerald-500 hover:bg-emerald-600 text-white">Download</Button>
             </motion.div>
           </nav>
+
+          <button onClick={() => handleLanguageChange('en')}>English</button>
+          <button onClick={() => handleLanguageChange('it')}>Italian</button>
 
           {/* Mobile Menu Button */}
           <div className="md:hidden">

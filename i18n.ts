@@ -52,5 +52,9 @@ i18n
 
   });
 
+// Add this function to change language programmatically
+export const changeLanguage = (language: string) => {
+  return i18n.changeLanguage(language);
+};
 
 export default i18n;
