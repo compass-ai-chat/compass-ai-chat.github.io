@@ -10,8 +10,7 @@ import { MessageSquare, Loader2 } from "lucide-react"
 import { useTranslation } from "react-i18next"
 
 interface FormData {
-  name: string
-  email: string
+  subject: string
   message: string
 }
 
@@ -30,12 +29,12 @@ export default function ContactForm() {
   const onSubmit = async (data: FormData) => {
     setIsSubmitting(true)
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1500))
-
-    // In a real app, you would send the data to your API here
-    console.log("Form data:", data)
-
+    // Create mailto URL with form data
+    const mailtoUrl = `mailto:thomas@nordentoft.dk?subject=${encodeURIComponent(data.subject)}&body=${encodeURIComponent(`${data.message}`)}`;
+    
+    // Open email client
+    window.location.href = mailtoUrl;
+    
     setIsSubmitting(false)
     setIsSubmitted(true)
     reset()
@@ -48,33 +47,16 @@ export default function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
-      <div>
-        <Label htmlFor="name" className="text-foreground font-medium">{t("contact.form.name")}</Label>
-        <Input
-          id="name"
-          placeholder={t("contact.form.namePlaceholder")}
-          {...register("name", { required: t("contact.form.nameRequired") as string })}
-          className={`${errors.name ? "border-red-300" : ""} text-foreground placeholder:text-muted-foreground`}
-        />
-        {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name.message}</p>}
-      </div>
 
       <div>
-        <Label htmlFor="email" className="text-foreground font-medium">{t("contact.form.email")}</Label>
+        <Label htmlFor="subject" className="text-foreground font-medium">{t("contact.form.subject")}</Label>
         <Input
-          id="email"
-          type="email"
-          placeholder={t("contact.form.emailPlaceholder")}
-          {...register("email", {
-            required: t("contact.form.emailRequired") as string,
-            pattern: {
-              value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-              message: t("contact.form.emailInvalid") as string,
-            },
-          })}
-          className={`${errors.email ? "border-red-300" : ""} text-foreground placeholder:text-muted-foreground`}
+          id="subject"
+          placeholder={t("contact.form.subjectPlaceholder")}
+          {...register("subject", { required: t("contact.form.subjectRequired") as string })}
+          className={`${errors.subject ? "border-red-300" : ""} text-foreground placeholder:text-muted-foreground`}
         />
-        {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>}
+        {errors.subject && <p className="text-red-500 text-sm mt-1">{errors.subject.message}</p>}
       </div>
 
       <div>
