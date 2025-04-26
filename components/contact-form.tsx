@@ -47,18 +47,18 @@ export default function ContactForm() {
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
       <div>
-        <Label htmlFor="name">Name</Label>
+        <Label htmlFor="name" className="text-foreground font-medium">Name</Label>
         <Input
           id="name"
           placeholder="Your name"
           {...register("name", { required: "Name is required" })}
-          className={errors.name ? "border-red-300" : ""}
+          className={`${errors.name ? "border-red-300" : ""} text-foreground placeholder:text-muted-foreground`}
         />
         {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name.message}</p>}
       </div>
 
       <div>
-        <Label htmlFor="email">Email</Label>
+        <Label htmlFor="email" className="text-foreground font-medium">Email</Label>
         <Input
           id="email"
           type="email"
@@ -70,19 +70,19 @@ export default function ContactForm() {
               message: "Invalid email address",
             },
           })}
-          className={errors.email ? "border-red-300" : ""}
+          className={`${errors.email ? "border-red-300" : ""} text-foreground placeholder:text-muted-foreground`}
         />
         {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>}
       </div>
 
       <div>
-        <Label htmlFor="message">Message</Label>
+        <Label htmlFor="message" className="text-foreground font-medium">Message</Label>
         <Textarea
           id="message"
           placeholder="Your message..."
           rows={4}
           {...register("message", { required: "Message is required" })}
-          className={errors.message ? "border-red-300" : ""}
+          className={`${errors.message ? "border-red-300" : ""} text-foreground placeholder:text-muted-foreground`}
         />
         {errors.message && <p className="text-red-500 text-sm mt-1">{errors.message.message}</p>}
       </div>
