@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useRef } from "react"
+import { useState, useRef, useEffect } from "react"
 import { motion } from "framer-motion"
 import { ChevronDown, ChevronUp, Github, Linkedin, Mail } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -16,9 +16,32 @@ export default function Home() {
 
   const [isIframeMinimized, setIsIframeMinimized] = useState(false)
   const demoRef = useRef<HTMLDivElement>(null)
+  const [isMobile, setIsMobile] = useState(false)
+
+  // Check if device is mobile on component mount
+  useEffect(() => {
+    const checkIfMobile = () => {
+      setIsMobile(window.innerWidth < 768)
+    }
+    
+    // Initial check
+    checkIfMobile()
+    
+    // Add event listener for window resize
+    window.addEventListener('resize', checkIfMobile)
+    
+    // Cleanup
+    return () => window.removeEventListener('resize', checkIfMobile)
+  }, [])
 
   const scrollToDemo = () => {
-    demoRef.current?.scrollIntoView({ behavior: "smooth" })
+    if (isMobile) {
+      // Open demo in new tab on mobile
+      window.open('https://nordwestt.com/compass', '_blank')
+    } else {
+      // Scroll to demo section on desktop
+      demoRef.current?.scrollIntoView({ behavior: "smooth" })
+    }
   }
 
   return (
@@ -53,40 +76,42 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Demo Section */}
-      <section ref={demoRef} className="container mx-auto px-4 py-16 md:py-24" id="demo">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.1 }}
-          viewport={{ once: true }}
-          className="flex flex-col items-center"
-        >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-12 text-center">
-            {t("demo.title")} <span className="text-emerald-500">{t("demo.subtitle")}</span>
-          </h2>
-
-          <div
-            className={`w-full max-w-2/3 mx-auto bg-white dark:bg-card rounded-2xl shadow-xl overflow-hidden transition-all duration-500 ${isIframeMinimized ? "h-16" : "h-[800px]"}`}
+      {/* Demo Section - Hidden on mobile */}
+      {!isMobile && (
+        <section ref={demoRef} className="container mx-auto px-4 py-16 md:py-24" id="demo">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.1 }}
+            viewport={{ once: true }}
+            className="flex flex-col items-center"
           >
-            <div
-              className="flex items-center justify-between bg-emerald-500 text-white p-4 cursor-pointer"
-              onClick={() => setIsIframeMinimized(!isIframeMinimized)}
-            >
-              <h3 className="font-medium">{t("demo.demoTitle")}</h3>
-              <Button variant="ghost" size="sm" className="text-white hover:bg-emerald-600 p-1 h-auto">
-                {isIframeMinimized ? <ChevronDown size={18} /> : <ChevronUp size={18} />}
-              </Button>
-            </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-12 text-center">
+              {t("demo.title")} <span className="text-emerald-500">{t("demo.subtitle")}</span>
+            </h2>
 
-            {!isIframeMinimized && (
-              <div className="h-[700px] w-full bg-white dark:bg-card flex items-center justify-center">
-                <iframe src="https://nordwestt.com/compass" className="w-full h-full" />
+            <div
+              className={`w-full max-w-2/3 mx-auto bg-white dark:bg-card rounded-2xl shadow-xl overflow-hidden transition-all duration-500 ${isIframeMinimized ? "h-16" : "h-[800px]"}`}
+            >
+              <div
+                className="flex items-center justify-between bg-emerald-500 text-white p-4 cursor-pointer"
+                onClick={() => setIsIframeMinimized(!isIframeMinimized)}
+              >
+                <h3 className="font-medium">{t("demo.demoTitle")}</h3>
+                <Button variant="ghost" size="sm" className="text-white hover:bg-emerald-600 p-1 h-auto">
+                  {isIframeMinimized ? <ChevronDown size={18} /> : <ChevronUp size={18} />}
+                </Button>
               </div>
-            )}
-          </div>
-        </motion.div>
-      </section>
+
+              {!isIframeMinimized && (
+                <div className="h-[700px] w-full bg-white dark:bg-card flex items-center justify-center">
+                  <iframe src="https://nordwestt.com/compass" className="w-full h-full" />
+                </div>
+              )}
+            </div>
+          </motion.div>
+        </section>
+      )}
 
       {/* Features Section */}
       <section className="container mx-auto px-4 py-16 md:py-24" id="features">
