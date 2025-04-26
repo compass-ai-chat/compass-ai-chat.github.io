@@ -30,10 +30,10 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className="max-w-3xl"
           >
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
               Your AI Companion, <span className="text-emerald-500">Locally Powered</span>
             </h1>
-            <p className="text-xl text-gray-600 mb-8">
+            <p className="text-xl text-gray-700 dark:text-gray-300 mb-8">
               Compass is an open-source AI chat application that runs entirely on your device. No data leaves your
               computer, ensuring complete privacy and ownership.
             </p>
@@ -41,7 +41,7 @@ export default function Home() {
               <Button size="lg" className="bg-emerald-500 hover:bg-emerald-600 text-white" onClick={scrollToDemo}>
                 Try Demo
               </Button>
-              <Button size="lg" variant="outline" className="border-emerald-500 text-emerald-500 hover:bg-emerald-50">
+              <Button size="lg" variant="outline" className="border-emerald-500 text-emerald-500 hover:bg-emerald-50 dark:hover:bg-emerald-950">
                 Download Now
               </Button>
             </div>
@@ -58,12 +58,12 @@ export default function Home() {
           viewport={{ once: true }}
           className="flex flex-col items-center"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-12 text-center">
             Experience Compass <span className="text-emerald-500">In Action</span>
           </h2>
 
           <div
-            className={`w-full max-w-2/3 mx-auto bg-white rounded-2xl shadow-xl overflow-hidden transition-all duration-500 ${isIframeMinimized ? "h-16" : "h-[800px]"}`}
+            className={`w-full max-w-2/3 mx-auto bg-white dark:bg-gray-800 rounded-2xl shadow-xl overflow-hidden transition-all duration-500 ${isIframeMinimized ? "h-16" : "h-[800px]"}`}
           >
             <div
               className="flex items-center justify-between bg-emerald-500 text-white p-4 cursor-pointer"
@@ -76,7 +76,7 @@ export default function Home() {
             </div>
 
             {!isIframeMinimized && (
-              <div className="h-[700px] w-full bg-gray-100 flex items-center justify-center">
+              <div className="h-[700px] w-full bg-gray-100 dark:bg-gray-700 flex items-center justify-center">
                 <iframe src="https://nordwestt.com/compass" className="w-full h-full" />
               </div>
             )}
@@ -93,10 +93,10 @@ export default function Home() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
             Why Choose <span className="text-emerald-500">Compass</span>?
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">Built with your fundamental digital rights in mind</p>
+          <p className="text-xl text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">Built with your fundamental digital rights in mind</p>
         </motion.div>
 
         <div className="grid md:grid-cols-3 gap-8">
@@ -148,42 +148,42 @@ export default function Home() {
             transition={{ duration: 0.7 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
               Get In <span className="text-emerald-500">Touch</span>
             </h2>
-            <p className="text-lg text-gray-600 mb-8">
+            <p className="text-lg text-gray-700 dark:text-gray-300 mb-8">
               Have questions about Compass? Want to contribute to the project? Reach out to us through any of these
               channels.
             </p>
 
             <div className="space-y-4 mb-8">
               <div className="flex items-center gap-4">
-                <div className="bg-emerald-100 p-3 rounded-full">
-                  <Mail className="h-6 w-6 text-emerald-600" />
+                <div className="bg-emerald-100 dark:bg-emerald-900 p-3 rounded-full">
+                  <Mail className="h-6 w-6 text-emerald-600 dark:text-emerald-400" />
                 </div>
                 <div>
-                  <h3 className="font-medium">Email</h3>
-                  <p className="text-gray-600">hello@compassai.app</p>
+                  <h3 className="font-medium text-gray-900 dark:text-white">Email</h3>
+                  <p className="text-gray-700 dark:text-gray-300">hello@compassai.app</p>
                 </div>
               </div>
 
               <div className="flex items-center gap-4">
-                <div className="bg-emerald-100 p-3 rounded-full">
-                  <Github className="h-6 w-6 text-emerald-600" />
+                <div className="bg-emerald-100 dark:bg-emerald-900 p-3 rounded-full">
+                  <Github className="h-6 w-6 text-emerald-600 dark:text-emerald-400" />
                 </div>
                 <div>
-                  <h3 className="font-medium">GitHub</h3>
-                  <p className="text-gray-600">github.com/compass-ai</p>
+                  <h3 className="font-medium text-gray-900 dark:text-white">GitHub</h3>
+                  <p className="text-gray-700 dark:text-gray-300">github.com/compass-ai</p>
                 </div>
               </div>
 
               <div className="flex items-center gap-4">
-                <div className="bg-emerald-100 p-3 rounded-full">
-                  <Linkedin className="h-6 w-6 text-emerald-600" />
+                <div className="bg-emerald-100 dark:bg-emerald-900 p-3 rounded-full">
+                  <Linkedin className="h-6 w-6 text-emerald-600 dark:text-emerald-400" />
                 </div>
                 <div>
-                  <h3 className="font-medium">LinkedIn</h3>
-                  <p className="text-gray-600">linkedin.com/company/compass-ai</p>
+                  <h3 className="font-medium text-gray-900 dark:text-white">LinkedIn</h3>
+                  <p className="text-gray-700 dark:text-gray-300">linkedin.com/company/compass-ai</p>
                 </div>
               </div>
             </div>
@@ -195,8 +195,8 @@ export default function Home() {
             transition={{ duration: 0.7 }}
             viewport={{ once: true }}
           >
-            <div className="bg-white p-8 rounded-2xl shadow-lg">
-              <h3 className="text-2xl font-bold mb-6">Send us a message</h3>
+            <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg">
+              <h3 className="text-2xl font-bold mb-6 text-gray-900 dark:text-white">Send us a message</h3>
               <ContactForm />
             </div>
           </motion.div>
