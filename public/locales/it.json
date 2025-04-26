@@ -58,7 +58,14 @@
         "message": "Messaggio",
         "send": "Invia Messaggio",
         "sending": "Invio in corso...",
-        "success": "Grazie! Il tuo messaggio è stato inviato con successo."
+        "success": "Grazie! Il tuo messaggio è stato inviato con successo.",
+        "namePlaceholder": "Il tuo nome",
+        "emailPlaceholder": "tua.email@esempio.com",
+        "messagePlaceholder": "Il tuo messaggio...",
+        "nameRequired": "Il nome è obbligatorio",
+        "emailRequired": "L'email è obbligatoria",
+        "emailInvalid": "Indirizzo email non valido",
+        "messageRequired": "Il messaggio è obbligatorio"
       }
     },
     "nav": {

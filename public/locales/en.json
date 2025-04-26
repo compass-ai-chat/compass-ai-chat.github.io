@@ -58,7 +58,14 @@
         "message": "Message",
         "send": "Send Message",
         "sending": "Sending...",
-        "success": "Thank you! Your message has been sent successfully."
+        "success": "Thank you! Your message has been sent successfully.",
+        "namePlaceholder": "Your name",
+        "emailPlaceholder": "your.email@example.com",
+        "messagePlaceholder": "Your message...",
+        "nameRequired": "Name is required",
+        "emailRequired": "Email is required",
+        "emailInvalid": "Invalid email address",
+        "messageRequired": "Message is required"
       }
     },
     "nav": {

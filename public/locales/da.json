@@ -58,7 +58,14 @@
         "message": "Besked",
         "send": "Send Besked",
         "sending": "Sender...",
-        "success": "Tak! Din besked er blevet sendt med succes."
+        "success": "Tak! Din besked er blevet sendt med succes.",
+        "namePlaceholder": "Dit navn",
+        "emailPlaceholder": "din.email@eksempel.com",
+        "messagePlaceholder": "Din besked...",
+        "nameRequired": "Navn er påkrævet",
+        "emailRequired": "Email er påkrævet",
+        "emailInvalid": "Ugyldig email-adresse",
+        "messageRequired": "Besked er påkrævet"
       }
     },
     "nav": {

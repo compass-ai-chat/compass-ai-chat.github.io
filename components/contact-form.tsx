@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
 import { MessageSquare, Loader2 } from "lucide-react"
+import { useTranslation } from "react-i18next"
 
 interface FormData {
   name: string
@@ -15,6 +16,7 @@ interface FormData {
 }
 
 export default function ContactForm() {
+  const { t } = useTranslation()
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
 
@@ -47,27 +49,27 @@ export default function ContactForm() {
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
       <div>
-        <Label htmlFor="name" className="text-foreground font-medium">Name</Label>
+        <Label htmlFor="name" className="text-foreground font-medium">{t("contact.form.name")}</Label>
         <Input
           id="name"
-          placeholder="Your name"
-          {...register("name", { required: "Name is required" })}
+          placeholder={t("contact.form.namePlaceholder")}
+          {...register("name", { required: t("contact.form.nameRequired") as string })}
           className={`${errors.name ? "border-red-300" : ""} text-foreground placeholder:text-muted-foreground`}
         />
         {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name.message}</p>}
       </div>
 
       <div>
-        <Label htmlFor="email" className="text-foreground font-medium">Email</Label>
+        <Label htmlFor="email" className="text-foreground font-medium">{t("contact.form.email")}</Label>
         <Input
           id="email"
           type="email"
-          placeholder="your.email@example.com"
+          placeholder={t("contact.form.emailPlaceholder")}
           {...register("email", {
-            required: "Email is required",
+            required: t("contact.form.emailRequired") as string,
             pattern: {
               value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-              message: "Invalid email address",
+              message: t("contact.form.emailInvalid") as string,
             },
           })}
           className={`${errors.email ? "border-red-300" : ""} text-foreground placeholder:text-muted-foreground`}
@@ -76,12 +78,12 @@ export default function ContactForm() {
       </div>
 
       <div>
-        <Label htmlFor="message" className="text-foreground font-medium">Message</Label>
+        <Label htmlFor="message" className="text-foreground font-medium">{t("contact.form.message")}</Label>
         <Textarea
           id="message"
-          placeholder="Your message..."
+          placeholder={t("contact.form.messagePlaceholder")}
           rows={4}
-          {...register("message", { required: "Message is required" })}
+          {...register("message", { required: t("contact.form.messageRequired") as string })}
           className={`${errors.message ? "border-red-300" : ""} text-foreground placeholder:text-muted-foreground`}
         />
         {errors.message && <p className="text-red-500 text-sm mt-1">{errors.message.message}</p>}
@@ -91,19 +93,19 @@ export default function ContactForm() {
         {isSubmitting ? (
           <>
             <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-            Sending...
+            {t("contact.form.sending")}
           </>
         ) : (
           <>
             <MessageSquare className="mr-2 h-4 w-4" />
-            Send Message
+            {t("contact.form.send")}
           </>
         )}
       </Button>
 
       {isSubmitted && (
         <div className="bg-primary/20 text-primary dark:text-primary-foreground p-3 rounded-md text-center">
-          Thank you! Your message has been sent successfully.
+          {t("contact.form.success")}
         </div>
       )}
     </form>
