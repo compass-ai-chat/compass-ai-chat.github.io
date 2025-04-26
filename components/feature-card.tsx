@@ -36,8 +36,8 @@ export default function FeatureCard({ title, description, icon, delay = 0 }: Fea
       <div className="bg-primary/20 w-12 h-12 rounded-full flex items-center justify-center mb-4">
         <IconComponent className="h-6 w-6 text-primary" />
       </div>
-      <h3 className="text-xl font-bold mb-2 text-gray-900">{title}</h3>
-      <p className="text-gray-600">{description}</p>
+      <h3 className="text-xl font-bold mb-2 text-gray-900 dark:text-white">{title}</h3>
+      <p className="text-gray-600 dark:text-gray-300">{description}</p>
     </motion.div>
   )
 }

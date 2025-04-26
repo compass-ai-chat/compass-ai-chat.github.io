@@ -8,45 +8,45 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-2">
             <h3 className="text-2xl font-bold text-emerald-500 mb-4">Compass</h3>
-            <p className="text-gray-600 mb-4 max-w-md">
+            <p className="text-gray-600 dark:text-gray-300 mb-4 max-w-md">
               An open-source, local AI chat application focused on privacy, decentralization, and true data ownership.
             </p>
             <div className="flex space-x-4">
-              <Link href="#" className="text-gray-500 hover:text-emerald-500 transition-colors">
+              <Link href="#" className="text-gray-500 dark:text-gray-300 hover:text-emerald-500 transition-colors">
                 <Github className="h-5 w-5" />
               </Link>
-              <Link href="#" className="text-gray-500 hover:text-emerald-500 transition-colors">
+              <Link href="#" className="text-gray-500 dark:text-gray-300 hover:text-emerald-500 transition-colors">
                 <Twitter className="h-5 w-5" />
               </Link>
-              <Link href="#" className="text-gray-500 hover:text-emerald-500 transition-colors">
+              <Link href="#" className="text-gray-500 dark:text-gray-300 hover:text-emerald-500 transition-colors">
                 <Linkedin className="h-5 w-5" />
               </Link>
-              <Link href="#" className="text-gray-500 hover:text-emerald-500 transition-colors">
+              <Link href="#" className="text-gray-500 dark:text-gray-300 hover:text-emerald-500 transition-colors">
                 <Mail className="h-5 w-5" />
               </Link>
             </div>
           </div>
 
           <div>
-            <h4 className="font-semibold text-gray-900 mb-4">Links</h4>
+            <h4 className="font-semibold text-gray-900 dark:text-white mb-4">Links</h4>
             <ul className="space-y-2">
               <li>
-                <Link href="#" className="text-gray-600 hover:text-emerald-500 transition-colors">
+                <Link href="#" className="text-gray-600 dark:text-gray-300 hover:text-emerald-500 transition-colors">
                   Features
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-gray-600 hover:text-emerald-500 transition-colors">
+                <Link href="#" className="text-gray-600 dark:text-gray-300 hover:text-emerald-500 transition-colors">
                   Demo
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-gray-600 hover:text-emerald-500 transition-colors">
+                <Link href="#" className="text-gray-600 dark:text-gray-300 hover:text-emerald-500 transition-colors">
                   Download
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-gray-600 hover:text-emerald-500 transition-colors">
+                <Link href="#" className="text-gray-600 dark:text-gray-300 hover:text-emerald-500 transition-colors">
                   Contact
                 </Link>
               </li>
@@ -54,25 +54,25 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-semibold text-gray-900 mb-4">Resources</h4>
+            <h4 className="font-semibold text-gray-900 dark:text-white mb-4">Resources</h4>
             <ul className="space-y-2">
               <li>
-                <Link href="#" className="text-gray-600 hover:text-emerald-500 transition-colors">
+                <Link href="#" className="text-gray-600 dark:text-gray-300 hover:text-emerald-500 transition-colors">
                   Documentation
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-gray-600 hover:text-emerald-500 transition-colors">
+                <Link href="#" className="text-gray-600 dark:text-gray-300 hover:text-emerald-500 transition-colors">
                   GitHub Repository
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-gray-600 hover:text-emerald-500 transition-colors">
+                <Link href="#" className="text-gray-600 dark:text-gray-300 hover:text-emerald-500 transition-colors">
                   Privacy Policy
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-gray-600 hover:text-emerald-500 transition-colors">
+                <Link href="#" className="text-gray-600 dark:text-gray-300 hover:text-emerald-500 transition-colors">
                   Terms of Service
                 </Link>
               </li>
