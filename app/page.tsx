@@ -96,18 +96,18 @@ export default function Home() {
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
             Why Choose <span className="text-emerald-500">Compass</span>?
           </h2>
-          <p className="text-xl text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">Built with your fundamental digital rights in mind</p>
+          <p className="text-xl text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">Built with core values of sovereignty, privacy, and control</p>
         </motion.div>
 
         <div className="grid md:grid-cols-3 gap-8">
           <FeatureCard
             title="Complete Privacy"
-            description="All conversations stay on your device. No data is ever sent to the cloud without your explicit permission."
+            description="Run models locally on your device. No data ever needs to be sent to external servers without your explicit permission."
             icon="Shield"
           />
           <FeatureCard
-            title="Decentralized Architecture"
-            description="No central servers or authorities. Your data remains under your control at all times."
+            title="Best of Both Worlds"
+            description="Connect to providers like ChatGPT, Claude, or Gemini for cutting-edge models, or stay offline for sensitive tasks."
             icon="Network"
           />
           <FeatureCard
@@ -122,7 +122,7 @@ export default function Home() {
           />
           <FeatureCard
             title="Offline Capable"
-            description="Works without an internet connection. Perfect for sensitive environments or travel."
+            description="Works without an internet connection. Perfect for travel or when privacy is a priority."
             icon="Wifi"
           />
           <FeatureCard
@@ -147,7 +147,7 @@ export default function Home() {
               Get In <span className="text-emerald-500">Touch</span>
             </h2>
             <p className="text-lg text-gray-700 dark:text-gray-300 mb-8">
-              Have questions about Compass? Want to contribute to the project? Reach out to us through any of these
+              Interested in Compass? Reach out through any of these
               channels.
             </p>
 
