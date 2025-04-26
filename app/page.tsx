@@ -31,11 +31,11 @@ export default function Home() {
             className="max-w-3xl"
           >
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
-              Your AI Companion, <span className="text-emerald-500">Locally Powered</span>
+              Your AI Companion, <br/>
+              <span className="text-emerald-500">Under <u>your</u> Control</span>
             </h1>
             <p className="text-xl text-gray-700 dark:text-gray-300 mb-8">
-              Compass is an open-source AI chat application that runs entirely on your device. No data leaves your
-              computer, ensuring complete privacy and ownership.
+              Compass is an open-source AI chat application that gives you control between privacy and speed. Run entirely offline when privacy is a priority or connect to one of many providers, such as ChatGPT, when you need the latest models.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-emerald-500 hover:bg-emerald-600 text-white" onClick={scrollToDemo}>
@@ -152,7 +152,7 @@ export default function Home() {
             </p>
 
             <div className="space-y-4 mb-8">
-              <div className="flex items-center gap-4">
+              <div className="flex items-center gap-4 cursor-pointer hover:bg-emerald-100 dark:hover:bg-emerald-900 rounded-full transition-all duration-300">
                 <div className="bg-emerald-100 dark:bg-emerald-900 p-3 rounded-full">
                   <Mail className="h-6 w-6 text-emerald-600 dark:text-emerald-400" />
                 </div>
@@ -162,7 +162,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="flex items-center gap-4">
+              <div onClick={() => window.open('https://github.com/nordwestt/compass#user-content-welcome-to-compass-', '_blank')} className="flex items-center gap-4 cursor-pointer hover:bg-emerald-100 dark:hover:bg-emerald-900 rounded-full transition-all duration-300">
                 <div className="bg-emerald-100 dark:bg-emerald-900 p-3 rounded-full">
                   <Github className="h-6 w-6 text-emerald-600 dark:text-emerald-400" />
                 </div>
@@ -172,7 +172,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="flex items-center gap-4">
+              <div onClick={() => window.open('https://www.linkedin.com/company/nordwestt', '_blank')} className="flex items-center gap-4 cursor-pointer hover:bg-emerald-100 dark:hover:bg-emerald-900 rounded-full transition-all duration-300">
                 <div className="bg-emerald-100 dark:bg-emerald-900 p-3 rounded-full">
                   <Linkedin className="h-6 w-6 text-emerald-600 dark:text-emerald-400" />
                 </div>
