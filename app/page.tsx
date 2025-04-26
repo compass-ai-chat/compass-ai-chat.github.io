@@ -135,12 +135,13 @@ export default function Home() {
 
       {/* Contact Section */}
       <section className="container mx-auto px-4 py-16 md:py-24 bg-surface-light dark:bg-surface-dark rounded-3xl my-16">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid md:grid-cols-2 gap-12 items-center px-4">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7 }}
             viewport={{ once: true }}
+            className=""
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
               Get In <span className="text-emerald-500">Touch</span>
@@ -157,7 +158,7 @@ export default function Home() {
                 </div>
                 <div>
                   <h3 className="font-medium text-gray-900 dark:text-white">Email</h3>
-                  <p className="text-gray-700 dark:text-gray-300">hello@compassai.app</p>
+                  <p className="text-gray-700 dark:text-gray-300">compass-ai@nordwestt.com</p>
                 </div>
               </div>
 
@@ -167,7 +168,7 @@ export default function Home() {
                 </div>
                 <div>
                   <h3 className="font-medium text-gray-900 dark:text-white">GitHub</h3>
-                  <p className="text-gray-700 dark:text-gray-300">github.com/compass-ai</p>
+                  <p className="text-gray-700 dark:text-gray-300">github.com/nordwestt/compass</p>
                 </div>
               </div>
 
