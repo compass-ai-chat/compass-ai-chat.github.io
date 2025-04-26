@@ -50,7 +50,7 @@ export default function Home() {
       </section>
 
       {/* Demo Section */}
-      <section ref={demoRef} className="container mx-auto px-4 py-16 md:py-24">
+      <section ref={demoRef} className="container mx-auto px-4 py-16 md:py-24" id="demo">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -85,7 +85,7 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section className="container mx-auto px-4 py-16 md:py-24">
+      <section className="container mx-auto px-4 py-16 md:py-24" id="features">
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -134,7 +134,7 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section className="container mx-auto px-4 py-16 md:py-24 bg-surface-light dark:bg-surface-dark rounded-3xl my-16">
+      <section className="container mx-auto px-4 py-16 md:py-24 bg-surface-light dark:bg-surface-dark rounded-3xl my-16" id="contact">
         <div className="grid md:grid-cols-2 gap-12 items-center px-4">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
