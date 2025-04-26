@@ -1,26 +1,26 @@
 {
     "hero": {
-      "title": "Din AI-ledsager,",
+      "title": "Din AI-assistent,",
       "subtitle_1": "Under",
       "subtitle_2": "din",
       "subtitle_3": "Kontrol",
-      "description": "Compass er en open-source AI-chatapplikation, der giver dig kontrol mellem privatliv og hastighed. Kør helt offline, når privatlivet er en prioritet, eller opret forbindelse til en af mange udbydere, såsom ChatGPT, når du har brug for de nyeste modeller.",
-      "tryDemo": "Prøv Demo",
+      "description": "Compass er en open-source AI-chatapplikation, der giver dig kontrol over privatliv og hastighed. Kør helt offline, når følsomhed er en prioritet, eller forbind til en af mange udbydere, såsom ChatGPT, når du har brug for de nyeste modeller.",
+      "tryDemo": "Prøv Demoen",
       "downloadNow": "Download Nu"
     },
     "demo": {
-      "title": "Oplev Compass",
-      "subtitle": "I Aktion",
+      "title": "Prøv Compass",
+      "subtitle": "for dig selv",
       "demoTitle": "Compass Demo"
     },
     "features": {
-      "title": "Hvorfor Vælge",
-      "subtitle": "Compass",
+      "title": "Hvorfor vælge",
+      "subtitle": "Compass?",
       "description": "Bygget med kerneværdier om suverænitet, privatliv og kontrol",
       "cards": {
         "privacy": {
           "title": "Komplet Privatliv",
-          "description": "Kør modeller lokalt på din enhed. Ingen data behøver nogensinde at blive sendt til eksterne servere uden din udtrykkelige tilladelse."
+          "description": "Kør modeller lokalt på din enhed. Ingen data behøver nogensinde at blive sendt til eksterne servere uden din tilladelse."
         },
         "bestOfBoth": {
           "title": "Det Bedste fra Begge Verdener",
@@ -32,7 +32,7 @@
         },
         "openSource": {
           "title": "Open Source",
-          "description": "Fuldt gennemsigtig kodebase. Verificer sikkerheds- og privatlivspåstandene selv."
+          "description": "Fuldt gennemsigtig kodebase. Du kan verificere sikkerheds- og privatlivspåstandene selv."
         },
         "offline": {
           "title": "Offline-kapacitet",
@@ -40,14 +40,14 @@
         },
         "customizable": {
           "title": "Tilpasningsvenlig",
-          "description": "Tilpas Compass til dine specifikke behov med plugins og udvidelser."
+          "description": "Tilpas Compass til dine specifikke behov med temaer, karakterer og udbydere."
         }
       }
     },
     "contact": {
       "title": "Kom i",
       "subtitle": "Kontakt",
-      "description": "Interesseret i Compass? Ræk ud gennem en af disse kanaler.",
+      "description": "Interesseret i Compass? Tag fat på os gennem en af disse kanaler.",
       "email": "Email",
       "github": "GitHub",
       "linkedin": "LinkedIn",
