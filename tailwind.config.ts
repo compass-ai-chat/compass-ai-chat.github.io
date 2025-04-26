@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss"
+import colors from 'tailwindcss/colors'
 
 const config = {
   darkMode: ["class"],
@@ -20,6 +21,20 @@ const config = {
     },
     extend: {
       colors: {
+        gray: {
+          50: '#f7f7f7',
+          100: '#e3e3e3',
+          200: '#c8c8c8',
+          300: '#a4a4a4',
+          400: '#818181',
+          500: '#666666',
+          600: '#515151',
+          700: '#434343',
+          800: '#333333',
+          900: '#232323',
+          950: '#1a1a1a',
+        },
+        slate: colors.slate,
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

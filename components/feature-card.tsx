@@ -28,7 +28,7 @@ export default function FeatureCard({ title, description, icon, delay = 0 }: Fea
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, delay }}
+      transition={{ duration: 0.2, delay }}
       viewport={{ once: true }}
       whileHover={{ y: -5 }}
       className="bg-surface-light dark:bg-surface-dark p-6 rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100 dark:border-gray-700"

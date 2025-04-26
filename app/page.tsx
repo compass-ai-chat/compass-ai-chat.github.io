@@ -63,7 +63,7 @@ export default function Home() {
           </h2>
 
           <div
-            className={`w-full max-w-2/3 mx-auto bg-white dark:bg-gray-800 rounded-2xl shadow-xl overflow-hidden transition-all duration-500 ${isIframeMinimized ? "h-16" : "h-[800px]"}`}
+            className={`w-full max-w-2/3 mx-auto bg-white dark:bg-card rounded-2xl shadow-xl overflow-hidden transition-all duration-500 ${isIframeMinimized ? "h-16" : "h-[800px]"}`}
           >
             <div
               className="flex items-center justify-between bg-emerald-500 text-white p-4 cursor-pointer"
@@ -76,7 +76,7 @@ export default function Home() {
             </div>
 
             {!isIframeMinimized && (
-              <div className="h-[700px] w-full bg-gray-100 dark:bg-gray-700 flex items-center justify-center">
+              <div className="h-[700px] w-full bg-white dark:bg-card flex items-center justify-center">
                 <iframe src="https://nordwestt.com/compass" className="w-full h-full" />
               </div>
             )}
@@ -104,37 +104,31 @@ export default function Home() {
             title="Complete Privacy"
             description="All conversations stay on your device. No data is ever sent to the cloud without your explicit permission."
             icon="Shield"
-            delay={0.1}
           />
           <FeatureCard
             title="Decentralized Architecture"
             description="No central servers or authorities. Your data remains under your control at all times."
             icon="Network"
-            delay={0.2}
           />
           <FeatureCard
             title="True Ownership"
             description="You own your data and conversations. Export, delete, or manage them however you want."
             icon="Lock"
-            delay={0.3}
           />
           <FeatureCard
             title="Open Source"
             description="Fully transparent codebase. Verify the security and privacy claims yourself."
             icon="Code"
-            delay={0.4}
           />
           <FeatureCard
             title="Offline Capable"
             description="Works without an internet connection. Perfect for sensitive environments or travel."
             icon="Wifi"
-            delay={0.5}
           />
           <FeatureCard
             title="Customizable"
             description="Adapt Compass to your specific needs with plugins and extensions."
             icon="Settings"
-            delay={0.6}
           />
         </div>
       </section>
