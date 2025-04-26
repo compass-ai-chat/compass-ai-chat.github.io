@@ -38,6 +38,9 @@ i18n
       en: {
 
         translation: {
+            app:{
+                title: "Your AI Companion",
+            }
 
           // here we will place our translations...
 

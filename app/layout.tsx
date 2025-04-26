@@ -4,6 +4,7 @@ import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import { ThemeProvider } from "@/components/theme-provider"
 import BackgroundPattern from "@/components/background-pattern"
+import { I18nProvider } from "@/components/i18n-provider"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -22,7 +23,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
-          <BackgroundPattern>{children}</BackgroundPattern>
+          <I18nProvider>
+            <BackgroundPattern>{children}</BackgroundPattern>
+          </I18nProvider>
         </ThemeProvider>
       </body>
     </html>

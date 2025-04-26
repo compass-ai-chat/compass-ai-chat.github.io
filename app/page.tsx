@@ -8,8 +8,12 @@ import ContactForm from "@/components/contact-form"
 import FeatureCard from "@/components/feature-card"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
+import { useTranslation } from "react-i18next"
+
 
 export default function Home() {
+  const { t } = useTranslation();
+
   const [isIframeMinimized, setIsIframeMinimized] = useState(false)
   const demoRef = useRef<HTMLDivElement>(null)
 
@@ -31,7 +35,7 @@ export default function Home() {
             className="max-w-3xl"
           >
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
-              Your AI Companion, <br/>
+              {t("app.title")}, <br/>
               <span className="text-emerald-500">Under <u>your</u> Control</span>
             </h1>
             <p className="text-xl text-gray-700 dark:text-gray-300 mb-8">
