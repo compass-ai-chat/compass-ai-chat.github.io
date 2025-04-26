@@ -8,9 +8,11 @@ import Link from "next/link"
 import ThemeToggle from "@/components/theme-toggle"
 import { changeLanguage } from '../i18n';
 import LanguageSwitcher from "./language-switcher"
+import { useTranslation } from 'react-i18next';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const { t } = useTranslation();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen)
@@ -58,7 +60,7 @@ export default function Header() {
                   scrollToSection('demo');
                 }}
               >
-                Demo
+                {t('nav.demo')}
               </a>
             </motion.div>
             <motion.div
@@ -74,7 +76,7 @@ export default function Header() {
                   scrollToSection('features');
                 }}
               >
-                Features
+                {t('nav.features')}
               </a>
             </motion.div>
             
@@ -91,7 +93,7 @@ export default function Header() {
                   scrollToSection('contact');
                 }}
               >
-                Contact
+                {t('nav.contact')}
               </a>
             </motion.div>
             <motion.div
@@ -106,7 +108,7 @@ export default function Header() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
             >
-              <Button className="bg-emerald-500 hover:bg-emerald-600 text-white">Download</Button>
+              <Button className="bg-emerald-500 hover:bg-emerald-600 text-white">{t('nav.download')}</Button>
             </motion.div>
             <LanguageSwitcher />
 
@@ -140,7 +142,7 @@ export default function Header() {
                 scrollToSection('features');
               }}
             >
-              Features
+              {t('nav.features')}
             </a>
             <a
               href="#demo"
@@ -150,7 +152,7 @@ export default function Header() {
                 scrollToSection('demo');
               }}
             >
-              Demo
+              {t('nav.demo')}
             </a>
             <a
               href="#contact"
@@ -160,7 +162,7 @@ export default function Header() {
                 scrollToSection('contact');
               }}
             >
-              Contact
+              {t('nav.contact')}
             </a>
             <div className="flex justify-center py-2">
               <ThemeToggle />
@@ -169,7 +171,7 @@ export default function Header() {
               className="bg-emerald-500 hover:bg-emerald-600 text-white w-full"
               onClick={() => setIsMenuOpen(false)}
             >
-              Download
+              {t('nav.download')}
             </Button>
           </div>
         </motion.div>
