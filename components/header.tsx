@@ -134,6 +134,16 @@ export default function Header() {
           className="md:hidden bg-white"
         >
           <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
+          <a
+              href="#demo"
+              className="text-gray-600 hover:text-emerald-500 transition-colors py-2 cursor-pointer"
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToSection('demo');
+              }}
+            >
+              {t('nav.demo')}
+            </a>
             <a
               href="#features"
               className="text-gray-600 hover:text-emerald-500 transition-colors py-2 cursor-pointer"
@@ -143,16 +153,6 @@ export default function Header() {
               }}
             >
               {t('nav.features')}
-            </a>
-            <a
-              href="#demo"
-              className="text-gray-600 hover:text-emerald-500 transition-colors py-2 cursor-pointer"
-              onClick={(e) => {
-                e.preventDefault();
-                scrollToSection('demo');
-              }}
-            >
-              {t('nav.demo')}
             </a>
             <a
               href="#contact"
@@ -173,6 +173,8 @@ export default function Header() {
             >
               {t('nav.download')}
             </Button>
+            <LanguageSwitcher />
+
           </div>
         </motion.div>
       )}
