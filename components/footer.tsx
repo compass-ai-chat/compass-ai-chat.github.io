@@ -15,16 +15,18 @@ export default function Footer() {
               {t('footer.description')}
             </p>
             <div className="flex space-x-4">
-              <Link href="#" className="text-gray-500 dark:text-gray-300 hover:text-emerald-500 transition-colors">
+              <Link href="https://github.com/nordwestt/compass#user-content-welcome-to-compass-" 
+                    className="text-gray-500 dark:text-gray-300 hover:text-emerald-500 transition-colors"
+                    target="_blank">
                 <Github className="h-5 w-5" />
               </Link>
-              <Link href="#" className="text-gray-500 dark:text-gray-300 hover:text-emerald-500 transition-colors">
-                <Twitter className="h-5 w-5" />
-              </Link>
-              <Link href="#" className="text-gray-500 dark:text-gray-300 hover:text-emerald-500 transition-colors">
+              <Link href="https://www.linkedin.com/in/thomas-nordentoft" 
+                    className="text-gray-500 dark:text-gray-300 hover:text-emerald-500 transition-colors"
+                    target="_blank">
                 <Linkedin className="h-5 w-5" />
               </Link>
-              <Link href="#" className="text-gray-500 dark:text-gray-300 hover:text-emerald-500 transition-colors">
+              <Link href="mailto:thomas@nordentoft.dk" 
+                    className="text-gray-500 dark:text-gray-300 hover:text-emerald-500 transition-colors">
                 <Mail className="h-5 w-5" />
               </Link>
             </div>
@@ -57,7 +59,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-semibold text-gray-900 dark:text-white mb-4">{t('footer.resources.title')}</h4>
+            {/* <h4 className="font-semibold text-gray-900 dark:text-white mb-4">{t('footer.resources.title')}</h4>
             <ul className="space-y-2">
               <li>
                 <Link href="#" className="text-gray-600 dark:text-gray-300 hover:text-emerald-500 transition-colors">
@@ -79,7 +81,7 @@ export default function Footer() {
                   {t('footer.resources.terms')}
                 </Link>
               </li>
-            </ul>
+            </ul> */}
           </div>
         </div>
 
