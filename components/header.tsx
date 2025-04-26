@@ -108,9 +108,10 @@ export default function Header() {
             >
               <Button className="bg-emerald-500 hover:bg-emerald-600 text-white">Download</Button>
             </motion.div>
+            <LanguageSwitcher />
+
           </nav>
 
-          <LanguageSwitcher />
 
           {/* Mobile Menu Button */}
           <div className="md:hidden">
