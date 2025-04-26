@@ -195,7 +195,7 @@ export default function Home() {
             transition={{ duration: 0.7 }}
             viewport={{ once: true }}
           >
-            <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg">
+            <div className="bg-card text-card-foreground dark:border dark:border-emerald-700/50 p-8 rounded-2xl shadow-lg">
               <h3 className="text-2xl font-bold mb-6 text-gray-900 dark:text-white">Send us a message</h3>
               <ContactForm />
             </div>
