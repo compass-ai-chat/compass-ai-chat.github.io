@@ -1,0 +1,71 @@
+{
+    "hero": {
+      "title": "Din AI-ledsager,",
+      "subtitle_1": "Under",
+      "subtitle_2": "din",
+      "subtitle_3": "Kontrol",
+      "description": "Compass er en open-source AI-chatapplikation, der giver dig kontrol mellem privatliv og hastighed. Kør helt offline, når privatlivet er en prioritet, eller opret forbindelse til en af mange udbydere, såsom ChatGPT, når du har brug for de nyeste modeller.",
+      "tryDemo": "Prøv Demo",
+      "downloadNow": "Download Nu"
+    },
+    "demo": {
+      "title": "Oplev Compass",
+      "subtitle": "I Aktion",
+      "demoTitle": "Compass Demo"
+    },
+    "features": {
+      "title": "Hvorfor Vælge",
+      "subtitle": "Compass",
+      "description": "Bygget med kerneværdier om suverænitet, privatliv og kontrol",
+      "cards": {
+        "privacy": {
+          "title": "Komplet Privatliv",
+          "description": "Kør modeller lokalt på din enhed. Ingen data behøver nogensinde at blive sendt til eksterne servere uden din udtrykkelige tilladelse."
+        },
+        "bestOfBoth": {
+          "title": "Det Bedste fra Begge Verdener",
+          "description": "Opret forbindelse til udbydere som ChatGPT, Claude eller Gemini for banebrydende modeller, eller forbliv offline til følsomme opgaver."
+        },
+        "ownership": {
+          "title": "Ægte Ejerskab",
+          "description": "Du ejer dine data og samtaler. Eksportér, slet eller administrer dem, som du vil."
+        },
+        "openSource": {
+          "title": "Open Source",
+          "description": "Fuldt gennemsigtig kodebase. Verificer sikkerheds- og privatlivspåstandene selv."
+        },
+        "offline": {
+          "title": "Offline-kapacitet",
+          "description": "Fungerer uden internetforbindelse. Perfekt til rejser eller når privatlivet er en prioritet."
+        },
+        "customizable": {
+          "title": "Tilpasningsvenlig",
+          "description": "Tilpas Compass til dine specifikke behov med plugins og udvidelser."
+        }
+      }
+    },
+    "contact": {
+      "title": "Kom i",
+      "subtitle": "Kontakt",
+      "description": "Interesseret i Compass? Ræk ud gennem en af disse kanaler.",
+      "email": "Email",
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "sendMessage": "Send os en besked",
+      "form": {
+        "name": "Navn",
+        "email": "Email",
+        "message": "Besked",
+        "send": "Send Besked",
+        "sending": "Sender...",
+        "success": "Tak! Din besked er blevet sendt med succes."
+      }
+    },
+    "nav": {
+      "demo": "Demo",
+      "features": "Funktioner",
+      "contact": "Kontakt",
+      "download": "Download"
+    }
+  }
+  
