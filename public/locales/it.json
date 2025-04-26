@@ -1,0 +1,68 @@
+{
+    "hero": {
+      "title": "Il tuo Compagno AI,",
+      "subtitle": "Sotto il tuo Controllo",
+      "description": "Compass è un'applicazione di chat AI open-source che ti offre il controllo tra privacy e velocità. Funziona completamente offline quando la privacy è una priorità o connettiti a uno dei tanti provider, come ChatGPT, quando hai bisogno dei modelli più recenti.",
+      "tryDemo": "Prova la Demo",
+      "downloadNow": "Scarica Ora"
+    },
+    "demo": {
+      "title": "Prova Compass",
+      "subtitle": "In Azione",
+      "demoTitle": "Demo di Compass"
+    },
+    "features": {
+      "title": "Perché Scegliere",
+      "subtitle": "Compass",
+      "description": "Costruito con valori fondamentali di sovranità, privacy e controllo",
+      "cards": {
+        "privacy": {
+          "title": "Privacy Completa",
+          "description": "Esegui modelli localmente sul tuo dispositivo. Nessun dato deve mai essere inviato a server esterni senza il tuo esplicito permesso."
+        },
+        "bestOfBoth": {
+          "title": "Il Meglio di Entrambi i Mondi",
+          "description": "Connettiti a provider come ChatGPT, Claude o Gemini per modelli all'avanguardia, o rimani offline per attività sensibili."
+        },
+        "ownership": {
+          "title": "Vera Proprietà",
+          "description": "Possiedi i tuoi dati e conversazioni. Esporta, elimina o gestiscili come preferisci."
+        },
+        "openSource": {
+          "title": "Open Source",
+          "description": "Codice completamente trasparente. Verifica tu stesso le affermazioni sulla sicurezza e la privacy."
+        },
+        "offline": {
+          "title": "Capacità Offline",
+          "description": "Funziona senza connessione internet. Perfetto per viaggiare o quando la privacy è una priorità."
+        },
+        "customizable": {
+          "title": "Personalizzabile",
+          "description": "Adatta Compass alle tue esigenze specifiche con plugin ed estensioni."
+        }
+      }
+    },
+    "contact": {
+      "title": "Mettiti in",
+      "subtitle": "Contatto",
+      "description": "Interessato a Compass? Contattaci attraverso uno di questi canali.",
+      "email": "Email",
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "sendMessage": "Inviaci un messaggio",
+      "form": {
+        "name": "Nome",
+        "email": "Email",
+        "message": "Messaggio",
+        "send": "Invia Messaggio",
+        "sending": "Invio in corso...",
+        "success": "Grazie! Il tuo messaggio è stato inviato con successo."
+      }
+    },
+    "nav": {
+      "demo": "Demo",
+      "features": "Funzionalità",
+      "contact": "Contatti",
+      "download": "Scarica"
+    }
+  }

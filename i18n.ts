@@ -4,6 +4,7 @@ import { initReactI18next } from 'react-i18next';
 
 import LanguageDetector from 'i18next-browser-languagedetector';
 import enTranslation from './public/locales/en.json';
+import itTranslation from './public/locales/it.json';
 
 
 i18n
@@ -39,6 +40,11 @@ i18n
       en: {
 
         translation: enTranslation
+
+      },
+      it: {
+
+        translation: itTranslation
 
       }
 
