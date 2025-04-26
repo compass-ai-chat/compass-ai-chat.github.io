@@ -155,7 +155,7 @@ export default function Home() {
             </p>
 
             <div className="space-y-4 mb-8">
-              <div className="flex items-center gap-4 cursor-pointer hover:bg-emerald-100 dark:hover:bg-emerald-900 rounded-full transition-all duration-300">
+              <div onClick={() => window.open('mailto:thomas@nordentoft.dk')} className="flex items-center gap-4 cursor-pointer hover:bg-emerald-100 dark:hover:bg-emerald-900 rounded-full transition-all duration-300">
                 <div className="bg-emerald-100 dark:bg-emerald-900 p-3 rounded-full">
                   <Mail className="h-6 w-6 text-emerald-600 dark:text-emerald-400" />
                 </div>
