@@ -20,7 +20,7 @@
       "cards": {
         "privacy": {
           "title": "Privacy Completa",
-          "description": "Esegui modelli localmente sul tuo dispositivo. Nessun dato deve mai essere inviato a server esterni senza il tuo esplicito permesso."
+          "description": "Esegui modelli localmente sul tuo dispositivo. Nessun dato sara inviato a server esterni senza il tuo esplicito permesso."
         },
         "bestOfBoth": {
           "title": "Il Meglio di Entrambi i Mondi",
