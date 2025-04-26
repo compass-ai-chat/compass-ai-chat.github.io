@@ -73,6 +73,20 @@
       "features": "Funktioner",
       "contact": "Kontakt",
       "download": "Download"
+    },
+    "footer": {
+      "description": "En open-source, lokal AI-chatapplikation med fokus på privatliv, decentralisering og ægte dataejerskab.",
+      "links": {
+        "title": "Links"
+      },
+      "resources": {
+        "title": "Ressourcer",
+        "documentation": "Dokumentation",
+        "repository": "GitHub Repository",
+        "privacy": "Privatlivspolitik",
+        "terms": "Servicevilkår"
+      },
+      "copyright": "© {{year}} Compass AI. Alle rettigheder forbeholdes."
     }
   }
   

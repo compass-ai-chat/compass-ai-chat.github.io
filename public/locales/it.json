@@ -73,5 +73,19 @@
       "features": "Funzionalità",
       "contact": "Contatti",
       "download": "Scarica"
+    },
+    "footer": {
+      "description": "Un'applicazione di chat AI open-source e locale focalizzata sulla privacy, la decentralizzazione e la vera proprietà dei dati.",
+      "links": {
+        "title": "Collegamenti"
+      },
+      "resources": {
+        "title": "Risorse",
+        "documentation": "Documentazione",
+        "repository": "Repository GitHub",
+        "privacy": "Informativa sulla Privacy",
+        "terms": "Termini di Servizio"
+      },
+      "copyright": "© {{year}} Compass AI. Tutti i diritti riservati."
     }
   }

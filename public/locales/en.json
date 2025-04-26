@@ -75,6 +75,17 @@
       "download": "Download"
     },
     "footer": {
+      "description": "An open-source, local AI chat application focused on privacy, decentralization, and true data ownership.",
+      "links": {
+        "title": "Links"
+      },
+      "resources": {
+        "title": "Resources",
+        "documentation": "Documentation",
+        "repository": "GitHub Repository",
+        "privacy": "Privacy Policy",
+        "terms": "Terms of Service"
+      },
       "copyright": "© {{year}} Compass AI. All rights reserved."
     }
   }

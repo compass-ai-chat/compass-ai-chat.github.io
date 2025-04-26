@@ -1,7 +1,10 @@
 import { Github, Linkedin, Mail, Twitter } from "lucide-react"
 import Link from "next/link"
+import { useTranslation } from "react-i18next"
 
 export default function Footer() {
+  const { t } = useTranslation()
+  
   return (
     <footer className="bg-surface-light dark:bg-surface-dark border-t border-gray-200 dark:border-gray-700">
       <div className="container mx-auto px-4 py-12">
@@ -9,7 +12,7 @@ export default function Footer() {
           <div className="md:col-span-2">
             <h3 className="text-2xl font-bold text-emerald-500 mb-4">Compass</h3>
             <p className="text-gray-600 dark:text-gray-300 mb-4 max-w-md">
-              An open-source, local AI chat application focused on privacy, decentralization, and true data ownership.
+              {t('footer.description')}
             </p>
             <div className="flex space-x-4">
               <Link href="#" className="text-gray-500 dark:text-gray-300 hover:text-emerald-500 transition-colors">
@@ -28,52 +31,52 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-semibold text-gray-900 dark:text-white mb-4">Links</h4>
+            <h4 className="font-semibold text-gray-900 dark:text-white mb-4">{t('footer.links.title')}</h4>
             <ul className="space-y-2">
               <li>
                 <Link href="#" className="text-gray-600 dark:text-gray-300 hover:text-emerald-500 transition-colors">
-                  Features
+                  {t('nav.features')}
                 </Link>
               </li>
               <li>
                 <Link href="#" className="text-gray-600 dark:text-gray-300 hover:text-emerald-500 transition-colors">
-                  Demo
+                  {t('nav.demo')}
                 </Link>
               </li>
               <li>
                 <Link href="#" className="text-gray-600 dark:text-gray-300 hover:text-emerald-500 transition-colors">
-                  Download
+                  {t('nav.download')}
                 </Link>
               </li>
               <li>
                 <Link href="#" className="text-gray-600 dark:text-gray-300 hover:text-emerald-500 transition-colors">
-                  Contact
+                  {t('nav.contact')}
                 </Link>
               </li>
             </ul>
           </div>
 
           <div>
-            <h4 className="font-semibold text-gray-900 dark:text-white mb-4">Resources</h4>
+            <h4 className="font-semibold text-gray-900 dark:text-white mb-4">{t('footer.resources.title')}</h4>
             <ul className="space-y-2">
               <li>
                 <Link href="#" className="text-gray-600 dark:text-gray-300 hover:text-emerald-500 transition-colors">
-                  Documentation
+                  {t('footer.resources.documentation')}
                 </Link>
               </li>
               <li>
                 <Link href="#" className="text-gray-600 dark:text-gray-300 hover:text-emerald-500 transition-colors">
-                  GitHub Repository
+                  {t('footer.resources.repository')}
                 </Link>
               </li>
               <li>
                 <Link href="#" className="text-gray-600 dark:text-gray-300 hover:text-emerald-500 transition-colors">
-                  Privacy Policy
+                  {t('footer.resources.privacy')}
                 </Link>
               </li>
               <li>
                 <Link href="#" className="text-gray-600 dark:text-gray-300 hover:text-emerald-500 transition-colors">
-                  Terms of Service
+                  {t('footer.resources.terms')}
                 </Link>
               </li>
             </ul>
@@ -81,7 +84,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-gray-200 mt-12 pt-8 text-center text-gray-500">
-          <p>© {new Date().getFullYear()} Compass AI. All rights reserved.</p>
+          <p>{t('footer.copyright', { year: new Date().getFullYear() })}</p>
         </div>
       </div>
     </footer>
