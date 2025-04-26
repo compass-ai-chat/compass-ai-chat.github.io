@@ -1,0 +1,71 @@
+{
+    "hero": {
+      "title": "Your AI Companion,",
+      "subtitle": "Under your Control",
+      "description": "Compass is an open-source AI chat application that gives you control between privacy and speed. Run entirely offline when privacy is a priority or connect to one of many providers, such as ChatGPT, when you need the latest models.",
+      "tryDemo": "Try Demo",
+      "downloadNow": "Download Now"
+    },
+    "demo": {
+      "title": "Experience Compass",
+      "subtitle": "In Action",
+      "demoTitle": "Compass Demo"
+    },
+    "features": {
+      "title": "Why Choose",
+      "subtitle": "Compass",
+      "description": "Built with core values of sovereignty, privacy, and control",
+      "cards": {
+        "privacy": {
+          "title": "Complete Privacy",
+          "description": "Run models locally on your device. No data ever needs to be sent to external servers without your explicit permission."
+        },
+        "bestOfBoth": {
+          "title": "Best of Both Worlds",
+          "description": "Connect to providers like ChatGPT, Claude, or Gemini for cutting-edge models, or stay offline for sensitive tasks."
+        },
+        "ownership": {
+          "title": "True Ownership",
+          "description": "You own your data and conversations. Export, delete, or manage them however you want."
+        },
+        "openSource": {
+          "title": "Open Source",
+          "description": "Fully transparent codebase. Verify the security and privacy claims yourself."
+        },
+        "offline": {
+          "title": "Offline Capable",
+          "description": "Works without an internet connection. Perfect for travel or when privacy is a priority."
+        },
+        "customizable": {
+          "title": "Customizable",
+          "description": "Adapt Compass to your specific needs with plugins and extensions."
+        }
+      }
+    },
+    "contact": {
+      "title": "Get In",
+      "subtitle": "Touch",
+      "description": "Interested in Compass? Reach out through any of these channels.",
+      "email": "Email",
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "sendMessage": "Send us a message",
+      "form": {
+        "name": "Name",
+        "email": "Email",
+        "message": "Message",
+        "send": "Send Message",
+        "sending": "Sending...",
+        "success": "Thank you! Your message has been sent successfully."
+      }
+    },
+    "nav": {
+      "demo": "Demo",
+      "features": "Features",
+      "contact": "Contact",
+      "download": "Download"
+    },
+    "footer": {
+      "copyright": "© {{year}} Compass AI. All rights reserved."
+    }
+  }

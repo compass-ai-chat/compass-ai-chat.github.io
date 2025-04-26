@@ -35,7 +35,7 @@ export default function Home() {
             className="max-w-3xl"
           >
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
-              {t("app.title")}, <br/>
+              {t("hero.title")}<br/>
               <span className="text-emerald-500">Under <u>your</u> Control</span>
             </h1>
             <p className="text-xl text-gray-700 dark:text-gray-300 mb-8">
