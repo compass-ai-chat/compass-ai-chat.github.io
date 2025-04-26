@@ -36,17 +36,17 @@ export default function Home() {
           >
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
               {t("hero.title")}<br/>
-              <span className="text-emerald-500">Under <u>your</u> Control</span>
+              <span className="text-emerald-500">{t("hero.subtitle_1")} <u>{t("hero.subtitle_2")}</u> {t("hero.subtitle_3")}</span>
             </h1>
             <p className="text-xl text-gray-700 dark:text-gray-300 mb-8">
-              Compass is an open-source AI chat application that gives you control between privacy and speed. Run entirely offline when privacy is a priority or connect to one of many providers, such as ChatGPT, when you need the latest models.
+              {t("hero.description")}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-emerald-500 hover:bg-emerald-600 text-white" onClick={scrollToDemo}>
-                Try Demo
+                {t("hero.tryDemo")}
               </Button>
               <Button size="lg" variant="outline" className="border-emerald-500 text-emerald-500 hover:bg-emerald-50 dark:hover:bg-emerald-950">
-                Download Now
+                {t("hero.downloadNow")}
               </Button>
             </div>
           </motion.div>
@@ -63,7 +63,7 @@ export default function Home() {
           className="flex flex-col items-center"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-12 text-center">
-            Experience Compass <span className="text-emerald-500">In Action</span>
+            {t("demo.title")} <span className="text-emerald-500">{t("demo.subtitle")}</span>
           </h2>
 
           <div
@@ -73,7 +73,7 @@ export default function Home() {
               className="flex items-center justify-between bg-emerald-500 text-white p-4 cursor-pointer"
               onClick={() => setIsIframeMinimized(!isIframeMinimized)}
             >
-              <h3 className="font-medium">Compass Demo</h3>
+              <h3 className="font-medium">{t("demo.demoTitle")}</h3>
               <Button variant="ghost" size="sm" className="text-white hover:bg-emerald-600 p-1 h-auto">
                 {isIframeMinimized ? <ChevronDown size={18} /> : <ChevronUp size={18} />}
               </Button>
@@ -98,40 +98,40 @@ export default function Home() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-            Why Choose <span className="text-emerald-500">Compass</span>?
+            {t("features.title")} <span className="text-emerald-500">{t("features.subtitle")}</span>
           </h2>
-          <p className="text-xl text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">Built with core values of sovereignty, privacy, and control</p>
+          <p className="text-xl text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">{t("features.description")}</p>
         </motion.div>
 
         <div className="grid md:grid-cols-3 gap-8">
           <FeatureCard
-            title="Complete Privacy"
-            description="Run models locally on your device. No data ever needs to be sent to external servers without your explicit permission."
+            title={t("features.cards.privacy.title")}
+            description={t("features.cards.privacy.description")}
             icon="Shield"
           />
           <FeatureCard
-            title="Best of Both Worlds"
-            description="Connect to providers like ChatGPT, Claude, or Gemini for cutting-edge models, or stay offline for sensitive tasks."
+            title={t("features.cards.bestOfBoth.title")}
+            description={t("features.cards.bestOfBoth.description")}
             icon="Network"
           />
           <FeatureCard
-            title="True Ownership"
-            description="You own your data and conversations. Export, delete, or manage them however you want."
+            title={t("features.cards.ownership.title")}
+            description={t("features.cards.ownership.description")}
             icon="Lock"
           />
           <FeatureCard
-            title="Open Source"
-            description="Fully transparent codebase. Verify the security and privacy claims yourself."
+            title={t("features.cards.openSource.title")}
+            description={t("features.cards.openSource.description")}
             icon="Code"
           />
           <FeatureCard
-            title="Offline Capable"
-            description="Works without an internet connection. Perfect for travel or when privacy is a priority."
+            title={t("features.cards.offline.title")}
+            description={t("features.cards.offline.description")}
             icon="Wifi"
           />
           <FeatureCard
-            title="Customizable"
-            description="Adapt Compass to your specific needs with plugins and extensions."
+            title={t("features.cards.customizable.title")}
+            description={t("features.cards.customizable.description")}
             icon="Settings"
           />
         </div>
@@ -148,11 +148,10 @@ export default function Home() {
             className=""
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
-              Get In <span className="text-emerald-500">Touch</span>
+              {t("contact.title")} <span className="text-emerald-500">{t("contact.subtitle")}</span>
             </h2>
             <p className="text-lg text-gray-700 dark:text-gray-300 mb-8">
-              Interested in Compass? Reach out through any of these
-              channels.
+              {t("contact.description")}
             </p>
 
             <div className="space-y-4 mb-8">
@@ -161,7 +160,7 @@ export default function Home() {
                   <Mail className="h-6 w-6 text-emerald-600 dark:text-emerald-400" />
                 </div>
                 <div>
-                  <h3 className="font-medium text-gray-900 dark:text-white">Email</h3>
+                  <h3 className="font-medium text-gray-900 dark:text-white">{t("contact.email")}</h3>
                   <p className="text-gray-700 dark:text-gray-300">compass-ai@nordwestt.com</p>
                 </div>
               </div>
@@ -171,7 +170,7 @@ export default function Home() {
                   <Github className="h-6 w-6 text-emerald-600 dark:text-emerald-400" />
                 </div>
                 <div>
-                  <h3 className="font-medium text-gray-900 dark:text-white">GitHub</h3>
+                  <h3 className="font-medium text-gray-900 dark:text-white">{t("contact.github")}</h3>
                   <p className="text-gray-700 dark:text-gray-300">github.com/nordwestt/compass</p>
                 </div>
               </div>
@@ -181,7 +180,7 @@ export default function Home() {
                   <Linkedin className="h-6 w-6 text-emerald-600 dark:text-emerald-400" />
                 </div>
                 <div>
-                  <h3 className="font-medium text-gray-900 dark:text-white">LinkedIn</h3>
+                  <h3 className="font-medium text-gray-900 dark:text-white">{t("contact.linkedin")}</h3>
                   <p className="text-gray-700 dark:text-gray-300">linkedin.com/company/compass-ai</p>
                 </div>
               </div>
@@ -195,7 +194,7 @@ export default function Home() {
             viewport={{ once: true }}
           >
             <div className="bg-card text-card-foreground dark:border dark:border-emerald-700/50 p-8 rounded-2xl shadow-lg">
-              <h3 className="text-2xl font-bold mb-6 text-gray-900 dark:text-white">Send us a message</h3>
+              <h3 className="text-2xl font-bold mb-6 text-gray-900 dark:text-white">{t("contact.sendMessage")}</h3>
               <ContactForm />
             </div>
           </motion.div>

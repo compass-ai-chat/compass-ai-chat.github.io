@@ -1,7 +1,9 @@
 {
     "hero": {
       "title": "Your AI Companion,",
-      "subtitle": "Under your Control",
+      "subtitle_1": "Under your Control",
+      "subtitle_2": "your",
+      "subtitle_3": "Control",
       "description": "Compass is an open-source AI chat application that gives you control between privacy and speed. Run entirely offline when privacy is a priority or connect to one of many providers, such as ChatGPT, when you need the latest models.",
       "tryDemo": "Try Demo",
       "downloadNow": "Download Now"
