@@ -87,10 +87,17 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        "compass-rotate": {
+          "0%, 100%": { transform: "rotate(-15deg)" },
+          "10%, 90%": { transform: "rotate(-15deg)" }, // pause at extremes
+          "50%": { transform: "rotate(15deg)" },
+          "40%, 60%": { transform: "rotate(15deg)" }, // pause at extremes
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "compass-rotate": "compass-rotate 8s ease-in-out infinite",
       },
     },
   },

@@ -60,7 +60,11 @@ export default function Home() {
             className="max-w-3xl"
           >
           <div className="flex flex-col md:flex-row items-center mb-6">
-            <img className="h-24 self-center mb-4 md:mb-0 md:mr-4" src="https://github.com/nordwestt/compass/blob/master/assets/compass.png?raw=true" alt="Compass Logo" />
+            <img 
+              className="h-24 self-center mb-4 md:mb-0 md:mr-4 animate-compass-rotate origin-center" 
+              src="https://github.com/nordwestt/compass/blob/master/assets/compass.png?raw=true" 
+              alt="Compass Logo" 
+            />
             <h1 className="my-auto text-4xl md:text-6xl font-bold text-gray-900 dark:text-white text-center md:text-left">
               {t("hero.title")}<br/>
               <span className="text-emerald-500">{t("hero.subtitle_1")} <u>{t("hero.subtitle_2")}</u> {t("hero.subtitle_3")}</span>
