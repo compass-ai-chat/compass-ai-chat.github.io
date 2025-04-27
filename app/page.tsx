@@ -315,9 +315,9 @@ export default function Home() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7 }}
             viewport={{ once: true }}
-            className="flex flex-col items-center w-full"
+            className="flex flex-col md:px-4 w-full"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6 mx-auto">
               {t("contact.title")}{" "}
               <span className="text-emerald-500">{t("contact.subtitle")}</span>
             </h2>
