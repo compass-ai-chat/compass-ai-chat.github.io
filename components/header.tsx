@@ -122,7 +122,7 @@ export default function Header() {
 
           {/* Mobile Menu Button */}
           <div className="md:hidden">
-            <Button variant="ghost" size="icon" onClick={toggleMenu} className="text-gray-700">
+            <Button variant="ghost" size="icon" onClick={toggleMenu} className="text-gray-700 bg-accent">
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </Button>
           </div>
