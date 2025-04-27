@@ -166,6 +166,7 @@ export default function Header() {
             </a>
             <div className="flex justify-center py-2">
               <ThemeToggle />
+              <LanguageSwitcher />
             </div>
             <Button
               className="bg-emerald-500 hover:bg-emerald-600 text-white w-full"
@@ -173,7 +174,7 @@ export default function Header() {
             >
               {t('nav.download')}
             </Button>
-            <LanguageSwitcher />
+            
 
           </div>
         </motion.div>

@@ -50,17 +50,22 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="container mx-auto px-4 pt-20 pb-16 md:pt-32 md:pb-24">
+        
         <div className="flex flex-col items-center text-center">
+          
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="max-w-3xl"
           >
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
+          <div className="flex flex-row items-center mb-6">
+          <img className="h-24 self-center mr-4" src="https://github.com/nordwestt/compass/blob/master/assets/compass.png?raw=true" alt="Compass Logo" />
+            <h1 className="my-auto text-4xl md:text-6xl font-bold text-gray-900 dark:text-white">
               {t("hero.title")}<br/>
               <span className="text-emerald-500">{t("hero.subtitle_1")} <u>{t("hero.subtitle_2")}</u> {t("hero.subtitle_3")}</span>
             </h1>
+            </div>
             <p className="text-xl text-gray-700 dark:text-gray-300 mb-8">
               {t("hero.description")}
             </p>
