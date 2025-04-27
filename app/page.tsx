@@ -146,7 +146,7 @@ export default function Home() {
           {/* Scrolling providers */}
           <div className="flex overflow-hidden">
             <motion.div
-              className="flex gap-12 items-center py-8"
+              className="flex items-center py-8 md:gap-12"
               animate={{ x: ["0%", "-50%"] }}
               transition={{
                 x: {
