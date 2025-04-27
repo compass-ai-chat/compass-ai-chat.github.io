@@ -41,6 +41,11 @@ export default function Header() {
             className="flex items-center"
           >
             <Link href="/" className="flex items-center">
+            <img 
+              className="h-8 self-center mr-2" 
+              src="https://github.com/nordwestt/compass/blob/master/assets/compass.png?raw=true" 
+              alt="Compass Logo" 
+            />
               <span className="text-2xl font-bold text-emerald-500">Compass</span>
             </Link>
           </motion.div>
