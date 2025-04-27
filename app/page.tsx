@@ -51,6 +51,20 @@ export default function Home() {
     }
   };
 
+  // Supported providers data
+  const supportedProviders = [
+    { name: "OpenAI", logo: "/images/providers/openai.svg" },
+    { name: "Anthropic", logo: "/images/providers/anthropic.svg" },
+    { name: "Google", logo: "/images/providers/google.svg" },
+    { name: "Mistral AI", logo: "/images/providers/mistral.svg" },
+    { name: "Cohere", logo: "/images/providers/cohere.svg" },
+    { name: "Hugging Face", logo: "/images/providers/huggingface.svg" },
+    { name: "Replicate", logo: "/images/providers/replicate.svg" },
+    { name: "AI21 Labs", logo: "/images/providers/ai21.svg" },
+    { name: "Together AI", logo: "/images/providers/together.svg" },
+    { name: "Ollama", logo: "/images/providers/ollama.svg" },
+  ];
+
   return (
     <div className="min-h-screen">
       <Header />
@@ -89,6 +103,82 @@ export default function Home() {
               </Button>
             </div>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Supported Providers Section */}
+      <section className="py-16 overflow-hidden bg-gray-50 dark:bg-gray-900/50">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.7 }}
+            viewport={{ once: true }}
+            className="text-center mb-10"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+              {t("providers.title")} <span className="text-emerald-500">{t("providers.subtitle")}</span>
+            </h2>
+            <p className="text-xl text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">
+              {t("providers.description")}
+            </p>
+          </motion.div>
+        </div>
+        
+        <div className="relative">
+          {/* Gradient overlay - left */}
+          <div className="absolute left-0 top-0 w-24 h-full bg-gradient-to-r from-gray-50 to-transparent dark:from-gray-900/50 z-10"></div>
+          
+          {/* Scrolling providers */}
+          <div className="flex overflow-hidden">
+            <motion.div
+              className="flex gap-12 items-center py-8"
+              animate={{ x: ["0%", "-50%"] }}
+              transition={{
+                x: {
+                  repeat: Infinity,
+                  repeatType: "loop",
+                  duration: 40,
+                  ease: "linear",
+                },
+              }}
+            >
+              {/* First set of providers */}
+              {supportedProviders.map((provider, index) => (
+                <div key={`provider-${index}`} className="flex flex-col items-center mx-6">
+                  <div className="w-24 h-24 flex items-center justify-center bg-white dark:bg-gray-800 rounded-lg shadow-sm p-4">
+                    <img
+                      src={provider.logo}
+                      alt={`${provider.name} logo`}
+                      className="max-w-full max-h-full object-contain"
+                    />
+                  </div>
+                  <span className="mt-3 text-gray-700 dark:text-gray-300 font-medium">
+                    {provider.name}
+                  </span>
+                </div>
+              ))}
+              
+              {/* Duplicate set for seamless looping */}
+              {supportedProviders.map((provider, index) => (
+                <div key={`provider-dup-${index}`} className="flex flex-col items-center mx-6">
+                  <div className="w-24 h-24 flex items-center justify-center bg-white dark:bg-gray-800 rounded-lg shadow-sm p-4">
+                    <img
+                      src={provider.logo}
+                      alt={`${provider.name} logo`}
+                      className="max-w-full max-h-full object-contain"
+                    />
+                  </div>
+                  <span className="mt-3 text-gray-700 dark:text-gray-300 font-medium">
+                    {provider.name}
+                  </span>
+                </div>
+              ))}
+            </motion.div>
+          </div>
+          
+          {/* Gradient overlay - right */}
+          <div className="absolute right-0 top-0 w-24 h-full bg-gradient-to-l from-gray-50 to-transparent dark:from-gray-900/50 z-10"></div>
         </div>
       </section>
 
