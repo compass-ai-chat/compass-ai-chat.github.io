@@ -227,6 +227,7 @@ export default function Home() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7 }}
             viewport={{ once: true }}
+            className="w-full"
           >
             <div className="bg-card text-card-foreground dark:border dark:border-emerald-700/50 p-8 rounded-2xl shadow-lg">
               <h3 className="text-2xl font-bold mb-6 text-gray-900 dark:text-white">{t("contact.sendMessage")}</h3>
