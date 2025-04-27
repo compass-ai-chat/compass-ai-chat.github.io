@@ -44,6 +44,13 @@ export default function Home() {
     }
   }
 
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className="min-h-screen">
       <Header />
@@ -77,8 +84,8 @@ export default function Home() {
               <Button size="lg" className="bg-emerald-500 hover:bg-emerald-600 text-white" onClick={scrollToDemo}>
                 {t("hero.tryDemo")}
               </Button>
-              <Button size="lg" variant="outline" className="border-emerald-500 text-emerald-500 hover:bg-emerald-50 dark:hover:bg-emerald-950">
-                {t("hero.downloadNow")}
+              <Button onClick={() => scrollToSection('contact')} size="lg" variant="outline" className="border-emerald-500 text-emerald-500 hover:bg-emerald-50 dark:hover:bg-emerald-950">
+                {t("contact.title")} {t("contact.subtitle")}
               </Button>
             </div>
           </motion.div>
