@@ -168,14 +168,14 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section className="container mx-auto px-4 py-16 md:py-24 bg-surface-light dark:bg-surface-dark rounded-3xl my-16" id="contact">
-        <div className="grid md:grid-cols-2 gap-12 items-center px-4">
+      <section className="container mx-auto px-4 py-16 my-16" id="contact">
+        <div className="flex flex-col md:flex-row gap-12 items-center px-4 py-6 md:py-24 bg-surface-light dark:bg-surface-dark rounded-3xl">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7 }}
             viewport={{ once: true }}
-            className=""
+            className="flex flex-col items-center w-full"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
               {t("contact.title")} <span className="text-emerald-500">{t("contact.subtitle")}</span>
@@ -184,34 +184,34 @@ export default function Home() {
               {t("contact.description")}
             </p>
 
-            <div className="space-y-4 mb-8">
-              <div onClick={() => window.open('mailto:thomas@nordentoft.dk')} className="flex items-center gap-4 cursor-pointer hover:bg-emerald-100 dark:hover:bg-emerald-900 rounded-full transition-all duration-300">
+            <div className="space-y-4 mb-8 w-full flex flex-col items-center">
+              <div onClick={() => window.open('mailto:thomas@nordentoft.dk')} className="flex items-center w-full gap-4 cursor-pointer hover:bg-emerald-100 dark:hover:bg-emerald-900 rounded-full transition-all duration-300">
                 <div className="bg-emerald-100 dark:bg-emerald-900 p-3 rounded-full">
                   <Mail className="h-6 w-6 text-emerald-600 dark:text-emerald-400" />
                 </div>
-                <div>
+                <div className="w-full flex flex-col overflow-x-auto">
                   <h3 className="font-medium text-gray-900 dark:text-white">{t("contact.email")}</h3>
-                  <p className="text-gray-700 dark:text-gray-300">thomas@nordentoft.dk</p>
+                  <p className="text-gray-700 dark:text-gray-300 break-words">thomas@nordentoft.dk</p>
                 </div>
               </div>
 
-              <div onClick={() => window.open('https://github.com/nordwestt/compass#user-content-welcome-to-compass-', '_blank')} className="flex items-center gap-4 cursor-pointer hover:bg-emerald-100 dark:hover:bg-emerald-900 rounded-full transition-all duration-300">
+              <div onClick={() => window.open('https://github.com/nordwestt/compass#user-content-welcome-to-compass-', '_blank')} className="flex items-center w-full gap-4 cursor-pointer hover:bg-emerald-100 dark:hover:bg-emerald-900 rounded-full transition-all duration-300">
                 <div className="bg-emerald-100 dark:bg-emerald-900 p-3 rounded-full">
                   <Github className="h-6 w-6 text-emerald-600 dark:text-emerald-400" />
                 </div>
-                <div>
+                <div className="w-full flex flex-col overflow-x-auto">
                   <h3 className="font-medium text-gray-900 dark:text-white">{t("contact.github")}</h3>
-                  <p className="text-gray-700 dark:text-gray-300">github.com/nordwestt/compass</p>
+                  <p className="text-gray-700 dark:text-gray-300 break-words">github.com/nordwestt/compass</p>
                 </div>
               </div>
 
-              <div onClick={() => window.open('https://www.linkedin.com/in/thomas-nordentoft', '_blank')} className="flex items-center gap-4 cursor-pointer hover:bg-emerald-100 dark:hover:bg-emerald-900 rounded-full transition-all duration-300">
+              <div onClick={() => window.open('https://www.linkedin.com/in/thomas-nordentoft', '_blank')} className="flex items-center w-full gap-4 cursor-pointer hover:bg-emerald-100 dark:hover:bg-emerald-900 rounded-full transition-all duration-300">
                 <div className="bg-emerald-100 dark:bg-emerald-900 p-3 rounded-full">
                   <Linkedin className="h-6 w-6 text-emerald-600 dark:text-emerald-400" />
                 </div>
-                <div>
+                <div className="w-full flex flex-col overflow-x-auto">
                   <h3 className="font-medium text-gray-900 dark:text-white">{t("contact.linkedin")}</h3>
-                  <p className="text-gray-700 dark:text-gray-300">https://www.linkedin.com/in/thomas-nordentoft</p>
+                  <p className="text-gray-700 dark:text-gray-300 break-words">https://www.linkedin.com/in/thomas-nordentoft</p>
                 </div>
               </div>
             </div>
