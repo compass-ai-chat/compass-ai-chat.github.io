@@ -1,94 +1,99 @@
 {
-    "hero": {
-      "title": "Your AI Companion,",
-      "subtitle_1": "Under your Control",
-      "subtitle_2": "your",
-      "subtitle_3": "Control",
-      "description": "Compass is an open-source AI chat application that gives you control of privacy and speed. Run entirely offline when privacy is a priority or connect to one of many providers, such as ChatGPT, when you need the latest models.",
-      "tryDemo": "Try Demo",
-      "downloadNow": "Download Now"
-    },
-    "demo": {
-      "title": "Experience Compass",
-      "subtitle": "In Action",
-      "demoTitle": "Compass Demo"
-    },
-    "features": {
-      "title": "Why Choose",
-      "subtitle": "Compass",
-      "description": "Built with core values of sovereignty, privacy, and control",
-      "cards": {
-        "privacy": {
-          "title": "Complete Privacy",
-          "description": "Run models locally on your device. No data ever needs to be sent to external servers without your explicit permission."
-        },
-        "bestOfBoth": {
-          "title": "Best of Both Worlds",
-          "description": "Connect to providers like ChatGPT, Claude, or Gemini for cutting-edge models, or stay offline for sensitive tasks."
-        },
-        "ownership": {
-          "title": "True Ownership",
-          "description": "You own your data and conversations. Export, delete, or manage them however you want."
-        },
-        "openSource": {
-          "title": "Open Source",
-          "description": "Fully transparent codebase. Verify the security and privacy claims yourself."
-        },
-        "offline": {
-          "title": "Offline Capable",
-          "description": "Works without an internet connection. Perfect for travel or when privacy is a priority."
-        },
-        "customizable": {
-          "title": "Customizable",
-          "description": "Adapt Compass to your specific needs with plugins and extensions."
-        }
-      }
-    },
-    "contact": {
-      "title": "Get In",
-      "subtitle": "Touch",
-      "description": "Interested in Compass? Reach out through any of these channels.",
-      "email": "Email",
-      "github": "GitHub",
-      "linkedin": "LinkedIn",
-      "sendMessage": "Send us a mail",
-      "form": {
-        "subject": "Subject",
-        "subjectPlaceholder": "Subject of your message",
-        "subjectRequired": "Subject is required",
-        "name": "Name",
-        "email": "Email",
-        "message": "Message",
-        "send": "Send Email",
-        "sending": "Sending...",
-        "success": "Thank you! Your email client will open now.",
-        "namePlaceholder": "Your name",
-        "emailPlaceholder": "your.email@example.com",
-        "messagePlaceholder": "Your message...",
-        "nameRequired": "Name is required",
-        "emailRequired": "Email is required",
-        "emailInvalid": "Invalid email address",
-        "messageRequired": "Message is required"
-      }
-    },
-    "nav": {
-      "demo": "Demo",
-      "features": "Features",
-      "contact": "Contact",
-      "download": "Download"
-    },
-    "footer": {
-      "description": "An open-source, local AI chat application focused on privacy, decentralization, and true data ownership.",
-      "links": {
-        "title": "Links"
+  "hero": {
+    "title": "Your AI Companion,",
+    "subtitle_1": "Under your Control",
+    "subtitle_2": "your",
+    "subtitle_3": "Control",
+    "description": "Compass is an open-source AI chat application that gives you control of privacy and speed. Run entirely offline when privacy is a priority or connect to one of many providers, such as ChatGPT, when you need the latest models.",
+    "tryDemo": "Try Demo",
+    "downloadNow": "Download Now"
+  },
+  "demo": {
+    "title": "Experience Compass",
+    "subtitle": "In Action",
+    "demoTitle": "Compass Demo"
+  },
+  "providers": {
+    "title": "Choose between",
+    "subtitle": "many AI providers",
+    "description": "Avoid getting trapped in a single eco-system - switch between providers with your chat history and documents intact"
+  },
+  "features": {
+    "title": "Why Choose",
+    "subtitle": "Compass",
+    "description": "Built with core values of sovereignty, privacy, and control",
+    "cards": {
+      "privacy": {
+        "title": "Complete Privacy",
+        "description": "Run models locally on your device. No data ever needs to be sent to external servers without your explicit permission."
       },
-      "resources": {
-        "title": "Resources",
-        "documentation": "Documentation",
-        "repository": "GitHub Repository",
-        "privacy": "Privacy Policy",
-        "terms": "Terms of Service"
+      "bestOfBoth": {
+        "title": "Best of Both Worlds",
+        "description": "Connect to providers like ChatGPT, Claude, or Gemini for cutting-edge models, or stay offline for sensitive tasks."
       },
-      "copyright": "© {{year}} Compass AI. All rights reserved."
+      "ownership": {
+        "title": "True Ownership",
+        "description": "You own your data and conversations. Export, delete, or manage them however you want."
+      },
+      "openSource": {
+        "title": "Open Source",
+        "description": "Fully transparent codebase. Verify the security and privacy claims yourself."
+      },
+      "offline": {
+        "title": "Offline Capable",
+        "description": "Works without an internet connection. Perfect for travel or when privacy is a priority."
+      },
+      "customizable": {
+        "title": "Customizable",
+        "description": "Adapt Compass to your specific needs with plugins and extensions."
+      }
     }
+  },
+  "contact": {
+    "title": "Get In",
+    "subtitle": "Touch",
+    "description": "Interested in Compass? Reach out through any of these channels.",
+    "email": "Email",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "sendMessage": "Send us a mail",
+    "form": {
+      "subject": "Subject",
+      "subjectPlaceholder": "Subject of your message",
+      "subjectRequired": "Subject is required",
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "send": "Send Email",
+      "sending": "Sending...",
+      "success": "Thank you! Your email client will open now.",
+      "namePlaceholder": "Your name",
+      "emailPlaceholder": "your.email@example.com",
+      "messagePlaceholder": "Your message...",
+      "nameRequired": "Name is required",
+      "emailRequired": "Email is required",
+      "emailInvalid": "Invalid email address",
+      "messageRequired": "Message is required"
+    }
+  },
+  "nav": {
+    "demo": "Demo",
+    "features": "Features",
+    "contact": "Contact",
+    "download": "Download"
+  },
+  "footer": {
+    "description": "An open-source, local AI chat application focused on privacy, decentralization, and true data ownership.",
+    "links": {
+      "title": "Links"
+    },
+    "resources": {
+      "title": "Resources",
+      "documentation": "Documentation",
+      "repository": "GitHub Repository",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service"
+    },
+    "copyright": "© {{year}} Compass AI. All rights reserved."
   }
+}

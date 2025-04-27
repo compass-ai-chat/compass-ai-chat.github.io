@@ -1,68 +1,68 @@
-"use client"
+"use client";
 
-import { useState, useRef, useEffect } from "react"
-import { motion } from "framer-motion"
-import { ChevronDown, ChevronUp, Github, Linkedin, Mail } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import ContactForm from "@/components/contact-form"
-import FeatureCard from "@/components/feature-card"
-import Header from "@/components/header"
-import Footer from "@/components/footer"
-import { useTranslation } from "react-i18next"
-
+import { useState, useRef, useEffect } from "react";
+import { motion } from "framer-motion";
+import { ChevronDown, ChevronUp, Github, Linkedin, Mail } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import ContactForm from "@/components/contact-form";
+import FeatureCard from "@/components/feature-card";
+import Header from "@/components/header";
+import Footer from "@/components/footer";
+import { useTranslation } from "react-i18next";
 
 export default function Home() {
   const { t } = useTranslation();
 
-  const [isIframeMinimized, setIsIframeMinimized] = useState(false)
-  const demoRef = useRef<HTMLDivElement>(null)
-  const [isMobile, setIsMobile] = useState(false)
+  const [isIframeMinimized, setIsIframeMinimized] = useState(false);
+  const demoRef = useRef<HTMLDivElement>(null);
+  const [isMobile, setIsMobile] = useState(false);
 
   // Check if device is mobile on component mount
   useEffect(() => {
     const checkIfMobile = () => {
-      setIsMobile(window.innerWidth < 768)
-    }
-    
+      setIsMobile(window.innerWidth < 768);
+    };
+
     // Initial check
-    checkIfMobile()
-    
+    checkIfMobile();
+
     // Add event listener for window resize
-    window.addEventListener('resize', checkIfMobile)
-    
+    window.addEventListener("resize", checkIfMobile);
+
     // Cleanup
-    return () => window.removeEventListener('resize', checkIfMobile)
-  }, [])
+    return () => window.removeEventListener("resize", checkIfMobile);
+  }, []);
 
   const scrollToDemo = () => {
     if (isMobile) {
       // Open demo in new tab on mobile
-      window.open('https://nordwestt.com/compass', '_blank')
+      window.open("https://nordwestt.com/compass", "_blank");
     } else {
       // Scroll to demo section on desktop
-      demoRef.current?.scrollIntoView({ behavior: "smooth" })
+      demoRef.current?.scrollIntoView({ behavior: "smooth" });
     }
-  }
+  };
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
     }
   };
 
   // Supported providers data
   const supportedProviders = [
-    { name: "OpenAI", logo: "/images/providers/openai.svg" },
-    { name: "Anthropic", logo: "/images/providers/anthropic.svg" },
-    { name: "Google", logo: "/images/providers/google.svg" },
-    { name: "Mistral AI", logo: "/images/providers/mistral.svg" },
-    { name: "Cohere", logo: "/images/providers/cohere.svg" },
-    { name: "Hugging Face", logo: "/images/providers/huggingface.svg" },
-    { name: "Replicate", logo: "/images/providers/replicate.svg" },
-    { name: "AI21 Labs", logo: "/images/providers/ai21.svg" },
-    { name: "Together AI", logo: "/images/providers/together.svg" },
-    { name: "Ollama", logo: "/images/providers/ollama.svg" },
+    { name: "OpenAI", logo: "/images/providers/openai.png" },
+    {
+      name: "Anthropic",
+      logo: "/images/providers/anthropic.jpeg",
+    },
+    { name: "Google", logo: "/images/providers/google.png" },
+    { name: "Mistral AI", logo: "/images/providers/mistral.png" },
+    { name: "Replicate", logo: "/images/providers/replicate.png" },
+    { name: "Ollama", logo: "/images/providers/ollama.png" },
+    { name: "xAI", logo: "/images/providers/xai.png" },
+    { name: "Groq", logo: "/images/providers/groq.png" },
   ];
 
   return (
@@ -71,34 +71,45 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="container mx-auto px-4 pt-24 pb-16 md:pt-32 md:pb-24">
-        
         <div className="flex flex-col items-center text-center">
-          
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="max-w-3xl"
           >
-          <div className="flex flex-col md:flex-row items-center mb-6">
-            <img 
-              className="h-24 self-center mb-4 md:mb-0 md:mr-4 animate-compass-rotate origin-center" 
-              src="https://github.com/nordwestt/compass/blob/master/assets/compass.png?raw=true" 
-              alt="Compass Logo" 
-            />
-            <h1 className="my-auto text-4xl md:text-6xl font-bold text-gray-900 dark:text-white text-center md:text-left">
-              {t("hero.title")}<br/>
-              <span className="text-emerald-500">{t("hero.subtitle_1")} <u>{t("hero.subtitle_2")}</u> {t("hero.subtitle_3")}</span>
-            </h1>
-          </div>
+            <div className="flex flex-col md:flex-row items-center mb-6">
+              <img
+                className="h-24 self-center mb-4 md:mb-0 md:mr-4 animate-compass-rotate origin-center"
+                src="https://github.com/nordwestt/compass/blob/master/assets/compass.png?raw=true"
+                alt="Compass Logo"
+              />
+              <h1 className="my-auto text-4xl md:text-6xl font-bold text-gray-900 dark:text-white text-center md:text-left">
+                {t("hero.title")}
+                <br />
+                <span className="text-emerald-500">
+                  {t("hero.subtitle_1")} <u>{t("hero.subtitle_2")}</u>{" "}
+                  {t("hero.subtitle_3")}
+                </span>
+              </h1>
+            </div>
             <p className="text-xl text-gray-700 dark:text-gray-300 mb-8">
               {t("hero.description")}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-emerald-500 hover:bg-emerald-600 text-white" onClick={scrollToDemo}>
+              <Button
+                size="lg"
+                className="bg-emerald-500 hover:bg-emerald-600 text-white"
+                onClick={scrollToDemo}
+              >
                 {t("hero.tryDemo")}
               </Button>
-              <Button onClick={() => scrollToSection('contact')} size="lg" variant="outline" className="border-emerald-500 text-emerald-500 hover:bg-emerald-50 dark:hover:bg-emerald-950">
+              <Button
+                onClick={() => scrollToSection("contact")}
+                size="lg"
+                variant="outline"
+                className="border-emerald-500 text-emerald-500 hover:bg-emerald-50 dark:hover:bg-emerald-950"
+              >
                 {t("contact.title")} {t("contact.subtitle")}
               </Button>
             </div>
@@ -117,18 +128,21 @@ export default function Home() {
             className="text-center mb-10"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-              {t("providers.title")} <span className="text-emerald-500">{t("providers.subtitle")}</span>
+              {t("providers.title")}{" "}
+              <span className="text-emerald-500">
+                {t("providers.subtitle")}
+              </span>
             </h2>
             <p className="text-xl text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">
               {t("providers.description")}
             </p>
           </motion.div>
         </div>
-        
+
         <div className="relative">
           {/* Gradient overlay - left */}
           <div className="absolute left-0 top-0 w-24 h-full bg-gradient-to-r from-gray-50 to-transparent dark:from-gray-900/50 z-10"></div>
-          
+
           {/* Scrolling providers */}
           <div className="flex overflow-hidden">
             <motion.div
@@ -138,15 +152,18 @@ export default function Home() {
                 x: {
                   repeat: Infinity,
                   repeatType: "loop",
-                  duration: 40,
+                  duration: 60,
                   ease: "linear",
                 },
               }}
             >
               {/* First set of providers */}
               {supportedProviders.map((provider, index) => (
-                <div key={`provider-${index}`} className="flex flex-col items-center mx-6">
-                  <div className="w-24 h-24 flex items-center justify-center bg-white dark:bg-gray-800 rounded-lg shadow-sm p-4">
+                <div
+                  key={`provider-${index}`}
+                  className="flex flex-col items-center mx-6"
+                >
+                  <div className="w-24 h-24 flex items-center justify-center bg-white dark:bg-gray-300 rounded-lg shadow-sm p-4">
                     <img
                       src={provider.logo}
                       alt={`${provider.name} logo`}
@@ -158,11 +175,14 @@ export default function Home() {
                   </span>
                 </div>
               ))}
-              
+
               {/* Duplicate set for seamless looping */}
               {supportedProviders.map((provider, index) => (
-                <div key={`provider-dup-${index}`} className="flex flex-col items-center mx-6">
-                  <div className="w-24 h-24 flex items-center justify-center bg-white dark:bg-gray-800 rounded-lg shadow-sm p-4">
+                <div
+                  key={`provider-dup-${index}`}
+                  className="flex flex-col items-center mx-6"
+                >
+                  <div className="w-24 h-24 flex items-center justify-center bg-white dark:bg-gray-300 rounded-lg shadow-sm p-4">
                     <img
                       src={provider.logo}
                       alt={`${provider.name} logo`}
@@ -176,7 +196,7 @@ export default function Home() {
               ))}
             </motion.div>
           </div>
-          
+
           {/* Gradient overlay - right */}
           <div className="absolute right-0 top-0 w-24 h-full bg-gradient-to-l from-gray-50 to-transparent dark:from-gray-900/50 z-10"></div>
         </div>
@@ -184,7 +204,11 @@ export default function Home() {
 
       {/* Demo Section - Hidden on mobile */}
       {!isMobile && (
-        <section ref={demoRef} className="container mx-auto px-4 py-16 md:py-24" id="demo">
+        <section
+          ref={demoRef}
+          className="container mx-auto px-4 py-16 md:py-24"
+          id="demo"
+        >
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -193,7 +217,8 @@ export default function Home() {
             className="flex flex-col items-center"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-12 text-center">
-              {t("demo.title")} <span className="text-emerald-500">{t("demo.subtitle")}</span>
+              {t("demo.title")}{" "}
+              <span className="text-emerald-500">{t("demo.subtitle")}</span>
             </h2>
 
             <div
@@ -204,14 +229,25 @@ export default function Home() {
                 onClick={() => setIsIframeMinimized(!isIframeMinimized)}
               >
                 <h3 className="font-medium">{t("demo.demoTitle")}</h3>
-                <Button variant="ghost" size="sm" className="text-white hover:bg-emerald-600 p-1 h-auto">
-                  {isIframeMinimized ? <ChevronDown size={18} /> : <ChevronUp size={18} />}
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  className="text-white hover:bg-emerald-600 p-1 h-auto"
+                >
+                  {isIframeMinimized ? (
+                    <ChevronDown size={18} />
+                  ) : (
+                    <ChevronUp size={18} />
+                  )}
                 </Button>
               </div>
 
               {!isIframeMinimized && (
                 <div className="h-[700px] w-full bg-white dark:bg-card flex items-center justify-center">
-                  <iframe src="https://nordwestt.com/compass" className="w-full h-full" />
+                  <iframe
+                    src="https://nordwestt.com/compass"
+                    className="w-full h-full"
+                  />
                 </div>
               )}
             </div>
@@ -229,9 +265,12 @@ export default function Home() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-            {t("features.title")} <span className="text-emerald-500">{t("features.subtitle")}</span>
+            {t("features.title")}{" "}
+            <span className="text-emerald-500">{t("features.subtitle")}</span>
           </h2>
-          <p className="text-xl text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">{t("features.description")}</p>
+          <p className="text-xl text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">
+            {t("features.description")}
+          </p>
         </motion.div>
 
         <div className="grid md:grid-cols-3 gap-8">
@@ -279,45 +318,76 @@ export default function Home() {
             className="flex flex-col items-center w-full"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
-              {t("contact.title")} <span className="text-emerald-500">{t("contact.subtitle")}</span>
+              {t("contact.title")}{" "}
+              <span className="text-emerald-500">{t("contact.subtitle")}</span>
             </h2>
             <p className="text-lg text-gray-700 dark:text-gray-300 mb-8">
               {t("contact.description")}
             </p>
 
             <div className="space-y-4 mb-8 w-full flex flex-col items-center">
-              <div onClick={() => window.open('mailto:thomas@nordentoft.dk')} className="flex items-center w-full gap-4 cursor-pointer hover:bg-emerald-100 dark:hover:bg-emerald-900 rounded-full transition-all duration-300">
+              <div
+                onClick={() => window.open("mailto:thomas@nordentoft.dk")}
+                className="flex items-center w-full gap-4 cursor-pointer hover:bg-emerald-100 dark:hover:bg-emerald-900 rounded-full transition-all duration-300"
+              >
                 <div className="bg-emerald-100 dark:bg-emerald-900 p-3 rounded-full">
                   <Mail className="h-6 w-6 text-emerald-600 dark:text-emerald-400" />
                 </div>
                 <div className="w-full flex flex-col overflow-x-auto">
-                  <h3 className="font-medium text-gray-900 dark:text-white">{t("contact.email")}</h3>
-                  <p className="text-gray-700 dark:text-gray-300 break-words">thomas@nordentoft.dk</p>
+                  <h3 className="font-medium text-gray-900 dark:text-white">
+                    {t("contact.email")}
+                  </h3>
+                  <p className="text-gray-700 dark:text-gray-300 break-words">
+                    thomas@nordentoft.dk
+                  </p>
                 </div>
               </div>
 
-              <div onClick={() => window.open('https://github.com/nordwestt/compass#user-content-welcome-to-compass-', '_blank')} className="flex items-center w-full gap-4 cursor-pointer hover:bg-emerald-100 dark:hover:bg-emerald-900 rounded-full transition-all duration-300">
+              <div
+                onClick={() =>
+                  window.open(
+                    "https://github.com/nordwestt/compass#user-content-welcome-to-compass-",
+                    "_blank",
+                  )
+                }
+                className="flex items-center w-full gap-4 cursor-pointer hover:bg-emerald-100 dark:hover:bg-emerald-900 rounded-full transition-all duration-300"
+              >
                 <div className="bg-emerald-100 dark:bg-emerald-900 p-3 rounded-full">
                   <Github className="h-6 w-6 text-emerald-600 dark:text-emerald-400" />
                 </div>
                 <div className="w-full flex flex-col overflow-x-auto">
-                  <h3 className="font-medium text-gray-900 dark:text-white">{t("contact.github")}</h3>
-                  <p className="text-gray-700 dark:text-gray-300 break-words">github.com/nordwestt/compass</p>
+                  <h3 className="font-medium text-gray-900 dark:text-white">
+                    {t("contact.github")}
+                  </h3>
+                  <p className="text-gray-700 dark:text-gray-300 break-words">
+                    github.com/nordwestt/compass
+                  </p>
                 </div>
               </div>
 
-              <div onClick={() => window.open('https://www.linkedin.com/in/thomas-nordentoft', '_blank')} className="flex items-center w-full gap-4 cursor-pointer hover:bg-emerald-100 dark:hover:bg-emerald-900 rounded-full transition-all duration-300">
+              <div
+                onClick={() =>
+                  window.open(
+                    "https://www.linkedin.com/in/thomas-nordentoft",
+                    "_blank",
+                  )
+                }
+                className="flex items-center w-full gap-4 cursor-pointer hover:bg-emerald-100 dark:hover:bg-emerald-900 rounded-full transition-all duration-300"
+              >
                 <div className="bg-emerald-100 dark:bg-emerald-900 p-3 rounded-full">
                   <Linkedin className="h-6 w-6 text-emerald-600 dark:text-emerald-400" />
                 </div>
                 <div className="w-full flex flex-col overflow-x-auto">
-                  <h3 className="font-medium text-gray-900 dark:text-white">{t("contact.linkedin")}</h3>
-                  <p className="text-gray-700 dark:text-gray-300 break-words">https://www.linkedin.com/in/thomas-nordentoft</p>
+                  <h3 className="font-medium text-gray-900 dark:text-white">
+                    {t("contact.linkedin")}
+                  </h3>
+                  <p className="text-gray-700 dark:text-gray-300 break-words">
+                    https://www.linkedin.com/in/thomas-nordentoft
+                  </p>
                 </div>
               </div>
             </div>
           </motion.div>
-          
 
           <motion.div
             initial={{ opacity: 0, x: 30 }}
@@ -327,7 +397,9 @@ export default function Home() {
             className="w-full"
           >
             <div className="bg-card text-card-foreground dark:border dark:border-emerald-700/50 p-8 rounded-2xl shadow-lg">
-              <h3 className="text-2xl font-bold mb-6 text-gray-900 dark:text-white">{t("contact.sendMessage")}</h3>
+              <h3 className="text-2xl font-bold mb-6 text-gray-900 dark:text-white">
+                {t("contact.sendMessage")}
+              </h3>
               <ContactForm />
             </div>
           </motion.div>
@@ -336,5 +408,5 @@ export default function Home() {
 
       <Footer />
     </div>
-  )
+  );
 }
