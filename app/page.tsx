@@ -78,7 +78,7 @@ export default function Home() {
             transition={{ duration: 0.6 }}
             className="max-w-3xl"
           >
-            <div className="flex flex-col md:flex-row items-center mb-6">
+            <div className="flex flex-col md:flex-row items-center mb-6 justify-center">
               <img
                 className="h-24 self-center mb-4 md:mb-0 md:mr-4 animate-compass-rotate origin-center"
                 src="https://github.com/nordwestt/compass/blob/master/assets/compass.png?raw=true"
