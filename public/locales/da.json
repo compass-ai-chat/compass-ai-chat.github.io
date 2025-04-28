@@ -13,7 +13,8 @@
     "subtitle": "for dig selv",
     "demoTitle": "Compass Demo",
     "clickToShowDemo": "Klik for at vise demoen",
-    "loadDemo": "Indlæs Demo"
+    "loadDemo": "Indlæs Demo",
+    "clickToExplore": "Klik for at udforske"
   },
   "providers": {
     "title": "Vælg mellem",

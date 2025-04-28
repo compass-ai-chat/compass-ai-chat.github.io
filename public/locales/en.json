@@ -13,7 +13,8 @@
     "subtitle": "In Action",
     "demoTitle": "Compass Demo",
     "clickToShowDemo": "Click to show demo",
-    "loadDemo": "Load Demo"
+    "loadDemo": "Load Demo",
+    "clickToExplore": "Click to explore"
   },
   "providers": {
     "title": "Choose between",

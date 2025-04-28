@@ -223,19 +223,32 @@ export default function Home() {
             </h2>
             {!showDemo && (
               <motion.div
-                className="w-full max-w-2xl mx-auto h-64 bg-gray-100 dark:bg-gray-800 rounded-2xl shadow-md overflow-hidden cursor-pointer flex flex-col items-center justify-center border-2 border-emerald-500"
+                className="w-full max-w-2xl mx-auto h-64 bg-gradient-to-br from-emerald-400 to-emerald-600 dark:from-emerald-600 dark:to-emerald-900 rounded-2xl shadow-lg overflow-hidden cursor-pointer flex flex-col items-center justify-center border-2 border-emerald-300 dark:border-emerald-500 relative"
                 onClick={() => setShowDemo(true)}
-                whileHover={{ scale: 1.02 }}
+                whileHover={{ scale: 1.03, boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)" }}
                 transition={{ duration: 0.3 }}
               >
+                {/* Background pattern */}
+                {/* <div className="absolute inset-0 opacity-10">
+                  <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJ3aGl0ZSIgZmlsbC1ydWxlPSJldmVub2RkIj48Y2lyY2xlIGN4PSIyIiBjeT0iMiIgcj0iMiIvPjwvZz48L3N2Zz4=')] bg-repeat"></div>
+                </div> */}
+                
+                {/* Animated glow effect */}
+                <div className="absolute -inset-1 bg-gradient-to-r from-emerald-300 to-teal-300 dark:from-emerald-700 dark:to-teal-700 rounded-2xl blur opacity-30 animate-pulse"></div>
+                
                 <img
                   src="https://github.com/nordwestt/compass/blob/master/assets/compass.png?raw=true"
                   alt="Compass Logo"
-                  className="h-16 mb-4 animate-compass-rotate origin-center"
+                  className="h-20 mb-4 animate-compass-rotate origin-center relative z-10 drop-shadow-lg"
                 />
-                <p className="text-lg font-medium text-gray-700 dark:text-gray-300">
-                  {t("demo.clickToShowDemo")}
+                <p className="text-xl font-semibold text-white mb-2 relative z-10 drop-shadow-md">
+                  Compass
                 </p>
+                <div className="flex items-center justify-center mt-2 relative z-10">
+                  <span className="px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-medium animate-pulse">
+                    {t("demo.clickToExplore") || "Click to explore"}
+                  </span>
+                </div>
               </motion.div>
             )}
             {showDemo && (
@@ -275,7 +288,7 @@ export default function Home() {
         >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
             {t("features.title")}{" "}
-            <span className="text-emerald-500">{t("features.subtitle")}</span>
+            <span className="text-emerald-500">{t("features.subtitle")}?</span>
           </h2>
           <p className="text-xl text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">
             {t("features.description")}
