@@ -18,10 +18,6 @@ export default function Header() {
     setIsMenuOpen(!isMenuOpen)
   }
 
-  const handleLanguageChange = (lang: string) => {
-    changeLanguage(lang);
-  };
-
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
