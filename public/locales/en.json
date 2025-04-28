@@ -11,7 +11,9 @@
   "demo": {
     "title": "Experience Compass",
     "subtitle": "In Action",
-    "demoTitle": "Compass Demo"
+    "demoTitle": "Compass Demo",
+    "clickToShowDemo": "Click to show demo",
+    "loadDemo": "Load Demo"
   },
   "providers": {
     "title": "Choose between",

@@ -11,7 +11,9 @@
   "demo": {
     "title": "Prøv Compass",
     "subtitle": "for dig selv",
-    "demoTitle": "Compass Demo"
+    "demoTitle": "Compass Demo",
+    "clickToShowDemo": "Klik for at vise demoen",
+    "loadDemo": "Indlæs Demo"
   },
   "providers": {
     "title": "Vælg mellem",

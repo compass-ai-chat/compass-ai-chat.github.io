@@ -222,39 +222,44 @@ export default function Home() {
               <span className="text-emerald-500">{t("demo.subtitle")}</span>
             </h2>
             {!showDemo && (
-              <Button onClick={() => setShowDemo(true)}>Show Demo</Button>
-            )}
-            { showDemo && (
-            <div
-              className={`w-full max-w-2/3 mx-auto bg-white dark:bg-card rounded-2xl shadow-xl overflow-hidden transition-all duration-500 ${isIframeMinimized ? "h-16" : "h-[800px]"}`}
-            >
-               <div
-                className="flex items-center justify-between bg-emerald-500 text-white p-4 cursor-pointer"
-                onClick={() => setIsIframeMinimized(!isIframeMinimized)}
+              <motion.div
+                className="w-full max-w-2xl mx-auto h-64 bg-gray-100 dark:bg-gray-800 rounded-2xl shadow-md overflow-hidden cursor-pointer flex flex-col items-center justify-center border-2 border-emerald-500"
+                onClick={() => setShowDemo(true)}
+                whileHover={{ scale: 1.02 }}
+                transition={{ duration: 0.3 }}
               >
-                <h3 className="font-medium">{t("demo.demoTitle")}</h3>
-                <Button
-                  variant="ghost"
-                  size="sm"
-                  className="text-white hover:bg-emerald-600 p-1 h-auto"
-                >
-                  {isIframeMinimized ? (
-                    <ChevronDown size={18} />
-                  ) : (
-                    <ChevronUp size={18} />
-                  )}
-                </Button>
-              </div>
-
-              {!isIframeMinimized && (
-                <div className="h-[700px] w-full bg-white dark:bg-card flex items-center justify-center">
-                  <iframe
-                    src="https://nordwestt.com/compass"
-                    className="w-full h-full"
-                  />
+                <img
+                  src="https://github.com/nordwestt/compass/blob/master/assets/compass.png?raw=true"
+                  alt="Compass Logo"
+                  className="h-16 mb-4 animate-compass-rotate origin-center"
+                />
+                <p className="text-lg font-medium text-gray-700 dark:text-gray-300">
+                  {t("demo.clickToShowDemo")}
+                </p>
+              </motion.div>
+            )}
+            {showDemo && (
+              <motion.div
+                initial={{ opacity: 0, height: 0 }}
+                animate={{ opacity: 1, height: "800px" }}
+                transition={{ duration: 0.5, ease: "easeInOut" }}
+                className="w-full max-w-2/3 mx-auto bg-white dark:bg-card rounded-2xl shadow-xl overflow-hidden"
+              >
+                <div
+                  className="flex items-center justify-between bg-emerald-500 text-white p-4">
+                  <h3 className="font-medium">{t("demo.demoTitle")}</h3>
                 </div>
-              )}
-            </div>)}
+
+                {!isIframeMinimized && (
+                  <div className="h-[700px] w-full bg-white dark:bg-card flex items-center justify-center">
+                    <iframe
+                      src="https://nordwestt.com/compass"
+                      className="w-full h-full"
+                    />
+                  </div>
+                )}
+              </motion.div>
+            )}
           </motion.div>
         </section>
       )}

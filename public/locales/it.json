@@ -11,7 +11,8 @@
   "demo": {
     "title": "Prova Compass",
     "subtitle": "In Azione",
-    "demoTitle": "Demo di Compass"
+    "demoTitle": "Demo di Compass",
+    "clickToShowDemo": "Clicca per mostrare la demo"
   },
   "providers": {
     "title": "Scegli tra",
