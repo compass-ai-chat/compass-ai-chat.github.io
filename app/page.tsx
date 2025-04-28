@@ -16,6 +16,7 @@ export default function Home() {
   const [isIframeMinimized, setIsIframeMinimized] = useState(false);
   const demoRef = useRef<HTMLDivElement>(null);
   const [isMobile, setIsMobile] = useState(false);
+  const [showDemo, setShowDemo] = useState(false);
 
   // Check if device is mobile on component mount
   useEffect(() => {
@@ -220,11 +221,14 @@ export default function Home() {
               {t("demo.title")}{" "}
               <span className="text-emerald-500">{t("demo.subtitle")}</span>
             </h2>
-
+            {!showDemo && (
+              <Button onClick={() => setShowDemo(true)}>Show Demo</Button>
+            )}
+            { showDemo && (
             <div
               className={`w-full max-w-2/3 mx-auto bg-white dark:bg-card rounded-2xl shadow-xl overflow-hidden transition-all duration-500 ${isIframeMinimized ? "h-16" : "h-[800px]"}`}
             >
-              <div
+               <div
                 className="flex items-center justify-between bg-emerald-500 text-white p-4 cursor-pointer"
                 onClick={() => setIsIframeMinimized(!isIframeMinimized)}
               >
@@ -250,7 +254,7 @@ export default function Home() {
                   />
                 </div>
               )}
-            </div>
+            </div>)}
           </motion.div>
         </section>
       )}
