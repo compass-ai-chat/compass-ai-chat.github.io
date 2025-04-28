@@ -52,17 +52,17 @@ export default function Home() {
 
   // Supported providers data
   const supportedProviders = [
-    { name: "OpenAI", logo: "/images/providers/openai.png" },
+    { name: "OpenAI", logo: "./images/providers/openai.png" },
     {
       name: "Anthropic",
-      logo: "/images/providers/anthropic.jpeg",
+      logo: "./images/providers/anthropic.jpeg",
     },
-    { name: "Google", logo: "/images/providers/google.png" },
-    { name: "Mistral AI", logo: "/images/providers/mistral.png" },
-    { name: "Replicate", logo: "/images/providers/replicate.png" },
-    { name: "Ollama", logo: "/images/providers/ollama.png" },
-    { name: "xAI", logo: "/images/providers/xai.png" },
-    { name: "Groq", logo: "/images/providers/groq.png" },
+    { name: "Google", logo: "./images/providers/google.png" },
+    { name: "Mistral AI", logo: "./images/providers/mistral.png" },
+    { name: "Replicate", logo: "./images/providers/replicate.png" },
+    { name: "Ollama", logo: "./images/providers/ollama.png" },
+    { name: "xAI", logo: "./images/providers/xai.png" },
+    { name: "Groq", logo: "./images/providers/groq.png" },
   ];
 
   return (
