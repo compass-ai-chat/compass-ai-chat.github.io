@@ -12,8 +12,9 @@ export default function PolarisDiagram() {
   return (
     <div className="w-full max-w-2xl mx-auto my-12 relative">
       <div className="aspect-square w-full relative">
+        
         {/* Provider icons at the top outside the circle */}
-        <div className="absolute top-0 left-1/4 -translate-x-1/2 flex flex-col items-center z-10">
+        <div className="absolute top-0 left-1/3 flex flex-col items-center z-10">
           <div className="w-16 h-16 flex items-center justify-center bg-white dark:bg-gray-300 rounded-lg shadow-sm p-2">
             <img
               src="./images/providers/google.png"
@@ -26,7 +27,7 @@ export default function PolarisDiagram() {
           </span>
         </div>
         
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 flex flex-col items-center z-10">
+        <div className="absolute -top-6 left-1/2 -translate-x-1/2 flex flex-col items-center z-10">
           <div className="w-16 h-16 flex items-center justify-center bg-white dark:bg-gray-300 rounded-lg shadow-sm p-2">
             <img
               src="./images/providers/openai.png"
@@ -39,7 +40,7 @@ export default function PolarisDiagram() {
           </span>
         </div>
         
-        <div className="absolute top-0 right-1/4 -translate-x-1/2 flex flex-col items-center z-10">
+        <div className="absolute top-0 right-1/3 flex flex-col items-center z-10">
           <div className="w-16 h-16 flex items-center justify-center bg-white dark:bg-gray-300 rounded-lg shadow-sm p-2">
             <img
               src="./images/providers/anthropic.jpeg"
@@ -169,21 +170,48 @@ export default function PolarisDiagram() {
         
         {/* Arrows from Polaris to providers outside the circle */}
         <div className="absolute top-[25%] left-1/4 -translate-x-1/2 flex flex-col items-center">
-          <div className="h-[60px] w-0.5 bg-amber-500 relative">
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3 h-3 border-t-2 border-r-2 border-amber-500 rotate-[-45deg]"></div>
-          </div>
+          <svg width="60" height="60" overflow="visible">
+            <defs>
+              <linearGradient id="topLeftGradient" x1="0%" y1="100%" x2="0%" y2="0%">
+                <stop offset="0%" stopColor="#f59e0b" />
+                <stop offset="100%" stopColor="#fbbf24" />
+              </linearGradient>
+            </defs>
+            <path d="M30,60 L30,0" stroke="url(#topLeftGradient)" strokeWidth="2" fill="none" />
+            <g transform="translate(30, 0) rotate(0)">
+              <path d="M0,-10 L-5,-5 L0,-15 L5,-5 Z" fill="#f59e0b" />
+            </g>
+          </svg>
         </div>
         
         <div className="absolute top-[25%] left-1/2 -translate-x-1/2 flex flex-col items-center">
-          <div className="h-[60px] w-0.5 bg-amber-500 relative">
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3 h-3 border-t-2 border-r-2 border-amber-500 rotate-[-45deg]"></div>
-          </div>
+          <svg width="60" height="60" overflow="visible">
+            <defs>
+              <linearGradient id="topMiddleGradient" x1="0%" y1="100%" x2="0%" y2="0%">
+                <stop offset="0%" stopColor="#f59e0b" />
+                <stop offset="100%" stopColor="#fbbf24" />
+              </linearGradient>
+            </defs>
+            <path d="M30,60 L30,0" stroke="url(#topMiddleGradient)" strokeWidth="2" fill="none" />
+            <g transform="translate(30, 0) rotate(0)">
+              <path d="M0,-10 L-5,-5 L0,-15 L5,-5 Z" fill="#f59e0b" />
+            </g>
+          </svg>
         </div>
         
         <div className="absolute top-[25%] right-1/4 -translate-x-1/2 flex flex-col items-center">
-          <div className="h-[60px] w-0.5 bg-amber-500 relative">
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3 h-3 border-t-2 border-r-2 border-amber-500 rotate-[-45deg]"></div>
-          </div>
+          <svg width="60" height="60" overflow="visible">
+            <defs>
+              <linearGradient id="topRightGradient" x1="0%" y1="100%" x2="0%" y2="0%">
+                <stop offset="0%" stopColor="#f59e0b" />
+                <stop offset="100%" stopColor="#fbbf24" />
+              </linearGradient>
+            </defs>
+            <path d="M30,60 L30,0" stroke="url(#topRightGradient)" strokeWidth="2" fill="none" />
+            <g transform="translate(30, 0) rotate(0)">
+              <path d="M0,-10 L-5,-5 L0,-15 L5,-5 Z" fill="#f59e0b" />
+            </g>
+          </svg>
         </div>
       </div>
     </div>
