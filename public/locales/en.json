@@ -14,12 +14,25 @@
     "demoTitle": "Compass Demo",
     "clickToShowDemo": "Click to show demo",
     "loadDemo": "Load Demo",
-    "clickToExplore": "Click to explore"
+    "clickToExplore": "Click to explore the demo"
   },
   "providers": {
     "title": "Choose between",
     "subtitle": "many AI providers",
     "description": "Avoid getting trapped in a single eco-system - switch between providers with your chat history and documents intact"
+  },
+  "diagram": {
+    "title": "How does it",
+    "subtitle": "Work",
+    "compass":{
+      "title": "Compass",
+      "description":"Compass exists within your own local network, however it can also connect to the internet to access the latest models from providers like ChatGPT, Claude, or Gemini."
+    },
+    "polaris":{
+      "title": "Polaris",
+      "description":"Polaris acts as a middleman, allowing you to setup your documents, characters and providers in one place and share it amongst multiple compass users."
+    },
+    "description": ""
   },
   "features": {
     "title": "Why Choose",

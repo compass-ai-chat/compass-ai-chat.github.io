@@ -300,10 +300,6 @@ export default function Home() {
           </p>
         </motion.div>
 
-        <div className="flex justify-center">
-          <CompassDiagram />
-          <PolarisDiagram />
-        </div>
 
         <div className="grid md:grid-cols-3 gap-8">
           <FeatureCard
@@ -337,6 +333,37 @@ export default function Home() {
             icon="Settings"
           />
         </div>
+      </section>
+
+      {/* Diagram Section */}
+      <section className="container mx-auto px-4 py-16 md:py-24" id="diagram">
+      <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.7 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+            {t("diagram.title")}{" "}
+            <span className="text-emerald-500">{t("diagram.subtitle")}?</span>
+          </h2>
+          <p className="text-xl text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">
+            {t("diagram.description")}
+          </p>
+        <div className="flex justify-center">
+        <p className="text-xl text-gray-700 dark:text-gray-300 max-w-2xl mx-auto mt-[10%]">
+            {t("diagram.compass.description")}
+          </p>
+          <CompassDiagram />
+        </div>
+        <div className="flex justify-center">
+          <PolarisDiagram />
+          <p className="text-xl text-gray-700 dark:text-gray-300 max-w-2xl mx-auto mt-[10%]">
+            {t("diagram.polaris.description")}
+          </p>
+        </div>
+        </motion.div>
       </section>
 
       {/* Contact Section */}
