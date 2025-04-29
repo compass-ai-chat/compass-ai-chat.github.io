@@ -54,7 +54,7 @@ export default function PolarisDiagram() {
         </div>
         
         {/* Dotted circle container */}
-        <div className="absolute top-[15%] bottom-[5%] left-[5%] right-[5%] rounded-full border-2 border-dashed border-gray-300 dark:border-gray-600 flex items-center justify-center">
+        <div className="absolute top-[25%] bottom-[5%] left-[5%] right-[5%] rounded-full border-2 border-dashed border-gray-300 dark:border-gray-600 flex items-center justify-center">
           
           {/* Lock icon embedded in the circle border (top) */}
           <div className="absolute top-1/4 left-0 bg-gray-50 dark:bg-gray-900 p-2 rounded-full">
@@ -65,7 +65,7 @@ export default function PolarisDiagram() {
           
           
           {/* Polaris diamond in the center with rounded corners */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rotate-45 bg-white dark:bg-gray-800 border-2 border-emerald-500 p-8 flex items-center justify-center" style={{ borderRadius: '30%' }}>
+          <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-2/3 rotate-45 bg-white dark:bg-gray-800 border-2 border-emerald-500 p-8 flex items-center justify-center" style={{ borderRadius: '15%', width: '100px', height: '100px' }}>
             <div className="rotate-[-45deg] text-emerald-500 font-bold text-xl flex flex-col items-center">
               <div className="text-emerald-500 mb-1">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
