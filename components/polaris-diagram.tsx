@@ -1,4 +1,4 @@
-import { Lock, User } from "lucide-react";
+import { Lock, User, Sparkles } from "lucide-react";
 
 export default function PolarisDiagram() {
   // Arrow component that can be reused with different positions and rotations
@@ -82,9 +82,7 @@ export default function PolarisDiagram() {
             </svg>
             <div className="rotate-[-45deg] text-emerald-500 font-bold text-xl flex flex-col items-center">
               <div className="text-emerald-500 mb-1">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="currentColor" />
-                </svg>
+                <Sparkles className="h-6 w-6" />
               </div>
               Polaris
             </div>
