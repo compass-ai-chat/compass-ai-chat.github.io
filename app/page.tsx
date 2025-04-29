@@ -10,6 +10,7 @@ import Header from "@/components/header";
 import Footer from "@/components/footer";
 import PolarisDiagram from "@/components/polaris-diagram";
 import { useTranslation } from "react-i18next";
+import CompassDiagram from "@/components/compass-diagram";
 
 export default function Home() {
   const { t } = useTranslation();
@@ -299,7 +300,10 @@ export default function Home() {
           </p>
         </motion.div>
 
-        <PolarisDiagram />
+        <div className="flex justify-center">
+          <CompassDiagram />
+          <PolarisDiagram />
+        </div>
 
         <div className="grid md:grid-cols-3 gap-8">
           <FeatureCard
