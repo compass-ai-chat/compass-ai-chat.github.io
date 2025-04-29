@@ -225,17 +225,21 @@ export default function Home() {
               <motion.div
                 className="w-full max-w-2xl mx-auto h-64 bg-gradient-to-br from-emerald-400 to-emerald-600 dark:from-emerald-600 dark:to-emerald-900 rounded-2xl shadow-lg overflow-hidden cursor-pointer flex flex-col items-center justify-center border-2 border-emerald-300 dark:border-emerald-500 relative"
                 onClick={() => setShowDemo(true)}
-                whileHover={{ scale: 1.03, boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)" }}
+                whileHover={{
+                  scale: 1.03,
+                  boxShadow:
+                    "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
+                }}
                 transition={{ duration: 0.3 }}
               >
                 {/* Background pattern */}
                 {/* <div className="absolute inset-0 opacity-10">
                   <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJ3aGl0ZSIgZmlsbC1ydWxlPSJldmVub2RkIj48Y2lyY2xlIGN4PSIyIiBjeT0iMiIgcj0iMiIvPjwvZz48L3N2Zz4=')] bg-repeat"></div>
                 </div> */}
-                
+
                 {/* Animated glow effect */}
                 <div className="absolute -inset-1 bg-gradient-to-r from-emerald-300 to-teal-300 dark:from-emerald-700 dark:to-teal-700 rounded-2xl blur opacity-30 animate-pulse"></div>
-                
+
                 <img
                   src="https://github.com/nordwestt/compass/blob/master/assets/compass.png?raw=true"
                   alt="Compass Logo"
@@ -258,8 +262,7 @@ export default function Home() {
                 transition={{ duration: 0.5, ease: "easeInOut" }}
                 className="w-full max-w-2/3 mx-auto bg-white dark:bg-card rounded-2xl shadow-xl overflow-hidden"
               >
-                <div
-                  className="flex items-center justify-between bg-emerald-500 text-white p-4">
+                <div className="flex items-center justify-between bg-emerald-500 text-white p-4">
                   <h3 className="font-medium">{t("demo.demoTitle")}</h3>
                 </div>
 
@@ -349,7 +352,7 @@ export default function Home() {
 
             <div className="space-y-4 mb-8 w-full flex flex-col items-center">
               <div
-                onClick={() => window.open("mailto:thomas@nordentoft.dk")}
+                onClick={() => window.open("mailto:info@compass-ai.chat")}
                 className="flex items-center w-full gap-4 cursor-pointer hover:bg-emerald-100 dark:hover:bg-emerald-900 rounded-full transition-all duration-300"
               >
                 <div className="bg-emerald-100 dark:bg-emerald-900 p-3 rounded-full">
@@ -360,7 +363,7 @@ export default function Home() {
                     {t("contact.email")}
                   </h3>
                   <p className="text-gray-700 dark:text-gray-300 break-words">
-                    thomas@nordentoft.dk
+                    info@compass-ai.chat
                   </p>
                 </div>
               </div>
