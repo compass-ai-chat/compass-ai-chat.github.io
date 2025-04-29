@@ -69,37 +69,70 @@ export default function PolarisDiagram() {
           
           {/* Compass icons pointing to Polaris */}
           <div className="absolute bottom-[5%] flex flex-col items-center">
-            <img
-              src="https://github.com/nordwestt/compass/blob/master/assets/compass.png?raw=true"
-              alt="Compass Logo"
-              className="h-16 mb-2"
-            />
-            {/* <div className="h-16 w-0.5 bg-emerald-500 relative">
-              <div className="absolute -top-1 left-1/2 -translate-x-1/2 w-3 h-3 border-t-2 border-r-2 border-emerald-500 rotate-[-45deg]"></div>
-            </div> */}
+            <div className="relative">
+              <svg className="absolute top-[-80px] left-1/2 -translate-x-1/2" width="4" height="80" overflow="visible">
+                <defs>
+                  <linearGradient id="bottomGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" stopColor="#10b981" />
+                    <stop offset="100%" stopColor="#34d399" />
+                  </linearGradient>
+                </defs>
+                <path d="M2,80 L2,10" stroke="url(#bottomGradient)" strokeWidth="2" fill="none" />
+                <path d="M2,10 L-3,15 L2,5 L7,15 Z" fill="#10b981" />
+              </svg>
+              <img
+                src="https://github.com/nordwestt/compass/blob/master/assets/compass.png?raw=true"
+                alt="Compass Logo"
+                className="h-16 mb-2"
+              />
+            </div>
+           
             <div className="bg-emerald-100 dark:bg-emerald-900 p-3 rounded-full">
               <User className="h-6 w-6 text-emerald-600 dark:text-emerald-400" />
             </div>
           </div>
           
           <div className="absolute bottom-[20%] left-[20%] flex items-center">
-          <div className="bg-emerald-100 dark:bg-emerald-900 p-3 rounded-full">
+            <div className="bg-emerald-100 dark:bg-emerald-900 p-3 rounded-full">
               <User className="h-6 w-6 text-emerald-600 dark:text-emerald-400" />
             </div>
-            <img
-              src="https://github.com/nordwestt/compass/blob/master/assets/compass.png?raw=true"
-              alt="Compass Logo"
-              className="h-16 mr-2"
-            />
-            
+            <div className="relative">
+              <svg className="absolute" width="100" height="100" overflow="visible" style={{ top: "5px", left: "60px" }}>
+                <defs>
+                  <linearGradient id="leftGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stopColor="#34d399" />
+                    <stop offset="100%" stopColor="#10b981" />
+                  </linearGradient>
+                </defs>
+                <path d="M0,0 L80,-70" stroke="url(#leftGradient)" strokeWidth="2" fill="none" />
+                <path d="M80,-70 L70,-65 L85,-75 L75,-85 Z" fill="#10b981" />
+              </svg>
+              <img
+                src="https://github.com/nordwestt/compass/blob/master/assets/compass.png?raw=true"
+                alt="Compass Logo"
+                className="h-16 mr-2"
+              />
+            </div>
           </div>
           
           <div className="absolute bottom-[20%] right-[20%] flex items-center">
-            <img
-              src="https://github.com/nordwestt/compass/blob/master/assets/compass.png?raw=true"
-              alt="Compass Logo"
-              className="h-16 ml-2"
-            />
+            <div className="relative">
+              <svg className="absolute" width="100" height="100" overflow="visible" style={{ top: "-60px", left: "30px" }}>
+                <defs>
+                  <linearGradient id="rightGradient" x1="100%" y1="0%" x2="0%" y2="0%">
+                    <stop offset="0%" stopColor="#34d399" />
+                    <stop offset="100%" stopColor="#10b981" />
+                  </linearGradient>
+                </defs>
+                <path d="M100,0 L30,70" stroke="url(#rightGradient)" strokeWidth="2" fill="none" />
+                <path d="M30,70 L40,65 L25,75 L35,85 Z" fill="#10b981" />
+              </svg>
+              <img
+                src="https://github.com/nordwestt/compass/blob/master/assets/compass.png?raw=true"
+                alt="Compass Logo"
+                className="h-16 ml-2"
+              />
+            </div>
             <div className="bg-emerald-100 dark:bg-emerald-900 p-3 rounded-full">
               <User className="h-6 w-6 text-emerald-600 dark:text-emerald-400" />
             </div>
