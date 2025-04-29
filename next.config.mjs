@@ -9,11 +9,9 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  output: 'export',
-  basePath: process.env.NODE_ENV === 'production' ? '/compass-website' : '',
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/compass-website/' : '',
-}
+  output: "export",
+  basePath: process.env.NODE_ENV === "production" ? "" : "",
+  assetPrefix: process.env.NODE_ENV === "production" ? "" : "",
+};
 
-export default nextConfig
-
-
+export default nextConfig;
