@@ -2,7 +2,7 @@ import { Lock, User } from "lucide-react";
 
 export default function PolarisDiagram() {
   // Arrow component that can be reused with different positions and rotations
-  const Arrow = ({ x, y, rotation }) => (
+  const Arrow = ({ x, y, rotation }: { x: string, y: string, rotation: string }) => (
     <g transform={`translate(${x}, ${y}) rotate(${rotation})`}>
       
       <path d="M0,-10 L-5,-5 L0,-15 L5,-5 Z" fill="#10b981" />
@@ -85,7 +85,7 @@ export default function PolarisDiagram() {
                     <stop offset="100%" stopColor="#34d399" />
                   </linearGradient>
                 </defs>
-                <Arrow x="2" y="80" rotation="0" gradient="bottomGradient" />
+                <Arrow x="2" y="80" rotation="0" />
               </svg>
               <img
                 src="https://github.com/nordwestt/compass/blob/master/assets/compass.png?raw=true"
@@ -112,7 +112,7 @@ export default function PolarisDiagram() {
                   </linearGradient>
                 </defs>
                 <path d="M0,0 L80,-70" stroke="url(#leftGradient)" strokeWidth="2" fill="none" />
-                <Arrow x="80" y="-70" rotation="40" gradient="leftGradient" />
+                <Arrow x="80" y="-70" rotation="40" />
               </svg>
               <img
                 src="https://github.com/nordwestt/compass/blob/master/assets/compass.png?raw=true"
@@ -132,7 +132,7 @@ export default function PolarisDiagram() {
                   </linearGradient>
                 </defs>
                 <path d="M0,0 L-80,-70" stroke="url(#leftGradient)" strokeWidth="2" fill="none" />
-                <Arrow x="-80" y="-70" rotation="-40" gradient="rightGradient" />
+                <Arrow x="-80" y="-70" rotation="-40" />
               </svg>
               <img
                 src="https://github.com/nordwestt/compass/blob/master/assets/compass.png?raw=true"
@@ -147,7 +147,12 @@ export default function PolarisDiagram() {
           
           {/* Ollama provider with arrow from Polaris */}
           <div className="absolute top-1/2 right-[5%] -translate-y-1/2 flex flex-col items-center">
-            
+            <div className="relative">
+                <svg className="absolute" width="100" height="100" overflow="visible" style={{top:"30px",left:"-35px"}}>
+                <Arrow x="-30" y="0" rotation="90" />
+                <path d="M-30,0 L-180,1" stroke="url(#leftGradient)" strokeWidth="2" fill="none" />
+                </svg>
+            </div>
             <div className="w-16 h-16 flex items-center justify-center bg-white dark:bg-gray-300 rounded-lg shadow-sm p-2">
               <img
                 src="./images/providers/ollama.png"
