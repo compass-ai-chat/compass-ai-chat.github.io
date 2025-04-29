@@ -66,6 +66,20 @@ export default function PolarisDiagram() {
           
           {/* Polaris diamond in the center with rounded corners */}
           <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-2/3 rotate-45 bg-white dark:bg-gray-800 border-2 border-emerald-500 p-8 flex items-center justify-center" style={{ borderRadius: '15%', width: '100px', height: '100px' }}>
+            <svg className="absolute" width="100" height="100" overflow="visible" style={{ top: "0px", left: "0px" }}>
+                    <defs>
+                    <linearGradient id="centerGradient" x1="100%" y1="0%" x2="0%" y2="0%">
+                        <stop offset="0%" stopColor="#f59e0b" />
+                        <stop offset="100%" stopColor="#f59e0b" />
+                    </linearGradient>
+                    </defs>
+                    <path d="M0,0 L-100,-100" stroke="url(#centerGradient)" strokeWidth="2" fill="#f59e0b" />
+                    <path d="M0,0 L-140,-40" stroke="url(#centerGradient)" strokeWidth="2" fill="#f59e0b" />
+                    <path d="M0,0 L-40,-140" stroke="url(#centerGradient)" strokeWidth="2" fill="#f59e0b" />
+                    <Arrow x="-100" y="-100" rotation="-45" />
+                    <Arrow x="-140" y="-40" rotation="-45" />
+                    <Arrow x="-40" y="-140" rotation="-45" />
+            </svg>
             <div className="rotate-[-45deg] text-emerald-500 font-bold text-xl flex flex-col items-center">
               <div className="text-emerald-500 mb-1">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -168,51 +182,6 @@ export default function PolarisDiagram() {
           </div>
         </div>
         
-        {/* Arrows from Polaris to providers outside the circle */}
-        <div className="absolute top-[25%] left-1/4 -translate-x-1/2 flex flex-col items-center">
-          <svg width="60" height="60" overflow="visible">
-            <defs>
-              <linearGradient id="topLeftGradient" x1="0%" y1="100%" x2="0%" y2="0%">
-                <stop offset="0%" stopColor="#f59e0b" />
-                <stop offset="100%" stopColor="#fbbf24" />
-              </linearGradient>
-            </defs>
-            <path d="M30,60 L30,0" stroke="url(#topLeftGradient)" strokeWidth="2" fill="none" />
-            <g transform="translate(30, 0) rotate(0)">
-              <path d="M0,-10 L-5,-5 L0,-15 L5,-5 Z" fill="#f59e0b" />
-            </g>
-          </svg>
-        </div>
-        
-        <div className="absolute top-[25%] left-1/2 -translate-x-1/2 flex flex-col items-center">
-          <svg width="60" height="60" overflow="visible">
-            <defs>
-              <linearGradient id="topMiddleGradient" x1="0%" y1="100%" x2="0%" y2="0%">
-                <stop offset="0%" stopColor="#f59e0b" />
-                <stop offset="100%" stopColor="#fbbf24" />
-              </linearGradient>
-            </defs>
-            <path d="M30,60 L30,0" stroke="url(#topMiddleGradient)" strokeWidth="2" fill="none" />
-            <g transform="translate(30, 0) rotate(0)">
-              <path d="M0,-10 L-5,-5 L0,-15 L5,-5 Z" fill="#f59e0b" />
-            </g>
-          </svg>
-        </div>
-        
-        <div className="absolute top-[25%] right-1/4 -translate-x-1/2 flex flex-col items-center">
-          <svg width="60" height="60" overflow="visible">
-            <defs>
-              <linearGradient id="topRightGradient" x1="0%" y1="100%" x2="0%" y2="0%">
-                <stop offset="0%" stopColor="#f59e0b" />
-                <stop offset="100%" stopColor="#fbbf24" />
-              </linearGradient>
-            </defs>
-            <path d="M30,60 L30,0" stroke="url(#topRightGradient)" strokeWidth="2" fill="none" />
-            <g transform="translate(30, 0) rotate(0)">
-              <path d="M0,-10 L-5,-5 L0,-15 L5,-5 Z" fill="#f59e0b" />
-            </g>
-          </svg>
-        </div>
       </div>
     </div>
   );
