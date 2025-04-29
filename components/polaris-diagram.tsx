@@ -2,10 +2,10 @@ import { Lock, User } from "lucide-react";
 
 export default function PolarisDiagram() {
   // Arrow component that can be reused with different positions and rotations
-  const Arrow = ({ x, y, rotation }: { x: string, y: string, rotation: string }) => (
+  const Arrow = ({ x, y, rotation, color }: { x: string, y: string, rotation: string, color: string }) => (
     <g transform={`translate(${x}, ${y}) rotate(${rotation})`}>
       
-      <path d="M0,-10 L-5,-5 L0,-15 L5,-5 Z" fill="#10b981" />
+      <path d="M0,-10 L-5,-5 L0,-15 L5,-5 Z" fill={color} />
     </g>
   );
 
@@ -76,9 +76,9 @@ export default function PolarisDiagram() {
                     <path d="M0,0 L-100,-100" stroke="url(#centerGradient)" strokeWidth="2" fill="#f59e0b" />
                     <path d="M0,0 L-140,-40" stroke="url(#centerGradient)" strokeWidth="2" fill="#f59e0b" />
                     <path d="M0,0 L-40,-140" stroke="url(#centerGradient)" strokeWidth="2" fill="#f59e0b" />
-                    <Arrow x="-100" y="-100" rotation="-45" />
-                    <Arrow x="-140" y="-40" rotation="-45" />
-                    <Arrow x="-40" y="-140" rotation="-45" />
+                    <Arrow x="-100" y="-100" rotation="-45" color="#f59e0b" />
+                    <Arrow x="-140" y="-40" rotation="-45" color="#f59e0b" />
+                    <Arrow x="-40" y="-140" rotation="-45" color="#f59e0b" />
             </svg>
             <div className="rotate-[-45deg] text-emerald-500 font-bold text-xl flex flex-col items-center">
               <div className="text-emerald-500 mb-1">
@@ -101,7 +101,7 @@ export default function PolarisDiagram() {
                   </linearGradient>
                 </defs>
                 <path d="M30,-5 L31,-30" stroke="url(#leftGradient)" strokeWidth="2" fill="none" />
-                <Arrow x="30" y="-30" rotation="0" />
+                <Arrow x="30" y="-30" rotation="0" color="#10b981" />
               </svg>
               <img
                 src="https://github.com/nordwestt/compass/blob/master/assets/compass.png?raw=true"
@@ -128,7 +128,7 @@ export default function PolarisDiagram() {
                   </linearGradient>
                 </defs>
                 <path d="M0,0 L40,-30" stroke="url(#leftGradient)" strokeWidth="2" fill="none" />
-                <Arrow x="40" y="-30" rotation="40" />
+                <Arrow x="40" y="-30" rotation="40" color="#10b981" />
               </svg>
               <img
                 src="https://github.com/nordwestt/compass/blob/master/assets/compass.png?raw=true"
@@ -148,7 +148,7 @@ export default function PolarisDiagram() {
                   </linearGradient>
                 </defs>
                 <path d="M0,0 L-40,-30" stroke="url(#leftGradient)" strokeWidth="2" fill="none" />
-                <Arrow x="-40" y="-30" rotation="-40" />
+                <Arrow x="-40" y="-30" rotation="-40" color="#10b981" />
               </svg>
               <img
                 src="https://github.com/nordwestt/compass/blob/master/assets/compass.png?raw=true"
@@ -165,7 +165,7 @@ export default function PolarisDiagram() {
           <div className="absolute top-1/3 right-[15%] -translate-y-1/2 flex flex-col items-center">
             <div className="relative">
                 <svg className="absolute" width="100" height="100" overflow="visible" style={{top:"30px",left:"-35px"}}>
-                <Arrow x="-30" y="0" rotation="90" />
+                <Arrow x="-30" y="0" rotation="90" color="#10b981" />
                 <path d="M-30,0 L-70,1" stroke="url(#leftGradient)" strokeWidth="2" fill="none" />
                 </svg>
             </div>
