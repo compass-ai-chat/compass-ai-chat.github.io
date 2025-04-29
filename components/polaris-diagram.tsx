@@ -56,7 +56,7 @@ export default function PolarisDiagram() {
         <div className="absolute top-[15%] bottom-[5%] left-[5%] right-[5%] rounded-full border-2 border-dashed border-gray-300 dark:border-gray-600 flex items-center justify-center">
           
           {/* Lock icon embedded in the circle border (top) */}
-          <div className="absolute -top-6 left-1/2 -translate-x-1/2 bg-gray-50 dark:bg-gray-900 p-2 rounded-full">
+          <div className="absolute top-1/4 left-0 bg-gray-50 dark:bg-gray-900 p-2 rounded-full">
             <div className="bg-emerald-100 dark:bg-emerald-900 p-3 rounded-full">
               <Lock className="h-6 w-6 text-emerald-600 dark:text-emerald-400" />
             </div>
