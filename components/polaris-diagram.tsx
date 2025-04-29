@@ -15,7 +15,7 @@ export default function PolarisDiagram() {
         
         {/* Provider icons at the top outside the circle */}
         <div className="absolute top-[5%] left-1/3 flex flex-col items-center z-10">
-          <div className="w-16 h-16 flex items-center justify-center bg-white dark:bg-gray-300 rounded-lg shadow-sm p-2">
+          <div className="w-16 h-16 flex items-center justify-center bg-white rounded-lg shadow-sm p-2">
             <img
               src="./images/providers/google.png"
               alt="Google logo"
@@ -28,7 +28,7 @@ export default function PolarisDiagram() {
         </div>
         
         <div className="absolute top-[0%] left-1/2 -translate-x-1/2 flex flex-col items-center z-10">
-          <div className="w-16 h-16 flex items-center justify-center bg-white dark:bg-gray-300 rounded-lg shadow-sm p-2">
+          <div className="w-16 h-16 flex items-center justify-center bg-white rounded-lg shadow-sm p-2">
             <img
               src="./images/providers/openai.png"
               alt="OpenAI logo"
@@ -41,7 +41,7 @@ export default function PolarisDiagram() {
         </div>
         
         <div className="absolute top-[5%] right-1/3 flex flex-col items-center z-10">
-          <div className="w-16 h-16 flex items-center justify-center bg-white dark:bg-gray-300 rounded-lg shadow-sm p-2">
+          <div className="w-16 h-16 flex items-center justify-center bg-white rounded-lg shadow-sm p-2">
             <img
               src="./images/providers/anthropic.jpeg"
               alt="Anthropic logo"
@@ -113,8 +113,8 @@ export default function PolarisDiagram() {
             </div>
             <div className="relative">
               <svg className="absolute" width="100" height="100" overflow="visible" style={{ top: "10px", left: "50px" }}>
-                <path d="M0,0 L70,-72" stroke="#10b981" strokeWidth="2" fill="none" />
-                <Arrow x="62" y="-64" rotation="40" color="#10b981" />
+                <path d="M0,0 L70,-80" stroke="#10b981" strokeWidth="2" fill="none" />
+                <Arrow x="62" y="-70" rotation="40" color="#10b981" />
               </svg>
               <img
                 src="https://github.com/nordwestt/compass/blob/master/assets/compass.png?raw=true"
@@ -127,8 +127,8 @@ export default function PolarisDiagram() {
           <div className="absolute bottom-[25%] right-[20%] flex items-center">
             <div className="relative">
               <svg className="absolute" width="100" height="100" overflow="visible" style={{ top: "10px", left: "20px" }}>
-                <path d="M0,0 L-70,-72" stroke="#10b981" strokeWidth="2" fill="none" />
-                <Arrow x="-62" y="-64" rotation="-40" color="#10b981" />
+                <path d="M0,0 L-70,-80" stroke="#10b981" strokeWidth="2" fill="none" />
+                <Arrow x="-62" y="-70" rotation="-40" color="#10b981" />
               </svg>
               <img
                 src="https://github.com/nordwestt/compass/blob/master/assets/compass.png?raw=true"
@@ -149,7 +149,7 @@ export default function PolarisDiagram() {
                 <path d="M-10,0 L-80,0" stroke="#10b981" strokeWidth="2" fill="none" />
                 </svg>
             </div>
-            <div className="w-16 h-16 flex items-center justify-center bg-white dark:bg-gray-300 rounded-lg shadow-sm p-2">
+            <div className="w-16 h-16 flex items-center justify-center bg-white rounded-lg shadow-sm p-2">
               <img
                 src="./images/providers/ollama.png"
                 alt="Ollama logo"
