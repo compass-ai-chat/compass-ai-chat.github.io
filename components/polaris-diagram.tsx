@@ -57,7 +57,7 @@ export default function PolarisDiagram() {
         <div className="absolute top-[25%] bottom-[5%] left-[5%] right-[5%] rounded-full border-2 border-dashed border-gray-300 dark:border-gray-600 flex items-center justify-center">
           
           {/* Lock icon embedded in the circle border (top) */}
-          <div className="absolute top-1/4 left-0 bg-gray-50 dark:bg-gray-900 p-2 rounded-full">
+          <div className="absolute top-[10%] left-[5%] bg-gray-50 dark:bg-gray-900 p-2 rounded-full">
             <div className="bg-emerald-100 dark:bg-emerald-900 p-3 rounded-full">
               <Lock className="h-6 w-6 text-emerald-600 dark:text-emerald-400" />
             </div>
@@ -94,8 +94,8 @@ export default function PolarisDiagram() {
           <div className="absolute bottom-[5%] flex flex-col items-center">
             <div className="relative">
               <svg className="absolute" width="100" height="100" overflow="visible" style={{ top: "5px", left: "0px" }}>
-                <path d="M30,0 L30,-100" stroke="#10b981" strokeWidth="2" fill="none" />
-                <Arrow x="30" y="-90" rotation="0" color="#10b981" />
+                <path d="M30,0 L30,-110" stroke="#10b981" strokeWidth="2" fill="none" />
+                <Arrow x="30" y="-100" rotation="0" color="#10b981" />
               </svg>
               <img
                 src="https://github.com/nordwestt/compass/blob/master/assets/compass.png?raw=true"
