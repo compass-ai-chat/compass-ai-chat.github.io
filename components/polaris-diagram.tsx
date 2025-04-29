@@ -1,0 +1,145 @@
+import { Lock, User } from "lucide-react";
+
+export default function PolarisDiagram() {
+  return (
+    <div className="w-full max-w-4xl mx-auto my-12 relative">
+      <div className="aspect-square w-full relative">
+        {/* Provider icons at the top outside the circle */}
+        <div className="absolute top-0 left-1/4 -translate-x-1/2 flex flex-col items-center z-10">
+          <div className="w-16 h-16 flex items-center justify-center bg-white dark:bg-gray-300 rounded-lg shadow-sm p-2">
+            <img
+              src="./images/providers/google.png"
+              alt="Google logo"
+              className="max-w-full max-h-full object-contain"
+            />
+          </div>
+          <span className="mt-2 text-gray-700 dark:text-gray-300 text-sm font-medium">
+            Google
+          </span>
+        </div>
+        
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 flex flex-col items-center z-10">
+          <div className="w-16 h-16 flex items-center justify-center bg-white dark:bg-gray-300 rounded-lg shadow-sm p-2">
+            <img
+              src="./images/providers/openai.png"
+              alt="OpenAI logo"
+              className="max-w-full max-h-full object-contain"
+            />
+          </div>
+          <span className="mt-2 text-gray-700 dark:text-gray-300 text-sm font-medium">
+            OpenAI
+          </span>
+        </div>
+        
+        <div className="absolute top-0 right-1/4 -translate-x-1/2 flex flex-col items-center z-10">
+          <div className="w-16 h-16 flex items-center justify-center bg-white dark:bg-gray-300 rounded-lg shadow-sm p-2">
+            <img
+              src="./images/providers/anthropic.jpeg"
+              alt="Anthropic logo"
+              className="max-w-full max-h-full object-contain"
+            />
+          </div>
+          <span className="mt-2 text-gray-700 dark:text-gray-300 text-sm font-medium">
+            Anthropic
+          </span>
+        </div>
+        
+        {/* Dotted circle container */}
+        <div className="absolute top-[15%] bottom-[5%] left-[5%] right-[5%] rounded-full border-2 border-dashed border-gray-300 dark:border-gray-600 flex items-center justify-center">
+          
+          {/* Lock icon embedded in the circle border (top) */}
+          <div className="absolute -top-6 left-1/2 -translate-x-1/2 bg-gray-50 dark:bg-gray-900 p-2 rounded-full">
+            <div className="bg-emerald-100 dark:bg-emerald-900 p-3 rounded-full">
+              <Lock className="h-6 w-6 text-emerald-600 dark:text-emerald-400" />
+            </div>
+          </div>
+          
+          
+          {/* Polaris diamond in the center with rounded corners */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rotate-45 bg-white dark:bg-gray-800 border-2 border-emerald-500 p-8 flex items-center justify-center" style={{ borderRadius: '30%' }}>
+            <div className="rotate-[-45deg] text-emerald-500 font-bold text-xl flex flex-col items-center">
+              <div className="text-emerald-500 mb-1">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" fill="currentColor" />
+                </svg>
+              </div>
+              Polaris
+            </div>
+          </div>
+          
+          {/* Compass icons pointing to Polaris */}
+          <div className="absolute bottom-[5%] flex flex-col items-center">
+            <img
+              src="https://github.com/nordwestt/compass/blob/master/assets/compass.png?raw=true"
+              alt="Compass Logo"
+              className="h-16 mb-2"
+            />
+            {/* <div className="h-16 w-0.5 bg-emerald-500 relative">
+              <div className="absolute -top-1 left-1/2 -translate-x-1/2 w-3 h-3 border-t-2 border-r-2 border-emerald-500 rotate-[-45deg]"></div>
+            </div> */}
+            <div className="bg-emerald-100 dark:bg-emerald-900 p-3 rounded-full">
+              <User className="h-6 w-6 text-emerald-600 dark:text-emerald-400" />
+            </div>
+          </div>
+          
+          <div className="absolute bottom-[20%] left-[20%] flex items-center">
+          <div className="bg-emerald-100 dark:bg-emerald-900 p-3 rounded-full">
+              <User className="h-6 w-6 text-emerald-600 dark:text-emerald-400" />
+            </div>
+            <img
+              src="https://github.com/nordwestt/compass/blob/master/assets/compass.png?raw=true"
+              alt="Compass Logo"
+              className="h-16 mr-2"
+            />
+            
+          </div>
+          
+          <div className="absolute bottom-[20%] right-[20%] flex items-center">
+            <img
+              src="https://github.com/nordwestt/compass/blob/master/assets/compass.png?raw=true"
+              alt="Compass Logo"
+              className="h-16 ml-2"
+            />
+            <div className="bg-emerald-100 dark:bg-emerald-900 p-3 rounded-full">
+              <User className="h-6 w-6 text-emerald-600 dark:text-emerald-400" />
+            </div>
+          </div>
+          
+          {/* Ollama provider with arrow from Polaris */}
+          <div className="absolute top-1/2 right-[5%] -translate-y-1/2 flex flex-col items-center">
+            
+            <div className="w-16 h-16 flex items-center justify-center bg-white dark:bg-gray-300 rounded-lg shadow-sm p-2">
+              <img
+                src="./images/providers/ollama.png"
+                alt="Ollama logo"
+                className="max-w-full max-h-full object-contain"
+              />
+            </div>
+            <span className="mt-2 text-gray-700 dark:text-gray-300 text-sm font-medium">
+              Ollama AI
+            </span>
+          </div>
+        </div>
+        
+        {/* Arrows from Polaris to providers outside the circle */}
+        <div className="absolute top-[25%] left-1/4 -translate-x-1/2 flex flex-col items-center">
+          <div className="h-[60px] w-0.5 bg-amber-500 relative">
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3 h-3 border-t-2 border-r-2 border-amber-500 rotate-[-45deg]"></div>
+          </div>
+        </div>
+        
+        <div className="absolute top-[25%] left-1/2 -translate-x-1/2 flex flex-col items-center">
+          <div className="h-[60px] w-0.5 bg-amber-500 relative">
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3 h-3 border-t-2 border-r-2 border-amber-500 rotate-[-45deg]"></div>
+          </div>
+        </div>
+        
+        <div className="absolute top-[25%] right-1/4 -translate-x-1/2 flex flex-col items-center">
+          <div className="h-[60px] w-0.5 bg-amber-500 relative">
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3 h-3 border-t-2 border-r-2 border-amber-500 rotate-[-45deg]"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+} 

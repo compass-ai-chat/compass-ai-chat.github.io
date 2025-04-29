@@ -8,6 +8,7 @@ import ContactForm from "@/components/contact-form";
 import FeatureCard from "@/components/feature-card";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
+import PolarisDiagram from "@/components/polaris-diagram";
 import { useTranslation } from "react-i18next";
 
 export default function Home() {
@@ -297,6 +298,8 @@ export default function Home() {
             {t("features.description")}
           </p>
         </motion.div>
+
+        <PolarisDiagram />
 
         <div className="grid md:grid-cols-3 gap-8">
           <FeatureCard
