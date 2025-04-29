@@ -73,9 +73,9 @@ export default function PolarisDiagram() {
                         <stop offset="100%" stopColor="#f59e0b" />
                     </linearGradient>
                     </defs>
-                    <path d="M0,0 L-90,-90" stroke="url(#centerGradient)" strokeWidth="2" fill="#f59e0b" />
-                    <path d="M0,0 L-120,-30" stroke="url(#centerGradient)" strokeWidth="2" fill="#f59e0b" />
-                    <path d="M0,0 L-30,-120" stroke="url(#centerGradient)" strokeWidth="2" fill="#f59e0b" />
+                    <path d="M0,0 L-90,-90" stroke="url(#centerGradient)" strokeWidth="2" fill="#f59e0b" strokeDasharray="4 2" />
+                    <path d="M0,0 L-120,-30" stroke="url(#centerGradient)" strokeWidth="2" fill="#f59e0b" strokeDasharray="4 2" />
+                    <path d="M0,0 L-30,-120" stroke="url(#centerGradient)" strokeWidth="2" fill="#f59e0b" strokeDasharray="4 2" />
                     <Arrow x="-83" y="-83" rotation="-45" color="#f59e0b" />
                     <Arrow x="-110" y="-26" rotation="-65" color="#f59e0b" />
                     <Arrow x="-26" y="-110" rotation="-25" color="#f59e0b" />
