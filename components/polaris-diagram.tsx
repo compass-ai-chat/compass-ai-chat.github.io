@@ -94,13 +94,7 @@ export default function PolarisDiagram() {
           <div className="absolute bottom-[5%] flex flex-col items-center">
             <div className="relative">
               <svg className="absolute" width="100" height="100" overflow="visible" style={{ top: "5px", left: "0px" }}>
-                <defs>
-                  <linearGradient id="bottomGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-                    <stop offset="0%" stopColor="#10b981" />
-                    <stop offset="100%" stopColor="#34d399" />
-                  </linearGradient>
-                </defs>
-                <path d="M30,-5 L31,-30" stroke="url(#leftGradient)" strokeWidth="2" fill="none" />
+                <path d="M30,-5 L31,-30" stroke="#10b981" strokeWidth="2" fill="none" />
                 <Arrow x="30" y="-30" rotation="0" color="#10b981" />
               </svg>
               <img
