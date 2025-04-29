@@ -1,6 +1,14 @@
 import { Lock, User } from "lucide-react";
 
 export default function PolarisDiagram() {
+  // Arrow component that can be reused with different positions and rotations
+  const Arrow = ({ x, y, rotation }) => (
+    <g transform={`translate(${x}, ${y}) rotate(${rotation})`}>
+      
+      <path d="M0,-10 L-5,-5 L0,-15 L5,-5 Z" fill="#10b981" />
+    </g>
+  );
+
   return (
     <div className="w-full max-w-4xl mx-auto my-12 relative">
       <div className="aspect-square w-full relative">
@@ -77,8 +85,7 @@ export default function PolarisDiagram() {
                     <stop offset="100%" stopColor="#34d399" />
                   </linearGradient>
                 </defs>
-                <path d="M2,80 L2,10" stroke="url(#bottomGradient)" strokeWidth="2" fill="none" />
-                <path d="M2,10 L-3,15 L2,5 L7,15 Z" fill="#10b981" />
+                <Arrow x="2" y="80" rotation="0" gradient="bottomGradient" />
               </svg>
               <img
                 src="https://github.com/nordwestt/compass/blob/master/assets/compass.png?raw=true"
@@ -105,7 +112,7 @@ export default function PolarisDiagram() {
                   </linearGradient>
                 </defs>
                 <path d="M0,0 L80,-70" stroke="url(#leftGradient)" strokeWidth="2" fill="none" />
-                <path d="M80,-70 L70,-65 L85,-75 L75,-85 Z" fill="#10b981" />
+                <Arrow x="80" y="-70" rotation="40" gradient="leftGradient" />
               </svg>
               <img
                 src="https://github.com/nordwestt/compass/blob/master/assets/compass.png?raw=true"
@@ -117,15 +124,15 @@ export default function PolarisDiagram() {
           
           <div className="absolute bottom-[20%] right-[20%] flex items-center">
             <div className="relative">
-              <svg className="absolute" width="100" height="100" overflow="visible" style={{ top: "-60px", left: "30px" }}>
+              <svg className="absolute" width="100" height="100" overflow="visible" style={{ top: "5px", left: "15px" }}>
                 <defs>
                   <linearGradient id="rightGradient" x1="100%" y1="0%" x2="0%" y2="0%">
                     <stop offset="0%" stopColor="#34d399" />
                     <stop offset="100%" stopColor="#10b981" />
                   </linearGradient>
                 </defs>
-                <path d="M100,0 L30,70" stroke="url(#rightGradient)" strokeWidth="2" fill="none" />
-                <path d="M30,70 L40,65 L25,75 L35,85 Z" fill="#10b981" />
+                <path d="M0,0 L-80,-70" stroke="url(#leftGradient)" strokeWidth="2" fill="none" />
+                <Arrow x="-80" y="-70" rotation="-40" gradient="rightGradient" />
               </svg>
               <img
                 src="https://github.com/nordwestt/compass/blob/master/assets/compass.png?raw=true"
