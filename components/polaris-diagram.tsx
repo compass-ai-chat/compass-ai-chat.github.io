@@ -10,7 +10,7 @@ export default function PolarisDiagram() {
   );
 
   return (
-    <div className="w-full max-w-4xl mx-auto my-12 relative">
+    <div className="w-full max-w-2xl mx-auto my-12 relative">
       <div className="aspect-square w-full relative">
         {/* Provider icons at the top outside the circle */}
         <div className="absolute top-0 left-1/4 -translate-x-1/2 flex flex-col items-center z-10">
@@ -78,14 +78,15 @@ export default function PolarisDiagram() {
           {/* Compass icons pointing to Polaris */}
           <div className="absolute bottom-[5%] flex flex-col items-center">
             <div className="relative">
-              <svg className="absolute top-[-80px] left-1/2 -translate-x-1/2" width="4" height="80" overflow="visible">
+              <svg className="absolute" width="100" height="100" overflow="visible" style={{ top: "5px", left: "0px" }}>
                 <defs>
                   <linearGradient id="bottomGradient" x1="0%" y1="0%" x2="0%" y2="100%">
                     <stop offset="0%" stopColor="#10b981" />
                     <stop offset="100%" stopColor="#34d399" />
                   </linearGradient>
                 </defs>
-                <Arrow x="2" y="80" rotation="0" />
+                <path d="M30,-5 L31,-30" stroke="url(#leftGradient)" strokeWidth="2" fill="none" />
+                <Arrow x="30" y="-30" rotation="0" />
               </svg>
               <img
                 src="https://github.com/nordwestt/compass/blob/master/assets/compass.png?raw=true"
@@ -111,8 +112,8 @@ export default function PolarisDiagram() {
                     <stop offset="100%" stopColor="#10b981" />
                   </linearGradient>
                 </defs>
-                <path d="M0,0 L80,-70" stroke="url(#leftGradient)" strokeWidth="2" fill="none" />
-                <Arrow x="80" y="-70" rotation="40" />
+                <path d="M0,0 L40,-30" stroke="url(#leftGradient)" strokeWidth="2" fill="none" />
+                <Arrow x="40" y="-30" rotation="40" />
               </svg>
               <img
                 src="https://github.com/nordwestt/compass/blob/master/assets/compass.png?raw=true"
@@ -131,8 +132,8 @@ export default function PolarisDiagram() {
                     <stop offset="100%" stopColor="#10b981" />
                   </linearGradient>
                 </defs>
-                <path d="M0,0 L-80,-70" stroke="url(#leftGradient)" strokeWidth="2" fill="none" />
-                <Arrow x="-80" y="-70" rotation="-40" />
+                <path d="M0,0 L-40,-30" stroke="url(#leftGradient)" strokeWidth="2" fill="none" />
+                <Arrow x="-40" y="-30" rotation="-40" />
               </svg>
               <img
                 src="https://github.com/nordwestt/compass/blob/master/assets/compass.png?raw=true"
@@ -150,7 +151,7 @@ export default function PolarisDiagram() {
             <div className="relative">
                 <svg className="absolute" width="100" height="100" overflow="visible" style={{top:"30px",left:"-35px"}}>
                 <Arrow x="-30" y="0" rotation="90" />
-                <path d="M-30,0 L-180,1" stroke="url(#leftGradient)" strokeWidth="2" fill="none" />
+                <path d="M-30,0 L-130,1" stroke="url(#leftGradient)" strokeWidth="2" fill="none" />
                 </svg>
             </div>
             <div className="w-16 h-16 flex items-center justify-center bg-white dark:bg-gray-300 rounded-lg shadow-sm p-2">
