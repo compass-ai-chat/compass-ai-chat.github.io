@@ -101,7 +101,7 @@ export default function PolarisDiagram() {
             </div>
           </div>
           
-          <div className="absolute bottom-[20%] left-[20%] flex items-center">
+          <div className="absolute bottom-[25%] left-[20%] flex items-center">
             <div className="bg-emerald-100 dark:bg-emerald-900 p-3 rounded-full">
               <User className="h-6 w-6 text-emerald-600 dark:text-emerald-400" />
             </div>
@@ -124,7 +124,7 @@ export default function PolarisDiagram() {
             </div>
           </div>
           
-          <div className="absolute bottom-[20%] right-[20%] flex items-center">
+          <div className="absolute bottom-[25%] right-[20%] flex items-center">
             <div className="relative">
               <svg className="absolute" width="100" height="100" overflow="visible" style={{ top: "5px", left: "15px" }}>
                 <defs>
@@ -148,11 +148,11 @@ export default function PolarisDiagram() {
           </div>
           
           {/* Ollama provider with arrow from Polaris */}
-          <div className="absolute top-1/2 right-[5%] -translate-y-1/2 flex flex-col items-center">
+          <div className="absolute top-1/3 right-[15%] -translate-y-1/2 flex flex-col items-center">
             <div className="relative">
                 <svg className="absolute" width="100" height="100" overflow="visible" style={{top:"30px",left:"-35px"}}>
                 <Arrow x="-30" y="0" rotation="90" />
-                <path d="M-30,0 L-130,1" stroke="url(#leftGradient)" strokeWidth="2" fill="none" />
+                <path d="M-30,0 L-70,1" stroke="url(#leftGradient)" strokeWidth="2" fill="none" />
                 </svg>
             </div>
             <div className="w-16 h-16 flex items-center justify-center bg-white dark:bg-gray-300 rounded-lg shadow-sm p-2">
