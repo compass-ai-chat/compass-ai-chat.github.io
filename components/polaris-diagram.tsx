@@ -14,7 +14,7 @@ export default function PolarisDiagram() {
       <div className="aspect-square w-full relative">
         
         {/* Provider icons at the top outside the circle */}
-        <div className="absolute top-0 left-1/3 flex flex-col items-center z-10">
+        <div className="absolute top-[5%] left-1/3 flex flex-col items-center z-10">
           <div className="w-16 h-16 flex items-center justify-center bg-white dark:bg-gray-300 rounded-lg shadow-sm p-2">
             <img
               src="./images/providers/google.png"
@@ -27,7 +27,7 @@ export default function PolarisDiagram() {
           </span>
         </div>
         
-        <div className="absolute -top-6 left-1/2 -translate-x-1/2 flex flex-col items-center z-10">
+        <div className="absolute top-[0%] left-1/2 -translate-x-1/2 flex flex-col items-center z-10">
           <div className="w-16 h-16 flex items-center justify-center bg-white dark:bg-gray-300 rounded-lg shadow-sm p-2">
             <img
               src="./images/providers/openai.png"
@@ -40,7 +40,7 @@ export default function PolarisDiagram() {
           </span>
         </div>
         
-        <div className="absolute top-0 right-1/3 flex flex-col items-center z-10">
+        <div className="absolute top-[5%] right-1/3 flex flex-col items-center z-10">
           <div className="w-16 h-16 flex items-center justify-center bg-white dark:bg-gray-300 rounded-lg shadow-sm p-2">
             <img
               src="./images/providers/anthropic.jpeg"
@@ -73,12 +73,12 @@ export default function PolarisDiagram() {
                         <stop offset="100%" stopColor="#f59e0b" />
                     </linearGradient>
                     </defs>
-                    <path d="M0,0 L-100,-100" stroke="url(#centerGradient)" strokeWidth="2" fill="#f59e0b" />
-                    <path d="M0,0 L-140,-40" stroke="url(#centerGradient)" strokeWidth="2" fill="#f59e0b" />
-                    <path d="M0,0 L-40,-140" stroke="url(#centerGradient)" strokeWidth="2" fill="#f59e0b" />
-                    <Arrow x="-100" y="-100" rotation="-45" color="#f59e0b" />
-                    <Arrow x="-140" y="-40" rotation="-45" color="#f59e0b" />
-                    <Arrow x="-40" y="-140" rotation="-45" color="#f59e0b" />
+                    <path d="M0,0 L-90,-90" stroke="url(#centerGradient)" strokeWidth="2" fill="#f59e0b" />
+                    <path d="M0,0 L-120,-30" stroke="url(#centerGradient)" strokeWidth="2" fill="#f59e0b" />
+                    <path d="M0,0 L-30,-120" stroke="url(#centerGradient)" strokeWidth="2" fill="#f59e0b" />
+                    <Arrow x="-83" y="-83" rotation="-45" color="#f59e0b" />
+                    <Arrow x="-110" y="-26" rotation="-65" color="#f59e0b" />
+                    <Arrow x="-26" y="-110" rotation="-25" color="#f59e0b" />
             </svg>
             <div className="rotate-[-45deg] text-emerald-500 font-bold text-xl flex flex-col items-center">
               <div className="text-emerald-500 mb-1">
