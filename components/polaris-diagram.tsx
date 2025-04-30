@@ -9,6 +9,36 @@ export default function PolarisDiagram() {
     </g>
   );
 
+  // Define the pulse gradient once to be reused
+  const PulseGradient = ({ id, x1 = "100%", y1 = "0%", x2 = "0%", y2 = "0%" }: { id?: string, x1?: string, y1?: string, x2?: string, y2?: string }) => (
+    <linearGradient id={id} x1={x1} y1={y1} x2={x2} y2={y2}>
+      <stop offset="0%" stopColor="rgba(16, 185, 129, 0.1)">
+        <animate attributeName="offset" values="0;1" dur="2s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="20%" stopColor="rgba(16, 185, 129, 0.8)">
+        <animate attributeName="offset" values="0.2;1.2" dur="2s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="40%" stopColor="rgba(16, 185, 129, 0.1)">
+        <animate attributeName="offset" values="0.4;1.4" dur="2s" repeatCount="indefinite" />
+      </stop>
+    </linearGradient>
+  );
+
+  // Define the amber pulse gradient for Polaris connections
+  const AmberPulseGradient = () => (
+    <linearGradient id="amberPulseGradient" x1="100%" y1="0%" x2="0%" y2="0%">
+      <stop offset="0%" stopColor="rgba(245, 158, 11, 0.1)">
+        <animate attributeName="offset" values="0;1" dur="2s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="20%" stopColor="rgba(245, 158, 11, 0.8)">
+        <animate attributeName="offset" values="0.2;1.2" dur="2s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="40%" stopColor="rgba(245, 158, 11, 0.1)">
+        <animate attributeName="offset" values="0.4;1.4" dur="2s" repeatCount="indefinite" />
+      </stop>
+    </linearGradient>
+  );
+
   return (
     <div className="w-full overflow-hidden my-12 flex justify-center">
         <div className="inline-block">
@@ -71,14 +101,25 @@ export default function PolarisDiagram() {
             <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-2/3 rotate-45 bg-white dark:bg-gray-800 border-2 border-emerald-500 p-8 flex items-center justify-center" style={{ borderRadius: '15%', width: '100px', height: '100px' }}>
               <svg className="absolute" width="100" height="100" overflow="visible" style={{ top: "0px", left: "0px" }}>
                       <defs>
-                      <linearGradient id="centerGradient" x1="100%" y1="0%" x2="0%" y2="0%">
-                          <stop offset="0%" stopColor="#f59e0b" />
-                          <stop offset="100%" stopColor="#f59e0b" />
-                      </linearGradient>
+                        <AmberPulseGradient />
                       </defs>
-                      <path d="M0,0 L-58,-58" stroke="#f59e0b" strokeWidth="2" fill="#f59e0b" strokeDasharray="4 2" />
-                      <path d="M0,0 L-90,-10" stroke="#f59e0b" strokeWidth="2" fill="#f59e0b" strokeDasharray="4 2" />
-                      <path d="M0,0 L-10,-90" stroke="#f59e0b" strokeWidth="2" fill="#f59e0b" strokeDasharray="4 2" />
+                      
+                      {/* Base dashed lines */}
+                      <path d="M0,0 L-58,-58" stroke="#f59e0b" strokeWidth="2" strokeOpacity="0.3" strokeDasharray="4 2" />
+                      <path d="M0,0 L-90,-10" stroke="#f59e0b" strokeWidth="2" strokeOpacity="0.3" strokeDasharray="4 2" />
+                      <path d="M0,0 L-10,-90" stroke="#f59e0b" strokeWidth="2" strokeOpacity="0.3" strokeDasharray="4 2" />
+                      
+                      {/* Animated pulse overlays */}
+                      <path d="M0,0 L-58,-58" stroke="url(#amberPulseGradient)" strokeWidth="3" fill="none">
+                        <animateTransform attributeName="transform" type="rotate" from="0 0 0" to="-45 0 0" dur="0.01s" repeatCount="1" />
+                      </path>
+                      <path d="M0,0 L-90,-10" stroke="url(#amberPulseGradient)" strokeWidth="3" fill="none">
+                        <animateTransform attributeName="transform" type="rotate" from="0 0 0" to="-80 0 0" dur="0.01s" repeatCount="1" />
+                      </path>
+                      <path d="M0,0 L-10,-90" stroke="url(#amberPulseGradient)" strokeWidth="3" fill="none">
+                        <animateTransform attributeName="transform" type="rotate" from="0 0 0" to="-8 0 0" dur="0.01s" repeatCount="1" />
+                      </path>
+                      
                       <Arrow x="-52" y="-52" rotation="-45" color="#f59e0b" />
                       <Arrow x="-84" y="-9" rotation="-80" color="#f59e0b" />
                       <Arrow x="-9" y="-84" rotation="-8" color="#f59e0b" />
@@ -95,7 +136,13 @@ export default function PolarisDiagram() {
             <div className="absolute bottom-[5%] flex flex-col items-center">
               <div className="relative">
                 <svg className="absolute" width="100" height="100" overflow="visible" style={{ top: "5px", left: "2px" }}>
-                  <path d="M30,0 L30,-80" stroke="#10b981" strokeWidth="2" fill="none" />
+                  <defs>
+                    <PulseGradient id="downUpPulseGradient" x1="0%" y1="100%" x2="0%" y2="0%" />
+                  </defs>
+                  {/* Base line */}
+                  <path d="M30,0 L30,-80" stroke="#10b981" strokeWidth="2" strokeOpacity="0.3" fill="none" />
+                  {/* Animated pulse overlay */}
+                  <path d="M31,0 L30,-80" stroke="url(#downUpPulseGradient)" strokeWidth="3" fill="none" />
                   <Arrow x="30" y="-70" rotation="0" color="#10b981" />
                 </svg>
                 <img
@@ -116,7 +163,13 @@ export default function PolarisDiagram() {
               </div>
               <div className="relative">
                 <svg className="absolute" width="100" height="100" overflow="visible" style={{ top: "10px", left: "50px" }}>
-                  <path d="M0,0 L50,-60" stroke="#10b981" strokeWidth="2" fill="none" />
+                <defs>
+                    <PulseGradient id="leftRightPulseGradient" x1="0%" y1="0%" x2="100%" y2="0%" />
+                  </defs>
+                  {/* Base line */}
+                  <path d="M0,0 L50,-60" stroke="#10b981" strokeWidth="2" strokeOpacity="0.3" fill="none" />
+                  {/* Animated pulse overlay */}
+                  <path d="M0,0 L50,-60" stroke="url(#leftRightPulseGradient)" strokeWidth="3" fill="none" />
                   <Arrow x="44" y="-52" rotation="40" color="#10b981" />
                 </svg>
                 <img
@@ -130,7 +183,13 @@ export default function PolarisDiagram() {
             <div className="absolute bottom-[25%] right-[20%] flex items-center">
               <div className="relative">
                 <svg className="absolute" width="100" height="100" overflow="visible" style={{ top: "10px", left: "20px" }}>
-                  <path d="M0,0 L-50,-60" stroke="#10b981" strokeWidth="2" fill="none" />
+                <defs>
+                    <PulseGradient id="rightLeftPulseGradient" x1="100%" y1="0%" x2="0%" y2="0%" />
+                  </defs>
+                  {/* Base line */}
+                  <path d="M0,0 L-50,-60" stroke="#10b981" strokeWidth="2" strokeOpacity="0.3" fill="none" />
+                  {/* Animated pulse overlay */}
+                  <path d="M0,0 L-50,-60" stroke="url(#rightLeftPulseGradient)" strokeWidth="3" fill="none" />
                   <Arrow x="-44" y="-52" rotation="-40" color="#10b981" />
                 </svg>
                 <img
@@ -148,8 +207,15 @@ export default function PolarisDiagram() {
             <div className="absolute top-1/3 right-[15%] -translate-y-1/2 flex flex-col items-center">
               <div className="relative">
                   <svg className="absolute" width="100" height="100" overflow="visible" style={{top:"30px",left:"-35px"}}>
+                  <defs>
+                    <PulseGradient id="downUpPulseGradient" x1="0%" y1="100%" x2="0%" y2="0%" />
+                  </defs>
+                    
+                  {/* Base line */}
+                  <path d="M-10,0 L-57,0" stroke="#10b981" strokeWidth="2" strokeOpacity="0.3" fill="none" />
+                  {/* Animated pulse overlay */}
+                  <path d="M-10,0 L-57,1" stroke="url(#leftRightPulseGradient)" strokeWidth="3" fill="none" />
                   <Arrow x="-20" y="0" rotation="90" color="#10b981" />
-                  <path d="M-10,0 L-57,0" stroke="#10b981" strokeWidth="2" fill="none" />
                   </svg>
               </div>
               <div className="w-16 h-16 flex items-center justify-center bg-white rounded-lg shadow-sm p-2">
