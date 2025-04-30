@@ -57,7 +57,7 @@ export default function CompassDiagram() {
           <div className="absolute top-[30%] bottom-[35%] left-[15%] right-[15%] rounded-full border-2 border-dashed border-gray-300 dark:border-gray-600 flex items-center justify-center">
             
             {/* Lock icon embedded in the circle border (top) */}
-            <div className="absolute top-[10%] -left-[2%] bg-gray-50 dark:bg-gray-900 p-2 rounded-full">
+            <div className="absolute top-[10%] -left-[4%] bg-gray-50 dark:bg-gray-900 p-2 rounded-full">
               <div className="bg-emerald-100 dark:bg-emerald-900 p-3 rounded-full">
                 <Lock className="h-6 w-6 text-emerald-600 dark:text-emerald-400" />
               </div>
