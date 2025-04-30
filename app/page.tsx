@@ -351,13 +351,13 @@ export default function Home() {
           <p className="text-xl text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">
             {t("diagram.description")}
           </p>
-        <div className="flex justify-center flex-col md:flex-row">
+        <div className="flex justify-center flex-col lg:flex-row">
           <p className="text-xl text-gray-700 dark:text-gray-300 max-w-2xl mx-auto mt-[10%]">
             {t("diagram.compass.description")}
           </p>
           <CompassDiagram />
         </div>
-        <div className="flex justify-center">
+        <div className="flex justify-center flex-col lg:flex-row">
           <PolarisDiagram />
           <p className="text-xl text-gray-700 dark:text-gray-300 max-w-2xl mx-auto mt-[10%]">
             {t("diagram.polaris.description")}
