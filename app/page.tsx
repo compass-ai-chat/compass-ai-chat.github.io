@@ -351,8 +351,8 @@ export default function Home() {
           <p className="text-xl text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">
             {t("diagram.description")}
           </p>
-        <div className="flex justify-center">
-        <p className="text-xl text-gray-700 dark:text-gray-300 max-w-2xl mx-auto mt-[10%]">
+        <div className="flex justify-center flex-col md:flex-row">
+          <p className="text-xl text-gray-700 dark:text-gray-300 max-w-2xl mx-auto mt-[10%]">
             {t("diagram.compass.description")}
           </p>
           <CompassDiagram />
