@@ -33,10 +33,10 @@ export default function FeatureCard({
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.2, delay }}
+      transition={{ duration: 0.3, delay }}
       viewport={{ once: true }}
       whileHover={{ y: -5 }}
-      className="bg-surface-light dark:bg-surface-dark p-6 rounded-2xl shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100 dark:border-gray-700 overflow-x-auto"
+      className="bg-surface-light dark:bg-surface-dark p-6 rounded-2xl shadow-md hover:shadow-lg border border-gray-100 dark:border-gray-700 overflow-x-auto"
     >
       <div className="flex flex-row">
         <div className="bg-primary/20 w-12 h-12 rounded-full flex items-center justify-center mb-4">
