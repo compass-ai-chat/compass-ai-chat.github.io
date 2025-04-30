@@ -94,9 +94,9 @@ export default function PolarisDiagram() {
             {/* Compass icons pointing to Polaris */}
             <div className="absolute bottom-[5%] flex flex-col items-center">
               <div className="relative">
-                <svg className="absolute" width="100" height="100" overflow="visible" style={{ top: "5px", left: "0px" }}>
-                  <path d="M30,0 L30,-110" stroke="#10b981" strokeWidth="2" fill="none" />
-                  <Arrow x="30" y="-100" rotation="0" color="#10b981" />
+                <svg className="absolute" width="100" height="100" overflow="visible" style={{ top: "5px", left: "2px" }}>
+                  <path d="M30,0 L30,-80" stroke="#10b981" strokeWidth="2" fill="none" />
+                  <Arrow x="30" y="-70" rotation="0" color="#10b981" />
                 </svg>
                 <img
                   src="https://github.com/nordwestt/compass/blob/master/assets/compass.png?raw=true"
@@ -116,8 +116,8 @@ export default function PolarisDiagram() {
               </div>
               <div className="relative">
                 <svg className="absolute" width="100" height="100" overflow="visible" style={{ top: "10px", left: "50px" }}>
-                  <path d="M0,0 L70,-80" stroke="#10b981" strokeWidth="2" fill="none" />
-                  <Arrow x="62" y="-70" rotation="40" color="#10b981" />
+                  <path d="M0,0 L50,-60" stroke="#10b981" strokeWidth="2" fill="none" />
+                  <Arrow x="44" y="-52" rotation="40" color="#10b981" />
                 </svg>
                 <img
                   src="https://github.com/nordwestt/compass/blob/master/assets/compass.png?raw=true"
@@ -130,8 +130,8 @@ export default function PolarisDiagram() {
             <div className="absolute bottom-[25%] right-[20%] flex items-center">
               <div className="relative">
                 <svg className="absolute" width="100" height="100" overflow="visible" style={{ top: "10px", left: "20px" }}>
-                  <path d="M0,0 L-70,-80" stroke="#10b981" strokeWidth="2" fill="none" />
-                  <Arrow x="-62" y="-70" rotation="-40" color="#10b981" />
+                  <path d="M0,0 L-50,-60" stroke="#10b981" strokeWidth="2" fill="none" />
+                  <Arrow x="-44" y="-52" rotation="-40" color="#10b981" />
                 </svg>
                 <img
                   src="https://github.com/nordwestt/compass/blob/master/assets/compass.png?raw=true"
