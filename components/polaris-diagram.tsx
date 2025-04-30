@@ -17,7 +17,7 @@ export default function PolarisDiagram() {
         <div className="absolute inset-0">
           
           {/* Provider icons at the top outside the circle */}
-          <div className="absolute top-[5%] left-1/3 flex flex-col items-center z-10">
+          <div className="absolute top-[5%] left-1/4 flex flex-col items-center z-10">
             <div className="w-16 h-16 flex items-center justify-center bg-white rounded-lg shadow-sm p-2">
               <img
                 src="./images/providers/google.png"
@@ -43,7 +43,7 @@ export default function PolarisDiagram() {
             </span>
           </div>
           
-          <div className="absolute top-[5%] right-1/3 flex flex-col items-center z-10">
+          <div className="absolute top-[5%] right-1/4 flex flex-col items-center z-10">
             <div className="w-16 h-16 flex items-center justify-center bg-white rounded-lg shadow-sm p-2">
               <img
                 src="./images/providers/anthropic.jpeg"
@@ -77,11 +77,11 @@ export default function PolarisDiagram() {
                       </linearGradient>
                       </defs>
                       <path d="M0,0 L-58,-58" stroke="#f59e0b" strokeWidth="2" fill="#f59e0b" strokeDasharray="4 2" />
-                      <path d="M0,0 L-80,-15" stroke="#f59e0b" strokeWidth="2" fill="#f59e0b" strokeDasharray="4 2" />
-                      <path d="M0,0 L-15,-80" stroke="#f59e0b" strokeWidth="2" fill="#f59e0b" strokeDasharray="4 2" />
+                      <path d="M0,0 L-90,-10" stroke="#f59e0b" strokeWidth="2" fill="#f59e0b" strokeDasharray="4 2" />
+                      <path d="M0,0 L-10,-90" stroke="#f59e0b" strokeWidth="2" fill="#f59e0b" strokeDasharray="4 2" />
                       <Arrow x="-52" y="-52" rotation="-45" color="#f59e0b" />
-                      <Arrow x="-74" y="-14" rotation="-80" color="#f59e0b" />
-                      <Arrow x="-14" y="-74" rotation="-8" color="#f59e0b" />
+                      <Arrow x="-84" y="-9" rotation="-80" color="#f59e0b" />
+                      <Arrow x="-9" y="-84" rotation="-8" color="#f59e0b" />
               </svg>
               <div className="rotate-[-45deg] text-emerald-500 font-bold text-xl flex flex-col items-center">
                 <div className="text-emerald-500 mb-1">
