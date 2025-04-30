@@ -137,12 +137,12 @@ export default function PolarisDiagram() {
               <div className="relative">
                 <svg className="absolute" width="100" height="100" overflow="visible" style={{ top: "5px", left: "2px" }}>
                   <defs>
-                    <PulseGradient id="downUpPulseGradient" x1="0%" y1="100%" x2="0%" y2="0%" />
+                    <PulseGradient id="downUpNormalPulseGradient" x1="0%" y1="100%" x2="0%" y2="0%" />
                   </defs>
                   {/* Base line */}
                   <path d="M30,0 L30,-80" stroke="#10b981" strokeWidth="2" strokeOpacity="0.3" fill="none" />
                   {/* Animated pulse overlay */}
-                  <path d="M31,0 L30,-80" stroke="url(#downUpPulseGradient)" strokeWidth="3" fill="none" />
+                  <path d="M31,0 L30,-80" stroke="url(#downUpNormalPulseGradient)" strokeWidth="3" fill="none" />
                   <Arrow x="30" y="-70" rotation="0" color="#10b981" />
                 </svg>
                 <img
@@ -164,12 +164,12 @@ export default function PolarisDiagram() {
               <div className="relative">
                 <svg className="absolute" width="100" height="100" overflow="visible" style={{ top: "10px", left: "50px" }}>
                 <defs>
-                    <PulseGradient id="leftRightPulseGradient" x1="0%" y1="0%" x2="100%" y2="0%" />
+                    <PulseGradient id="leftRightNormalPulseGradient" x1="0%" y1="0%" x2="100%" y2="0%" />
                   </defs>
                   {/* Base line */}
                   <path d="M0,0 L50,-60" stroke="#10b981" strokeWidth="2" strokeOpacity="0.3" fill="none" />
                   {/* Animated pulse overlay */}
-                  <path d="M0,0 L50,-60" stroke="url(#leftRightPulseGradient)" strokeWidth="3" fill="none" />
+                  <path d="M0,0 L50,-60" stroke="url(#leftRightNormalPulseGradient)" strokeWidth="3" fill="none" />
                   <Arrow x="44" y="-52" rotation="40" color="#10b981" />
                 </svg>
                 <img
@@ -184,12 +184,12 @@ export default function PolarisDiagram() {
               <div className="relative">
                 <svg className="absolute" width="100" height="100" overflow="visible" style={{ top: "10px", left: "20px" }}>
                 <defs>
-                    <PulseGradient id="rightLeftPulseGradient" x1="100%" y1="0%" x2="0%" y2="0%" />
+                    <PulseGradient id="rightLeftNormalPulseGradient" x1="100%" y1="0%" x2="0%" y2="0%" />
                   </defs>
                   {/* Base line */}
                   <path d="M0,0 L-50,-60" stroke="#10b981" strokeWidth="2" strokeOpacity="0.3" fill="none" />
                   {/* Animated pulse overlay */}
-                  <path d="M0,0 L-50,-60" stroke="url(#rightLeftPulseGradient)" strokeWidth="3" fill="none" />
+                  <path d="M0,0 L-50,-60" stroke="url(#rightLeftNormalPulseGradient)" strokeWidth="3" fill="none" />
                   <Arrow x="-44" y="-52" rotation="-40" color="#10b981" />
                 </svg>
                 <img
@@ -207,14 +207,11 @@ export default function PolarisDiagram() {
             <div className="absolute top-1/3 right-[15%] -translate-y-1/2 flex flex-col items-center">
               <div className="relative">
                   <svg className="absolute" width="100" height="100" overflow="visible" style={{top:"30px",left:"-35px"}}>
-                  <defs>
-                    <PulseGradient id="downUpPulseGradient" x1="0%" y1="100%" x2="0%" y2="0%" />
-                  </defs>
                     
                   {/* Base line */}
                   <path d="M-10,0 L-57,0" stroke="#10b981" strokeWidth="2" strokeOpacity="0.3" fill="none" />
                   {/* Animated pulse overlay */}
-                  <path d="M-10,0 L-57,1" stroke="url(#leftRightPulseGradient)" strokeWidth="3" fill="none" />
+                  <path d="M-10,0 L-57,1" stroke="url(#leftRightNormalPulseGradient)" strokeWidth="3" fill="none" />
                   <Arrow x="-20" y="0" rotation="90" color="#10b981" />
                   </svg>
               </div>

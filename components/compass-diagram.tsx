@@ -8,6 +8,35 @@ export default function CompassDiagram() {
     </g>
   );
 
+  // Define the pulse gradient once to be reused
+  const PulseGradient = ({ id, x1 = "100%", y1 = "0%", x2 = "0%", y2 = "0%" }: { id?: string, x1?: string, y1?: string, x2?: string, y2?: string }) => (
+    <linearGradient id={id} x1={x1} y1={y1} x2={x2} y2={y2}>
+      <stop offset="0%" stopColor="rgba(16, 185, 129, 0.1)">
+        <animate attributeName="offset" values="0;1" dur="2s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="20%" stopColor="rgba(16, 185, 129, 0.8)">
+        <animate attributeName="offset" values="0.2;1.2" dur="2s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="40%" stopColor="rgba(16, 185, 129, 0.1)">
+        <animate attributeName="offset" values="0.4;1.4" dur="2s" repeatCount="indefinite" />
+      </stop>
+    </linearGradient>
+  );
+
+  const AmberPulseGradient = ({ id, x1 = "100%", y1 = "0%", x2 = "0%", y2 = "0%" }: { id?: string, x1?: string, y1?: string, x2?: string, y2?: string }) => (
+    <linearGradient id={id} x1={x1} y1={y1} x2={x2} y2={y2}>
+      <stop offset="0%" stopColor="rgba(245, 158, 11, 0.1)">
+        <animate attributeName="offset" values="0;1" dur="2s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="20%" stopColor="rgba(245, 158, 11, 0.8)">
+        <animate attributeName="offset" values="0.2;1.2" dur="2s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="40%" stopColor="rgba(245, 158, 11, 0.1)">
+        <animate attributeName="offset" values="0.4;1.4" dur="2s" repeatCount="indefinite" />
+      </stop>
+    </linearGradient>
+  );
+
   return (
     <div className="w-full overflow-hidden my-12 flex justify-center">
       <div className="inline-block">
@@ -68,14 +97,17 @@ export default function CompassDiagram() {
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rotate-45 p-8 flex items-center justify-center" style={{ borderRadius: '15%', width: '100px', height: '100px' }}>
               <svg className="absolute" width="100" height="100" overflow="visible" style={{ top: "0px", left: "0px" }}>
                       <defs>
-                      <linearGradient id="centerGradient" x1="100%" y1="0%" x2="0%" y2="0%">
-                          <stop offset="0%" stopColor="#f59e0b" />
-                          <stop offset="100%" stopColor="#f59e0b" />
-                      </linearGradient>
+                      
+                      <AmberPulseGradient id="downUpPulseGradient" x1="0%" y1="100%" x2="0%" y2="0%" />
+                      <AmberPulseGradient id="rightLeftPulseGradient" x1="100%" y1="0%" x2="0%" y2="0%" />
+                      <AmberPulseGradient id="leftRightPulseGradient" x1="0%" y1="0%" x2="100%" y2="0%" />
                       </defs>
-                      <path d="M0,0 L-50,-50" stroke="#f59e0b" strokeWidth="2" fill="#f59e0b" strokeDasharray="4 2" />
-                      <path d="M0,0 L-70,0" stroke="#f59e0b" strokeWidth="2" fill="#f59e0b" strokeDasharray="4 2" />
-                      <path d="M0,0 L0,-70" stroke="#f59e0b" strokeWidth="2" fill="#f59e0b" strokeDasharray="4 2" />
+                      <path d="M0,0 L-50,-50" stroke="#f59e0b" strokeWidth="2" fill="#f59e0b" strokeDasharray="4 2" strokeOpacity="0.5" />
+                      <path d="M0,0 L-50,-50" stroke="url(#downUpPulseGradient)" strokeWidth="3" fill="none" />
+                      <path d="M0,0 L-70,0" stroke="#f59e0b" strokeWidth="2" fill="#f59e0b" strokeDasharray="4 2" strokeOpacity="0.5" />
+                      <path d="M0,0 L-70,1" stroke="url(#rightLeftPulseGradient)" strokeWidth="3" fill="none" />
+                      <path d="M0,0 L0,-70" stroke="#f59e0b" strokeWidth="2" fill="#f59e0b" strokeDasharray="4 2" strokeOpacity="0.5" />
+                      <path d="M0,0 L1,-71" stroke="url(#downUpPulseGradient)" strokeWidth="3" fill="none" />
                       <Arrow x="-42" y="-42" rotation="-45" color="#f59e0b" />
                       <Arrow x="-60" y="1" rotation="-85" color="#f59e0b" />
                       <Arrow x="1" y="-60" rotation="-8" color="#f59e0b" />
@@ -98,8 +130,12 @@ export default function CompassDiagram() {
             <div className="absolute top-1/2 right-[15%] -translate-y-1/2 flex flex-col items-center">
               <div className="relative">
                   <svg className="absolute" width="100" height="100" overflow="visible" style={{top:"30px",left:"-35px"}}>
+                  <defs>
+                    <PulseGradient id="leftRightNormalPulseGradient" x1="0%" y1="0%" x2="100%" y2="0%" />
+                  </defs>
                   <Arrow x="-20" y="0" rotation="90" color="#10b981" />
-                  <path d="M-10,0 L-50,0" stroke="#10b981" strokeWidth="2" fill="none" />
+                  <path d="M-10,0 L-50,0" stroke="#10b981" strokeWidth="2" fill="none" strokeOpacity="0.5" />
+                  <path d="M-10,0 L-50,1" stroke="url(#leftRightNormalPulseGradient)" strokeWidth="3" fill="none" />
                   </svg>
               </div>
               <div className="w-16 h-16 flex items-center justify-center bg-white rounded-lg shadow-sm p-2">
