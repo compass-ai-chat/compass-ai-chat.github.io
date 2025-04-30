@@ -76,12 +76,12 @@ export default function PolarisDiagram() {
                           <stop offset="100%" stopColor="#f59e0b" />
                       </linearGradient>
                       </defs>
-                      <path d="M0,0 L-50,-50" stroke="#f59e0b" strokeWidth="2" fill="#f59e0b" strokeDasharray="4 2" />
-                      <path d="M0,0 L-70,0" stroke="#f59e0b" strokeWidth="2" fill="#f59e0b" strokeDasharray="4 2" />
-                      <path d="M0,0 L0,-70" stroke="#f59e0b" strokeWidth="2" fill="#f59e0b" strokeDasharray="4 2" />
-                      <Arrow x="-42" y="-42" rotation="-45" color="#f59e0b" />
-                      <Arrow x="-60" y="1" rotation="-85" color="#f59e0b" />
-                      <Arrow x="1" y="-60" rotation="-8" color="#f59e0b" />
+                      <path d="M0,0 L-58,-58" stroke="#f59e0b" strokeWidth="2" fill="#f59e0b" strokeDasharray="4 2" />
+                      <path d="M0,0 L-80,-15" stroke="#f59e0b" strokeWidth="2" fill="#f59e0b" strokeDasharray="4 2" />
+                      <path d="M0,0 L-15,-80" stroke="#f59e0b" strokeWidth="2" fill="#f59e0b" strokeDasharray="4 2" />
+                      <Arrow x="-52" y="-52" rotation="-45" color="#f59e0b" />
+                      <Arrow x="-74" y="-14" rotation="-80" color="#f59e0b" />
+                      <Arrow x="-14" y="-74" rotation="-8" color="#f59e0b" />
               </svg>
               <div className="rotate-[-45deg] text-emerald-500 font-bold text-xl flex flex-col items-center">
                 <div className="text-emerald-500 mb-1">
