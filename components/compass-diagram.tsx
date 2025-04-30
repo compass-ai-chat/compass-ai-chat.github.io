@@ -14,7 +14,7 @@ export default function CompassDiagram() {
       <div className="w-[600px] h-[500px] relative mx-auto md:transform-none sm:scale-75 scale-50 sm:origin-center origin-center">
         <div className="absolute inset-0">
           {/* Provider icons at the top outside the circle */}
-          <div className="absolute top-[5%] left-1/3 flex flex-col items-center z-10">
+          <div className="absolute top-[5%] left-1/4 flex flex-col items-center z-10">
             <div className="w-16 h-16 flex items-center justify-center bg-white rounded-lg shadow-sm p-2">
               <img
                 src="./images/providers/google.png"
@@ -40,7 +40,7 @@ export default function CompassDiagram() {
             </span>
           </div>
           
-          <div className="absolute top-[5%] right-1/3 flex flex-col items-center z-10">
+          <div className="absolute top-[5%] right-1/4 flex flex-col items-center z-10">
             <div className="w-16 h-16 flex items-center justify-center bg-white rounded-lg shadow-sm p-2">
               <img
                 src="./images/providers/anthropic.jpeg"
@@ -73,12 +73,12 @@ export default function CompassDiagram() {
                           <stop offset="100%" stopColor="#f59e0b" />
                       </linearGradient>
                       </defs>
-                      <path d="M0,0 L-90,-90" stroke="url(#centerGradient)" strokeWidth="2" fill="#f59e0b" strokeDasharray="4 2" />
-                      <path d="M0,0 L-120,-30" stroke="url(#centerGradient)" strokeWidth="2" fill="#f59e0b" strokeDasharray="4 2" />
-                      <path d="M0,0 L-30,-120" stroke="url(#centerGradient)" strokeWidth="2" fill="#f59e0b" strokeDasharray="4 2" />
-                      <Arrow x="-83" y="-83" rotation="-45" color="#f59e0b" />
-                      <Arrow x="-110" y="-26" rotation="-65" color="#f59e0b" />
-                      <Arrow x="-26" y="-110" rotation="-25" color="#f59e0b" />
+                      <path d="M0,0 L-50,-50" stroke="#f59e0b" strokeWidth="2" fill="#f59e0b" strokeDasharray="4 2" />
+                      <path d="M0,0 L-70,0" stroke="#f59e0b" strokeWidth="2" fill="#f59e0b" strokeDasharray="4 2" />
+                      <path d="M0,0 L0,-70" stroke="#f59e0b" strokeWidth="2" fill="#f59e0b" strokeDasharray="4 2" />
+                      <Arrow x="-42" y="-42" rotation="-45" color="#f59e0b" />
+                      <Arrow x="-60" y="1" rotation="-85" color="#f59e0b" />
+                      <Arrow x="1" y="-60" rotation="-8" color="#f59e0b" />
               </svg>
               <div className="rotate-[-45deg] text-emerald-500 font-bold text-xl flex flex-col items-center">
                 <div className="text-emerald-500 mb-1">
@@ -99,7 +99,7 @@ export default function CompassDiagram() {
               <div className="relative">
                   <svg className="absolute" width="100" height="100" overflow="visible" style={{top:"30px",left:"-35px"}}>
                   <Arrow x="-20" y="0" rotation="90" color="#10b981" />
-                  <path d="M-10,0 L-70,0" stroke="#10b981" strokeWidth="2" fill="none" />
+                  <path d="M-10,0 L-50,0" stroke="#10b981" strokeWidth="2" fill="none" />
                   </svg>
               </div>
               <div className="w-16 h-16 flex items-center justify-center bg-white rounded-lg shadow-sm p-2">

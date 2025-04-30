@@ -76,12 +76,12 @@ export default function PolarisDiagram() {
                           <stop offset="100%" stopColor="#f59e0b" />
                       </linearGradient>
                       </defs>
-                      <path d="M0,0 L-90,-90" stroke="url(#centerGradient)" strokeWidth="2" fill="#f59e0b" strokeDasharray="4 2" />
-                      <path d="M0,0 L-120,-30" stroke="url(#centerGradient)" strokeWidth="2" fill="#f59e0b" strokeDasharray="4 2" />
-                      <path d="M0,0 L-30,-120" stroke="url(#centerGradient)" strokeWidth="2" fill="#f59e0b" strokeDasharray="4 2" />
-                      <Arrow x="-83" y="-83" rotation="-45" color="#f59e0b" />
-                      <Arrow x="-110" y="-26" rotation="-65" color="#f59e0b" />
-                      <Arrow x="-26" y="-110" rotation="-25" color="#f59e0b" />
+                      <path d="M0,0 L-50,-50" stroke="#f59e0b" strokeWidth="2" fill="#f59e0b" strokeDasharray="4 2" />
+                      <path d="M0,0 L-70,0" stroke="#f59e0b" strokeWidth="2" fill="#f59e0b" strokeDasharray="4 2" />
+                      <path d="M0,0 L0,-70" stroke="#f59e0b" strokeWidth="2" fill="#f59e0b" strokeDasharray="4 2" />
+                      <Arrow x="-42" y="-42" rotation="-45" color="#f59e0b" />
+                      <Arrow x="-60" y="1" rotation="-85" color="#f59e0b" />
+                      <Arrow x="1" y="-60" rotation="-8" color="#f59e0b" />
               </svg>
               <div className="rotate-[-45deg] text-emerald-500 font-bold text-xl flex flex-col items-center">
                 <div className="text-emerald-500 mb-1">
@@ -149,7 +149,7 @@ export default function PolarisDiagram() {
               <div className="relative">
                   <svg className="absolute" width="100" height="100" overflow="visible" style={{top:"30px",left:"-35px"}}>
                   <Arrow x="-20" y="0" rotation="90" color="#10b981" />
-                  <path d="M-10,0 L-80,0" stroke="#10b981" strokeWidth="2" fill="none" />
+                  <path d="M-10,0 L-57,0" stroke="#10b981" strokeWidth="2" fill="none" />
                   </svg>
               </div>
               <div className="w-16 h-16 flex items-center justify-center bg-white rounded-lg shadow-sm p-2">
