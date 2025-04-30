@@ -4,15 +4,14 @@ export default function CompassDiagram() {
   // Arrow component that can be reused with different positions and rotations
   const Arrow = ({ x, y, rotation, color }: { x: string, y: string, rotation: string, color: string }) => (
     <g transform={`translate(${x}, ${y}) rotate(${rotation})`}>
-      
       <path d="M0,-10 L-5,-5 L0,-15 L5,-5 Z" fill={color} />
     </g>
   );
 
   return (
-    <div className="w-full max-w-2xl mx-auto my-12 relative">
-      {/* Add a fixed size container with responsive scaling */}
-      <div className="relative w-[600px] h-[500px] mx-auto transform origin-top-center md:scale-100 sm:scale-75 scale-50">
+    <div className="w-full overflow-hidden my-12 flex justify-center">
+      <div className="inline-block">
+      <div className="w-[600px] h-[500px] relative mx-auto md:transform-none sm:scale-75 scale-50 sm:origin-center origin-center">
         <div className="absolute inset-0">
           {/* Provider icons at the top outside the circle */}
           <div className="absolute top-[5%] left-1/3 flex flex-col items-center z-10">
@@ -117,6 +116,7 @@ export default function CompassDiagram() {
           </div>
           
         </div>
+      </div>
       </div>
     </div>
   );
