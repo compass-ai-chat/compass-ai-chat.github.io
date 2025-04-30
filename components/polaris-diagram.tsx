@@ -85,7 +85,7 @@ export default function PolarisDiagram() {
               </svg>
               <div className="rotate-[-45deg] text-emerald-500 font-bold text-xl flex flex-col items-center">
                 <div className="text-emerald-500 mb-1">
-                  <Sparkles className="h-6 w-6" />
+                  <Sparkles className="h-6 w-6 fill-current" />
                 </div>
                 Polaris
               </div>
