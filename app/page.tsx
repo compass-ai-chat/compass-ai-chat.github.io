@@ -351,12 +351,28 @@ export default function Home() {
           <p className="text-xl text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">
             {t("diagram.description")}
           </p>
+        </motion.div>
+        <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.7 }}
+            viewport={{ once: true }}
+            className="w-full"
+          >
         <div className="flex justify-center flex-col lg:flex-row">
           <p className="text-xl text-gray-700 dark:text-gray-300 max-w-2xl mx-auto mt-[10%]">
             {t("diagram.compass.description")}
           </p>
           <CompassDiagram />
         </div>
+        </motion.div>
+        <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.7 }}
+            viewport={{ once: true }}
+            className="w-full"
+          >
         <div className="flex justify-center flex-col lg:flex-row">
           <PolarisDiagram />
           <p className="text-xl text-gray-700 dark:text-gray-300 max-w-2xl mx-auto mt-[10%]">
@@ -364,6 +380,7 @@ export default function Home() {
           </p>
         </div>
         </motion.div>
+        
       </section>
 
       {/* Contact Section */}
