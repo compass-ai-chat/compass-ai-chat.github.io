@@ -26,11 +26,11 @@
     "subtitle": "Work",
     "compass":{
       "title": "Compass",
-      "description":"Compass exists within your own local network, however it can also connect to the internet to access the latest models from providers like ChatGPT, Claude, or Gemini."
+      "description":"Compass exists within your own local network, however it can also connect to the internet to access the latest models from providers like ChatGPT, Claude, or Gemini. This allows you to use Compass offline when privacy is a priority, or connect to the internet when you need the latest models."
     },
     "polaris":{
       "title": "Polaris",
-      "description":"Polaris acts as a middleman, allowing you to setup your documents, characters and providers in one place and share it amongst multiple compass users."
+      "description":"Polaris allows you to bundle up different providers, including your local AI, in one place and share it amongst multiple compass users. This both simplifies the setup process and allows you to control usage in one place."
     },
     "description": ""
   },

@@ -20,6 +20,19 @@
     "subtitle": "numerosi provider di AI",
     "description": "Evitate di rimanere intrappolati in un unico ecosistema: passate da un provider all'altro mantenendo intatti la cronologia delle chat e i documenti."
   },
+  "diagram": {
+    "title": "Come",
+    "subtitle": "Funziona",
+    "compass":{
+      "title": "Compass",
+      "description":"Compass esiste all'interno della vostra rete locale, ma può anche connettersi a Internet per accedere ai modelli più recenti di fornitori come ChatGPT, Claude o Gemini. Ciò consente di utilizzare Compass offline quando la privacy è una priorità, oppure di connettersi a Internet quando si ha bisogno dei modelli più recenti."
+    },
+    "polaris":{
+      "title": "Polaris",
+      "description":"Polaris consente di raggruppare diversi provider, compresa l'AI locale, in un unico luogo e di condividerlo tra più utenti di compass. Questo semplifica il processo di configurazione e consente di controllare l'utilizzo in un unico luogo."
+    },
+    "description": ""
+  },
   "features": {
     "title": "Perché Scegliere",
     "subtitle": "Compass",

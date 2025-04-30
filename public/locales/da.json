@@ -21,9 +21,22 @@
     "subtitle": "mange AI udbydere",
     "description": "Undgå at blive fanget i et enkelt økosystem - skift mellem udbydere med din chathistorik og dine dokumenter intakte"
   },
+  "diagram": {
+    "title": "Hvordan",
+    "subtitle": "fungerer det",
+    "compass":{
+      "title": "Compass",
+      "description":"Compass findes inden for dit eget lokale netværk, men det kan også oprette forbindelse til internettet for at få adgang til de nyeste modeller fra udbydere som ChatGPT, Claude eller Gemini. Det giver dig mulighed for at bruge Compass offline, når privatlivets fred er en prioritet, eller oprette forbindelse til internettet, når du har brug for de nyeste modeller."
+    },
+    "polaris":{
+      "title": "Polaris",
+      "description":"Polaris giver dig mulighed for at samle forskellige udbydere, herunder din lokale AI, på ét sted og dele det med flere compass-brugere. Det forenkler både opsætningsprocessen og giver dig mulighed for at kontrollere brugen ét sted."
+    },
+    "description": ""
+  },
   "features": {
     "title": "Hvorfor vælge",
-    "subtitle": "Compass?",
+    "subtitle": "Compass",
     "description": "Bygget med kerneværdier om suverænitet, privatliv og kontrol",
     "cards": {
       "privacy": {
