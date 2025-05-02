@@ -329,20 +329,28 @@ export default function Home() {
             icon="Wifi"
           />
           <FeatureCard
-            title={t("features.cards.customizable.title")}
-            description={t("features.cards.customizable.description")}
-            icon="Settings"
-          />
-          <FeatureCard
             title={t("features.cards.authentication.title")}
             description={
               <>
                 <Trans i18nKey="features.cards.authentication.description" components={{ 1: <span className="text-primary font-medium" />, 2: <span className="text-primary font-medium" /> }} />
               </>
             }
-            
-            
             icon="KeyRound"
+          />
+          <FeatureCard
+            title={t("features.cards.documents.title")}
+            description={t("features.cards.documents.description")}
+            icon="File"
+          />
+          <FeatureCard
+            title={t("features.cards.characters.title")}
+            description={t("features.cards.characters.description")}
+            icon="UserRound"
+          />
+          <FeatureCard
+            title={t("features.cards.customizable.title")}
+            description={t("features.cards.customizable.description")}
+            icon="Settings"
           />
         </div>
       </section>

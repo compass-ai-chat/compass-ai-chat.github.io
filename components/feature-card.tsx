@@ -1,9 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Shield, Network, Lock, Code, Wifi, Settings, KeyRound } from "lucide-react";
+import { Shield, Network, Lock, Code, Wifi, Settings, KeyRound, File, UserRound } from "lucide-react";
 
-type IconName = "Shield" | "Network" | "Lock" | "Code" | "Wifi" | "Settings" | "KeyRound";
+type IconName = "Shield" | "Network" | "Lock" | "Code" | "Wifi" | "Settings" | "KeyRound" | "File" | "UserRound";
 
 interface FeatureCardProps {
   title: string;
@@ -26,6 +26,8 @@ export default function FeatureCard({
     Wifi: Wifi,
     Settings: Settings,
     KeyRound: KeyRound,
+    File: File,
+    UserRound: UserRound,
   };
 
   const IconComponent = iconComponents[icon];

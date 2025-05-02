@@ -62,6 +62,18 @@
       "customizable": {
         "title": "Tilpasningsvenlig",
         "description": "Tilpas Compass til dine specifikke behov med temaer, karakterer og udbydere."
+      },
+      "authentication": {
+        "title": "Vælg hvordan du authenticerer dig",
+        "description": "Polaris kan bruges med både <1>Microsoft</1> og <2>Google</2> konti, samt med en custom email og password eller blot en API-nøgle."
+      },
+      "documents": {
+        "title": "Dokumenter",
+        "description": "Compass kan bruges med dokumenter, såsom PDF'er. Dette giver dig mulighed for at bruge Compass til at chatte med dine dokumenter, samt med internettet."
+      },
+      "characters": {
+        "title": "Chat med karakterer",
+        "description": "Dan dig flere perspektiver ved at definere forskellige karakterer for forskellige opgaver. Kommer med 5 foruddefinerede karakterer."
       }
     }
   },

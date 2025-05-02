@@ -61,6 +61,18 @@
       "customizable": {
         "title": "Personalizzabile",
         "description": "Adatta Compass alle tue esigenze specifiche con plugin ed estensioni."
+      },
+      "authentication": {
+        "title": "Scegli come ti autentichi",
+        "description": "Polaris può essere utilizzato con sia <1>Microsoft</1> che <2>Google</2> account, così come con un indirizzo email e password personalizzato o semplicemente una chiave API."
+      },
+      "documents": {
+        "title": "Documenti",
+        "description": "Compass può essere utilizzato con documenti, come PDF. Questo ti permette di utilizzare Compass per chatta con i tuoi documenti, così come con l'internet."
+      },
+      "characters": {
+        "title": "Chat con personaggi",
+        "description": "Promuovi la diversità di pensiero e l'espressione definendo personaggi diversi per diverse attività. Include 5 personaggi predefiniti."
       }
     }
   },

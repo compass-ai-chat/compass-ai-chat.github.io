@@ -39,10 +39,6 @@
     "subtitle": "Compass",
     "description": "Built with core values of sovereignty, privacy, and control",
     "cards": {
-      "authentication": {
-        "title": "Authentication",
-        "description": "Polaris can be used with both <1>Microsoft</1> and <2>Google</2> accounts, as well as with a custom email and password."
-      },
       "privacy": {
         "title": "Complete Privacy",
         "description": "Run models locally on your device. No data ever needs to be sent to external servers without your explicit permission."
@@ -66,6 +62,18 @@
       "customizable": {
         "title": "Customizable",
         "description": "Adapt Compass to your specific needs with providers, themes, character profiles, and more."
+      },
+      "authentication": {
+        "title": "Choose how you authenticate",
+        "description": "Polaris can be used with both <1>Microsoft</1> and <2>Google</2> accounts, as well as with a custom email and password or simply an API key."
+      },
+      "documents": {
+        "title": "Documents",
+        "description": "Compass can be used with documents, such as PDFs. This allows you to use Compass to chat with your documents, as well as with the internet."
+      },
+      "characters": {
+        "title": "Chat with characters",
+        "description": "Promote diversity of thought and expression by defining different characters for different tasks. Comes with 5 pre-defined characters."
       }
     }
   },
