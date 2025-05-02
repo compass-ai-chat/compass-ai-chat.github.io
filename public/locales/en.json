@@ -39,6 +39,10 @@
     "subtitle": "Compass",
     "description": "Built with core values of sovereignty, privacy, and control",
     "cards": {
+      "authentication": {
+        "title": "Authentication",
+        "description": "Polaris can be used with both <1>Microsoft</1> and <2>Google</2> accounts, as well as with a custom email and password."
+      },
       "privacy": {
         "title": "Complete Privacy",
         "description": "Run models locally on your device. No data ever needs to be sent to external servers without your explicit permission."
@@ -61,7 +65,7 @@
       },
       "customizable": {
         "title": "Customizable",
-        "description": "Adapt Compass to your specific needs with plugins and extensions."
+        "description": "Adapt Compass to your specific needs with providers, themes, character profiles, and more."
       }
     }
   },

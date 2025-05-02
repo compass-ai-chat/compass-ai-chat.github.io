@@ -11,6 +11,7 @@ import Footer from "@/components/footer";
 import PolarisDiagram from "@/components/polaris-diagram";
 import { useTranslation } from "react-i18next";
 import CompassDiagram from "@/components/compass-diagram";
+import { Trans } from 'react-i18next';
 
 export default function Home() {
   const { t } = useTranslation();
@@ -331,6 +332,17 @@ export default function Home() {
             title={t("features.cards.customizable.title")}
             description={t("features.cards.customizable.description")}
             icon="Settings"
+          />
+          <FeatureCard
+            title={t("features.cards.authentication.title")}
+            description={
+              <>
+                <Trans i18nKey="features.cards.authentication.description" components={{ 1: <span className="text-primary font-medium" />, 2: <span className="text-primary font-medium" /> }} />
+              </>
+            }
+            
+            
+            icon="KeyRound"
           />
         </div>
       </section>
