@@ -468,7 +468,7 @@ export default function Home() {
               <div
                 onClick={() =>
                   window.open(
-                    "https://www.linkedin.com/in/thomas-nordentoft",
+                    "https://www.linkedin.com/company/compass-ai-chat",
                     "_blank",
                   )
                 }
@@ -482,7 +482,7 @@ export default function Home() {
                     {t("contact.linkedin")}
                   </h3>
                   <p className="text-gray-700 dark:text-gray-300 break-words">
-                    https://www.linkedin.com/in/thomas-nordentoft
+                    https://www.linkedin.com/company/compass-ai-chat
                   </p>
                 </div>
               </div>

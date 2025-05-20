@@ -25,7 +25,7 @@ export default function Footer() {
                 <Github className="h-5 w-5" />
               </Link>
               <Link
-                href="https://www.linkedin.com/in/thomas-nordentoft"
+                href="https://www.linkedin.com/company/compass-ai-chat"
                 className="text-gray-500 dark:text-gray-300 hover:text-emerald-500 transition-colors"
                 target="_blank"
               >
