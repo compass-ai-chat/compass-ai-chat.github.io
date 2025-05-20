@@ -41,7 +41,7 @@
     "cards": {
       "privacy": {
         "title": "Komplet Privatliv",
-        "description": "Kør modeller lokalt på dit netværk. Ingen data behøver nogensinde at blive sendt til eksterne servere uden din tilladelse."
+        "description": "Compass scanner for følsomt indhold og advarer dig før du sender det. Ingen data behøver nogensinde at blive sendt til eksterne servere uden din tilladelse."
       },
       "bestOfBoth": {
         "title": "Det Bedste fra Begge Verdener",

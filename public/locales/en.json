@@ -41,7 +41,7 @@
     "cards": {
       "privacy": {
         "title": "Complete Privacy",
-        "description": "Run models locally on your network. No data ever needs to be sent to external servers without your explicit permission."
+        "description": "Compass scans for sensitive content and warns you before you send it. No data ever needs to be sent to external servers without your explicit permission."
       },
       "bestOfBoth": {
         "title": "Best of Both Worlds",
