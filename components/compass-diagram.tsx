@@ -38,7 +38,7 @@ export default function CompassDiagram() {
   );
 
   return (
-    <div className="w-full overflow-hidden my-12 flex justify-center">
+    <div className="w-full overflow-hidden flex justify-center">
       <div className="inline-block">
       <div className="w-[600px] h-[500px] relative mx-auto md:transform-none sm:scale-75 scale-50 sm:origin-center origin-center">
         <div className="absolute inset-0">

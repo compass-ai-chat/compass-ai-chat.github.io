@@ -40,7 +40,7 @@ export default function PolarisDiagram() {
   );
 
   return (
-    <div className="w-full overflow-hidden my-12 flex justify-center">
+    <div className="w-full overflow-hidden flex justify-center">
         <div className="inline-block">
       {/* Add a fixed size container with responsive scaling */}
       <div className="relative w-[600px] h-[600px] mx-auto transform origin-top-center md:scale-100 sm:scale-75 scale-50 origin-center">
