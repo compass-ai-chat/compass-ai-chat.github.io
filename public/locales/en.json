@@ -41,11 +41,11 @@
     "cards": {
       "privacy": {
         "title": "Complete Privacy",
-        "description": "Run models locally on your device. No data ever needs to be sent to external servers without your explicit permission."
+        "description": "Run models locally on your network. No data ever needs to be sent to external servers without your explicit permission."
       },
       "bestOfBoth": {
         "title": "Best of Both Worlds",
-        "description": "Connect to providers like ChatGPT, Claude, or Gemini for cutting-edge models, or stay offline for sensitive tasks."
+        "description": "Connect to providers like <1>ChatGPT</1>, <2>Claude</2> or <3>Gemini</3> for cutting-edge models, or stay offline for sensitive tasks."
       },
       "ownership": {
         "title": "True Ownership",
@@ -108,7 +108,8 @@
     "demo": "Demo",
     "features": "Features",
     "contact": "Contact",
-    "download": "Download"
+    "download": "Download",
+    "diagram": "Diagram"
   },
   "footer": {
     "description": "An open-source, local AI chat application focused on privacy, decentralization, and true data ownership.",

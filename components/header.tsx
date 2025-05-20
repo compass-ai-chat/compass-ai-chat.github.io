@@ -87,14 +87,14 @@ export default function Header() {
               transition={{ duration: 0.5, delay: 0.3 }}
             >
               <a 
-                href="#contact" 
+                href="#diagram" 
                 className="text-gray-600 hover:text-emerald-500 transition-colors cursor-pointer"
                 onClick={(e) => {
                   e.preventDefault();
-                  scrollToSection('contact');
+                  scrollToSection('diagram');
                 }}
               >
-                {t('nav.contact')}
+                {t('nav.diagram')}
               </a>
             </motion.div>
             <motion.div
@@ -109,7 +109,10 @@ export default function Header() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
             >
-              <Button className="bg-emerald-500 hover:bg-emerald-600 text-white">{t('nav.download')}</Button>
+              <a href="#contact" onClick={(e) => {
+                e.preventDefault();
+                scrollToSection('contact');
+              }} className="bg-emerald-500 hover:bg-emerald-600 text-white p-2 rounded-sm">{t('nav.contact')}</a>
             </motion.div>
             <LanguageSwitcher />
 
@@ -160,10 +163,10 @@ export default function Header() {
               className="text-gray-600 hover:text-emerald-500 transition-colors py-2 cursor-pointer"
               onClick={(e) => {
                 e.preventDefault();
-                scrollToSection('contact');
+                scrollToSection('diagram');
               }}
             >
-              {t('nav.contact')}
+              {t('nav.diagram')}
             </a>
             <div className="flex justify-center py-2">
               <ThemeToggle />
@@ -173,7 +176,7 @@ export default function Header() {
               className="bg-emerald-500 hover:bg-emerald-600 text-white w-full"
               onClick={() => setIsMenuOpen(false)}
             >
-              {t('nav.download')}
+              {t('nav.contact')}
             </Button>
             
 

@@ -310,7 +310,11 @@ export default function Home() {
           />
           <FeatureCard
             title={t("features.cards.bestOfBoth.title")}
-            description={t("features.cards.bestOfBoth.description")}
+            description={
+              <>
+                <Trans i18nKey="features.cards.bestOfBoth.description" components={{ 1: <span className="text-primary font-medium" />, 2: <span className="text-primary font-medium" />, 3: <span className="text-primary font-medium" /> }} />
+              </>
+            }
             icon="Network"
           />
           <FeatureCard
@@ -442,7 +446,7 @@ export default function Home() {
               <div
                 onClick={() =>
                   window.open(
-                    "https://github.com/nordwestt/compass#user-content-welcome-to-compass-",
+                    "https://github.com/compass-ai-chat/compass#user-content-welcome-to-compass-",
                     "_blank",
                   )
                 }
@@ -456,7 +460,7 @@ export default function Home() {
                     {t("contact.github")}
                   </h3>
                   <p className="text-gray-700 dark:text-gray-300 break-words">
-                    github.com/nordwestt/compass
+                    github.com/compass-ai-chat/compass
                   </p>
                 </div>
               </div>

@@ -41,11 +41,11 @@
     "cards": {
       "privacy": {
         "title": "Komplet Privatliv",
-        "description": "Kør modeller lokalt på din enhed. Ingen data behøver nogensinde at blive sendt til eksterne servere uden din tilladelse."
+        "description": "Kør modeller lokalt på dit netværk. Ingen data behøver nogensinde at blive sendt til eksterne servere uden din tilladelse."
       },
       "bestOfBoth": {
         "title": "Det Bedste fra Begge Verdener",
-        "description": "Opret forbindelse til udbydere som ChatGPT, Claude eller Gemini for banebrydende modeller, eller forbliv offline til følsomme opgaver."
+        "description": "Opret forbindelse til udbydere som <1>ChatGPT</1>, <2>Claude</2> eller <3>Gemini</3> for banebrydende modeller, eller forbliv offline til følsomme opgaver."
       },
       "ownership": {
         "title": "Ægte Ejerskab",
@@ -108,7 +108,8 @@
     "demo": "Demo",
     "features": "Funktioner",
     "contact": "Kontakt",
-    "download": "Download"
+    "download": "Download",
+    "diagram": "Diagram"
   },
   "footer": {
     "description": "En open-source, lokal AI-chatapplikation med fokus på privatliv, decentralisering og ægte dataejerskab.",

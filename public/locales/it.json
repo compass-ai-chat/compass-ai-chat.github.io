@@ -40,11 +40,11 @@
     "cards": {
       "privacy": {
         "title": "Privacy Completa",
-        "description": "Esegui modelli localmente sul tuo dispositivo. Nessun dato sara inviato a server esterni senza il tuo esplicito permesso."
+        "description": "Esegui modelli localmente sul tuo network. Nessun dato sara inviato a server esterni senza il tuo esplicito permesso."
       },
       "bestOfBoth": {
         "title": "Il Meglio di Entrambi i Mondi",
-        "description": "Connettiti a provider come ChatGPT, Claude o Gemini per modelli all'avanguardia, o rimani offline per attività sensibili."
+        "description": "Connettiti a provider come <1>ChatGPT</1>, <2>Claude</2> o <3>Gemini</3> per modelli all'avanguardia, o rimani offline per attività sensibili."
       },
       "ownership": {
         "title": "Vera Proprietà",
@@ -107,7 +107,8 @@
     "demo": "Demo",
     "features": "Funzionalità",
     "contact": "Contatti",
-    "download": "Scarica"
+    "download": "Scarica",
+    "diagram": "Diagramma"
   },
   "footer": {
     "description": "Un'applicazione di chat AI open-source e locale focalizzata sulla privacy, la decentralizzazione e la vera proprietà dei dati.",
