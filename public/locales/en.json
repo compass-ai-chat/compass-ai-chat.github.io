@@ -40,7 +40,7 @@
     "description": "Built with core values of sovereignty, privacy, and control",
     "cards": {
       "privacy": {
-        "title": "Complete Privacy",
+        "title": "Privacy Oriented",
         "description": "Compass scans for sensitive content and warns you before you send it. No data ever needs to be sent to external servers without your explicit permission."
       },
       "bestOfBoth": {

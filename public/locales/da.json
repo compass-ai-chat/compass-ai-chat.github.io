@@ -40,7 +40,7 @@
     "description": "Bygget med kerneværdier om suverænitet, privatliv og kontrol",
     "cards": {
       "privacy": {
-        "title": "Komplet Privatliv",
+        "title": "Privathedsorienteret",
         "description": "Compass scanner for følsomt indhold og advarer dig før du sender det. Ingen data behøver nogensinde at blive sendt til eksterne servere uden din tilladelse."
       },
       "bestOfBoth": {
