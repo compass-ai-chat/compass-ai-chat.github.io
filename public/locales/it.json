@@ -47,8 +47,8 @@
         "description": "Connettiti a provider come <1>ChatGPT</1>, <2>Claude</2> o <3>Gemini</3> per modelli all'avanguardia, o rimani offline per attività sensibili."
       },
       "ownership": {
-        "title": "Vera Proprietà",
-        "description": "Possiedi i tuoi dati e conversazioni. Esporta, elimina o gestiscili come preferisci."
+        "title": "Proprietà e Portabilità",
+        "description": "I dati e le conversazioni sono di vostra proprietà e potete utilizzarli presso diversi fornitori e modelli. Potete esportarli, cancellarli o gestirli a vostro piacimento."
       },
       "openSource": {
         "title": "Open Source",

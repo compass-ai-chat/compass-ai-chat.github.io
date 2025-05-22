@@ -48,8 +48,8 @@
         "description": "Connect to providers like <1>ChatGPT</1>, <2>Claude</2> or <3>Gemini</3> for cutting-edge models, or stay offline for sensitive tasks."
       },
       "ownership": {
-        "title": "True Ownership",
-        "description": "You own your data and conversations. Export, delete, or manage them however you want."
+        "title": "Ownership and Portability",
+        "description": "You own your data and conversations, allowing you to use them across different providers and models. Export, delete, or manage them as you please."
       },
       "openSource": {
         "title": "Open Source",

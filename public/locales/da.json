@@ -48,8 +48,8 @@
         "description": "Opret forbindelse til udbydere som <1>ChatGPT</1>, <2>Claude</2> eller <3>Gemini</3> for banebrydende modeller, eller forbliv offline til følsomme opgaver."
       },
       "ownership": {
-        "title": "Ægte Ejerskab",
-        "description": "Du ejer dine data og samtaler. Eksportér, slet eller administrer dem, som du vil."
+        "title": "Ejerskab og Portabilitet",
+        "description": "Du ejer dine data og samtaler, så du kan bruge dem på tværs af forskellige udbydere og modeller. Eksporter, slet eller administrer dem, som du vil."
       },
       "openSource": {
         "title": "Open Source",
