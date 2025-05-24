@@ -40,7 +40,7 @@ export default function Home() {
   const scrollToDemo = () => {
     if (isMobile) {
       // Open demo in new tab on mobile
-      window.open("https://nordwestt.com/compass", "_blank");
+      window.open("https://compass-ai.chat/compass", "_blank");
     } else {
       // Scroll to demo section on desktop
       demoRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -272,7 +272,7 @@ export default function Home() {
                 {!isIframeMinimized && (
                   <div className="h-[700px] w-full bg-white dark:bg-card flex items-center justify-center">
                     <iframe
-                      src="https://nordwestt.com/compass"
+                      src="https://compass-ai.chat/compass"
                       className="w-full h-full"
                     />
                   </div>
