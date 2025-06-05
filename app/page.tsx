@@ -109,6 +109,15 @@ export default function Home() {
                 {t("hero.tryDemo")}
               </Button>
               <Button
+                onClick={() => window.open("https://github.com/compass-ai-chat/compass#user-content-welcome-to-compass-", "_blank")}
+                size="lg"
+                variant="outline"
+                className="border-emerald-500 text-emerald-500 hover:bg-emerald-50 dark:hover:bg-emerald-950"
+              >
+                <Github className="mr-2 h-5 w-5" />
+                GitHub
+              </Button>
+              <Button
                 onClick={() => scrollToSection("contact")}
                 size="lg"
                 variant="outline"
