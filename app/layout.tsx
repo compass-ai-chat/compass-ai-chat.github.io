@@ -6,6 +6,13 @@ import { ThemeProvider } from "@/components/theme-provider"
 import BackgroundPattern from "@/components/background-pattern"
 import { I18nProvider } from "@/components/i18n-provider"
 
+import { config } from '@fortawesome/fontawesome-svg-core'
+import '@fortawesome/fontawesome-svg-core/styles.css'
+
+// Tell Font Awesome to skip adding CSS automatically since it's already imported
+config.autoAddCss = false
+
+
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {

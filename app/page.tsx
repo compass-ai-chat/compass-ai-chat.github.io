@@ -15,6 +15,8 @@ import PolarisDiagram from "@/components/polaris-diagram";
 import { useTranslation } from "react-i18next";
 import CompassDiagram from "@/components/compass-diagram";
 import { Trans } from 'react-i18next';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faWindows, faLinux } from '@fortawesome/free-brands-svg-icons'
 
 export default function Home() {
   const { t } = useTranslation();
@@ -446,7 +448,7 @@ export default function Home() {
                 className="bg-emerald-500 hover:bg-emerald-600 text-white px-8 py-6 text-lg flex items-center gap-3"
                 onClick={() => window.open("https://github.com/compass-ai-chat/compass/releases/download/v1.0.2/compass_0.1.0_x64_en-US.msi", "_blank")}
               >
-                <IonIcon icon={logoWindows} className="h-6 w-6"/>
+                <FontAwesomeIcon icon={faWindows} style={{width: "1.5em", height: "1.5em"}}/>
                 {t("download.downloadFor")} Windows
               </Button>
               
@@ -462,7 +464,7 @@ export default function Home() {
                 className="bg-emerald-500 hover:bg-emerald-600 text-white px-8 py-6 text-lg flex items-center gap-3"
                 onClick={() => window.open("https://github.com/compass-ai-chat/compass/releases/download/v1.0.2/compass_0.1.0_x64_en-US.msi", "_blank")}
               >
-                {/* <IonIcon icon={logoLinux} className="h-6 w-6"/> */}
+                <FontAwesomeIcon icon={faLinux} style={{width: "1.5em", height: "1.5em"}}/>
                 {t("download.downloadFor")} Linux
               </Button>
               </motion.div>
