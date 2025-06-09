@@ -110,6 +110,12 @@
     "download": "Scarica",
     "diagram": "Diagramma"
   },
+  "download": {
+    "title": "Scarica",
+    "subtitle": "Compass",
+    "description": "Inizia con Compass su Windows - (Linux a breve)",
+    "downloadFor": "Scarica per"
+  },
   "footer": {
     "description": "Un'applicazione di chat AI open-source e locale focalizzata sulla privacy, la decentralizzazione e la vera proprietà dei dati.",
     "links": {

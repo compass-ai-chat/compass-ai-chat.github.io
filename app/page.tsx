@@ -2,7 +2,10 @@
 
 import { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
-import { ChevronDown, ChevronUp, Github, Linkedin, Mail } from "lucide-react";
+import { ChevronDown, ChevronUp, Github, Linkedin, Mail, Monitor } from "lucide-react";
+import { logoWindows } from "ionicons/icons";
+import { IonIcon } from '@ionic/react';
+
 import { Button } from "@/components/ui/button";
 import ContactForm from "@/components/contact-form";
 import FeatureCard from "@/components/feature-card";
@@ -414,6 +417,58 @@ export default function Home() {
         </div>
         </motion.div>
         
+      </section>
+
+      {/* Download Section */}
+      <section className="container mx-auto px-4 py-16 md:py-24" id="download">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.7 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+            {t("download.title")}{" "}
+            <span className="text-emerald-500">{t("download.subtitle")}</span>
+          </h2>
+          <p className="text-xl text-gray-700 dark:text-gray-300 max-w-2xl mx-auto mb-8">
+            {t("download.description")}
+          </p>
+          <div className="flex flex-wrap gap-4 justify-center">
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className=""
+            >
+              <Button
+                size="lg"
+                className="bg-emerald-500 hover:bg-emerald-600 text-white px-8 py-6 text-lg flex items-center gap-3"
+                onClick={() => window.open("https://github.com/compass-ai-chat/compass/releases/download/v1.0.2/compass_0.1.0_x64_en-US.msi", "_blank")}
+              >
+                <IonIcon icon={logoWindows} className="h-6 w-6"/>
+                {t("download.downloadFor")} Windows
+              </Button>
+              
+            </motion.div>
+
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className=""
+            >
+            <Button disabled
+                size="lg"
+                className="bg-emerald-500 hover:bg-emerald-600 text-white px-8 py-6 text-lg flex items-center gap-3"
+                onClick={() => window.open("https://github.com/compass-ai-chat/compass/releases/download/v1.0.2/compass_0.1.0_x64_en-US.msi", "_blank")}
+              >
+                {/* <IonIcon icon={logoLinux} className="h-6 w-6"/> */}
+                {t("download.downloadFor")} Linux
+              </Button>
+              </motion.div>
+          </div>
+
+        </motion.div>
       </section>
 
       {/* Contact Section */}
