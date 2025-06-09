@@ -31,18 +31,9 @@ jobs:
         with:
           version: 8
           
-      - name: Setup pnpm cache
-        uses: actions/cache@v3
-        with:
-          path: ~/.pnpm-store
-          key: ${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-pnpm-
-          
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: pnpm install
         
-
       - name: Build with Next.js
         run: pnpm run build
         
