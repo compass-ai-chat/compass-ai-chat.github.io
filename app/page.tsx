@@ -16,7 +16,7 @@ import { useTranslation } from "react-i18next";
 import CompassDiagram from "@/components/compass-diagram";
 import { Trans } from 'react-i18next';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faWindows, faLinux } from '@fortawesome/free-brands-svg-icons'
+import { faWindows, faLinux, faDocker } from '@fortawesome/free-brands-svg-icons'
 
 export default function Home() {
   const { t } = useTranslation();
@@ -469,6 +469,22 @@ export default function Home() {
               </Button>
               </motion.div>
           </div>
+
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="text-center mt-8 justify-center"
+            >
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-emerald-500 text-emerald-500 hover:bg-emerald-50 dark:hover:bg-emerald-900 px-8 py-6 text-lg flex items-center gap-3 mx-auto"
+                onClick={() => window.open("https://github.com/compass-ai-chat/compass/releases", "_blank")}
+              >
+                <FontAwesomeIcon icon={faDocker} style={{width: "1.5em", height: "1.5em"}}/>
+                {t("download.preferDocker")}
+              </Button>
+            </motion.div>
 
         </motion.div>
       </section>

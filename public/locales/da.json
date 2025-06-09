@@ -115,7 +115,8 @@
     "title": "Download",
     "subtitle": "Compass",
     "description": "Kom i gang med Compass på Windows - (Linux kommer snart)",
-    "downloadFor": "Download til"
+    "downloadFor": "Download til",
+    "preferDocker": "Foretrækker du Docker? Se vores udgivelsesnoter"
   },
   "footer": {
     "description": "En open-source, lokal AI-chatapplikation med fokus på privatliv, decentralisering og ægte dataejerskab.",
