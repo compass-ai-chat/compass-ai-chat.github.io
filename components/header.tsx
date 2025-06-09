@@ -100,6 +100,22 @@ export default function Header() {
             <motion.div
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+            >
+              <a 
+                href="#download" 
+                className="text-gray-600 hover:text-emerald-500 transition-colors cursor-pointer"
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection('download');
+                }}
+              >
+                {t('nav.download')}
+              </a>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.35 }}
             >
               <ThemeToggle />
