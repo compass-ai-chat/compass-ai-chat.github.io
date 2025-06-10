@@ -114,7 +114,7 @@
   "download": {
     "title": "Download",
     "subtitle": "Compass",
-    "description": "Kom i gang med Compass på Windows - (Linux kommer snart)",
+    "description": "Kom i gang med Compass på Windows eller Linux (se udgivelsesnoter for flere detaljer)",
     "downloadFor": "Download til",
     "preferDocker": "Foretrækker du Docker? Se vores udgivelsesnoter"
   },

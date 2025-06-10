@@ -113,7 +113,7 @@
   "download": {
     "title": "Scarica",
     "subtitle": "Compass",
-    "description": "Inizia con Compass su Windows - (Linux a breve)",
+    "description": "Inizia con Compass su Windows o Linux (vedi note di rilascio per maggiori dettagli)",
     "downloadFor": "Scarica per",
     "preferDocker": "Preferisci Docker? Consulta le note di rilascio"
   },

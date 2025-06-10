@@ -459,10 +459,10 @@ export default function Home() {
               whileTap={{ scale: 0.95 }}
               className=""
             >
-            <Button disabled
+            <Button
                 size="lg"
                 className="bg-emerald-500 hover:bg-emerald-600 text-white px-8 py-6 text-lg flex items-center gap-3"
-                onClick={() => window.open("https://github.com/compass-ai-chat/compass/releases/download/v1.0.2/compass_0.1.0_x64_en-US.msi", "_blank")}
+                onClick={() => window.open("https://github.com/compass-ai-chat/compass/releases/download/v1.0.2/compass_0.1.0_amd64.AppImage", "_blank")}
               >
                 <FontAwesomeIcon icon={faLinux} style={{width: "1.5em", height: "1.5em"}}/>
                 {t("download.downloadFor")} Linux
