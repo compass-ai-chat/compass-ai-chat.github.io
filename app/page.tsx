@@ -437,6 +437,24 @@ export default function Home() {
           <p className="text-xl text-gray-700 dark:text-gray-300 max-w-2xl mx-auto mb-8">
             {t("download.description")}
           </p>
+          <div className="flex items-center justify-around gap-2 text-lg text-emerald-600 dark:text-emerald-400 max-w-2xl mx-auto mb-8 font-medium p-4 bg-white rounded-lg">
+            <img 
+              src="https://ollama.com/public/ollama.png" 
+              alt="Ollama Logo" 
+              width={40}
+              height={40}
+            />
+            <div className="d-flex flex-col">
+              <p>To run AI locally, you'll need an inference engine -</p>
+              
+              <p>
+                Compass has been built to work seamlessly with Ollama
+              </p>
+              <p>
+              <a href="https://ollama.com" target="_blank" rel="noopener noreferrer" className="underline hover:text-emerald-700 dark:hover:text-emerald-300">Click here to install it</a>
+              </p>
+            </div>
+          </div>
           <div className="flex flex-wrap gap-4 justify-center">
             <motion.div
               whileHover={{ scale: 1.05 }}
